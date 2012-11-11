@@ -39,7 +39,7 @@ public:
 		*	 \fn    static Vue* getVue(QString nom);
 		*	 \param nom Décris le nom du type de la Vue à renvoyer
 		*/
-	virtual Vue* getVue(QString nom);
+	static Vue* getVue(QString nom);
 
 private:
 
