@@ -1,10 +1,10 @@
 #include <QtGui/QApplication>
-#include "qwitkwindow.h"
+#include "qwitk.h"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    QWITKWindow w;
+    QWITK w;
     w.show();
     
     return a.exec();
