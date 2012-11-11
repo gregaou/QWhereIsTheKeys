@@ -7,6 +7,8 @@
  */
 #ifndef PROFIL_H
 #define PROFIL_H
+
+#include <QMap>
 /**
  * \class Profil
  * \brief Structure de donnée représentant un profil de joueur.
@@ -16,7 +18,7 @@ class Profil
 {
 private:
 	QString _nom; /**< Nom du profil du joueur */
-	QList < QPair < int, int > > _resultatsNiveaux; /**< Liste des temps réalisés sur les niveaux déjà complétés */
+	QMap<int, int> _resultatsNiveaux; /**< Liste des temps réalisés sur les niveaux déjà complétés */
 public:
 	/**
 		*  \brief Constructeur
@@ -34,10 +36,23 @@ public:
 	QString getNom();
 	/**
 		*  \brief Accesseur de la donnée membre _resultatsNiveaux
-		*	 \fn    QList getResultatsNiveaux()
+		*	 \fn    QMap getResultatsNiveaux()
 		*  \return Liste des temps réalisés sur les niveaux déjà complétés
 		*/
-	QList getResultatsNiveaux();
+	QMap getResultatsNiveaux();
+	/**
+		*  \brief Accesseur de la donnée temps de _resultatsNiveau en fonction du niveau
+		*	 \fn    int getResultat(int idNiveau)
+		*	 \param idNiveau Identifiant du niveau
+		*  \return Temps du niveau identifié par idNiveau | 0 si le niveau n'existe pas
+		*/
+	int getResultat(int idNiveau);
+	/**
+		*  \brief Calcule le temps total de tout les niveaux
+		*	 \fn    int getTempsTotal()
+		*  \return Temps total de tout les niveaux
+		*/
+	int getTempsTotal();
 	/**
 		*  \brief Mutateur de la donnée membre _nom
 		*	 \fn    void setNom(QString nom)
@@ -47,15 +62,10 @@ public:
 	/**
 		*  \brief Ajoute un couple (identifiant de niveau)/(temps pour terminer le niveau) dans la liste des résultats
 		*	 \fn    bool ajouterResultatNiveau(int idNiveau, int temps)
-		*  \return Vrai si l'ajout a été éffectuer | Faux
+		*  \param idNiveau Identifiant du niveau
+		*  \param temps Temps réalisé sur le niveau
 		*/
-	bool ajouterResultatNiveau(int idNiveau, int temps);
-	/**
-		*  \brief Ajoute un nouveau temps pour un niveau donné
-		*	 \fn    bool ajouterResultat(int idNiveau)
-		*  \return Vrai si l'ajout a été éffectuer | Faux
-		*/
-	bool ajouterResultat(int idNiveau);
+	void ajouterResultatNiveau(int idNiveau, int temps);
 };
 
 #endif // PROFIL_H
