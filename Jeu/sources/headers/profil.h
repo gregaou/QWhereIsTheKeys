@@ -13,7 +13,6 @@
 /**
  * \class Profil
  * \brief Structure de donnée représentant un profil de joueur.
- *
  */
 class Profil
 {
