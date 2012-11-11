@@ -1,7 +1,7 @@
-/**
- * \file			vue.h
- * \brief			Classe abstraite pour les vues
- * \author    Société de Développement de Projets Informatique
+ï»¿/**
+ * \file	  vue.h
+ * \brief	  Classe abstraite pour les vues
+ * \author    SociÃ©tÃ© de DÃ©veloppement de Projets Informatique
  * \version   1.0
  * \date      11/11/12
  */
@@ -18,10 +18,20 @@
 class Vue : public QWidget{
 
 public:
-
+	/**
+		*  \brief Constructeur
+		*	 \fn    Vue (QWidget *parent)
+		*  \param parent DÃ©finit le parent de la vue
+		*/
 	Vue(QWidget *parent) :
-		QWidget(parent){}
+		QWidget(parent),
+		_mainWindow(parent)
+	{}
 
+	/**
+		*  \brief Destructeur
+		*	 \fn    ~Vue ()
+		*/
 	~Vue(){}
 
 	/**
@@ -39,6 +49,7 @@ signals:
 	void setVue(QString);
 
 protected:
+	QWidget *_mainWindow;
 
 };
 

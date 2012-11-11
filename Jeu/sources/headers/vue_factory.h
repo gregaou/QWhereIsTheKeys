@@ -1,7 +1,7 @@
-/**
- * \file			vue_factory.h
- * \brief			Classe fabrique pour les vues
- * \author    SociÈtÈ de DÈveloppement de Projets Informatique
+Ôªø/**
+ * \file	  vue_factory.h
+ * \brief	  Classe fabrique pour les vues
+ * \author    Soci√©t√©de D√©veloppement de Projets Informatique
  * \version   1.0
  * \date      11/11/12
  */
@@ -36,10 +36,11 @@ private:
 public:
 	/**
 		*  \brief Renvoi l'instance d'une vue en fonction d'un QString
-		*	 \fn    static Vue* getVue(QString nom);
-		*	 \param nom DÈcris le nom du type de la Vue ‡ renvoyer
+		*	 \fn    static Vue* getVue(QString nom, QWidget *parent = 0);
+		*	 \param nom D√©cris le nom du type de la Vue √† renvoyer
+		*  \param parent D√©cris le parent de la vue que l'on va cr√©er
 		*/
-	static Vue* getVue(QString nom);
+	static Vue* getVue(QString nom, QWidget *parent);
 
 private:
 

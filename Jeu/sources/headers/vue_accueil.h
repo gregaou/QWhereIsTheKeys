@@ -1,7 +1,7 @@
-/**
- * \file			vue_accueil.h
- * \brief			Classe vue accueil
- * \author    Société de Développement de Projets Informatique
+ï»¿/**
+ * \file	  vue_accueil.h
+ * \brief	  Classe vue accueil
+ * \author    SociÃ©tÃ© de DÃ©veloppement de Projets Informatique
  * \version   1.0
  * \date      11/11/12
  */
@@ -32,7 +32,7 @@ public:
 	/**
 		*  \brief Constructeur
 		*	 \fn    explicit VueAccueil (QWidget *parent = 0)
-		*  \param parent Définit le parent de la fenêtre
+		*  \param parent DÃ©finit le parent de la fenÃªtre
 		*/
 	explicit VueAccueil(QWidget *parent = 0);
 
@@ -51,7 +51,7 @@ public:
 	QString toString();
 
 private:
-	Ui::VueAccueil *_ui; /**< Interface graphique liée à la classe */
+	Ui::VueAccueil *_ui; /**< Interface graphique liÃ©e Ã  la classe */
 };
 
 #endif // VUE_ACCUEIL_H

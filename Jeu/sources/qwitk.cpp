@@ -1,4 +1,4 @@
-#include "sources/headers/qwitk.h"
+﻿#include "sources/headers/qwitk.h"
 #include "ui_qwitk.h"
 
 QWITK::QWITK(QWidget *parent) :
@@ -17,5 +17,5 @@ QWITK::~QWITK()
 
 void QWITK::setVue(QString nom)
 {
-	setCentralWidget(_vueFactory->getVue(nom));
+	setCentralWidget(_vueFactory->getVue(nom,this));
 }

@@ -1,7 +1,7 @@
-/**
- * \file			singleton.h
- * \brief			Classe modèle pour la création de singletons
- * \author    Société de Développement de Projets Informatique
+ï»¿/**
+ * \file	  singleton.h
+ * \brief	  Classe modÃ¨le pour la crÃ©ation de singletons
+ * \author    SociÃ©tÃ© de DÃ©veloppement de Projets Informatique
  * \version   1.0
  * \date      11/11/12
  */
@@ -13,7 +13,7 @@
 
 /**
  * \class Singleton
- * \brief Classe modèle pour la création de singletons
+ * \brief Classe modÃ¨le pour la crÃ©ation de singletons
  */
 template <typename T>
 class Singleton
@@ -44,7 +44,7 @@ public:
 	}
 
 	/**
-		*  \brief Détruit le singleton
+		*  \brief DÃ©truit le singleton
 		*	 \fn    static void kill ()
 		*/
 	static void kill ()

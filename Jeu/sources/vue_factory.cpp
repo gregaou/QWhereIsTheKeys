@@ -1,6 +1,6 @@
-#include "sources/headers/vue_factory.h"
+﻿#include "sources/headers/vue_factory.h"
 
-Vue* VueFactory::getVue(QString nom)
+Vue* VueFactory::getVue(QString nom, QWidget *parent)
 {
-	return new VueAccueil();
+	return new VueAccueil(parent);
 }

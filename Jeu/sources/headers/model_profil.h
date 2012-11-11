@@ -1,7 +1,7 @@
-/**
- * \file			modfel_profil.h
- * \brief			Structure de donnée représentant une collection de profils de joueurs.
- * \author    Société de Développement de Projets Informatique
+ï»¿/**
+ * \file	  model_profil.h
+ * \brief	  Structure de donnÃ©e reprÃ©sentant une collection de profils de joueurs.
+ * \author    SociÃ©tÃ© de DÃ©veloppement de Projets Informatique
  * \version   1.0
  * \date      11/11/12
  */
@@ -13,7 +13,7 @@
 #include "profil.h"
 /**
  * \class ModelProfil
- * \brief Structure de donnée représentant une collection de profils de joueurs.
+ * \brief Structure de donnÃ©e reprÃ©sentant une collection de profils de joueurs.
  */
 class ModelProfil : public Singleton<ModelProfil>, public QAbstractItemModel
 {

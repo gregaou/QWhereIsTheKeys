@@ -1,7 +1,7 @@
-/**
- * \file			qwitk.h
- * \brief			Fenêtre principale
- * \author    Société de Développement de Projets Informatique
+ï»¿/**
+ * \file	  qwitk.h
+ * \brief	  FenÃªtre principale
+ * \author    SociÃ©tÃ© de DÃ©veloppement de Projets Informatique
  * \version   1.0
  * \date      11/11/12
  */
@@ -24,9 +24,9 @@ namespace Ui {
 
 /**
  * \class QWITK
- * \brief Classe de la fenêtre principale
+ * \brief Classe de la fenÃªtre principale
  *
- *  La classe gère la fenêtre principale
+ *  La classe gÃ¨re la fenÃªtre principale
  */
 class QWITK : public QMainWindow
 {
@@ -36,7 +36,7 @@ public:
 	/**
 		*  \brief Constructeur
 		*	 \fn    explicit QWITK (QWidget *parent = 0)
-		*  \param parent Définit le parent de la fenêtre
+		*  \param parent DÃ©finit le parent de la fenÃªtre
 		*
 		*  Constructeur de la classe QWITK
 		*/
@@ -53,14 +53,14 @@ public slots:
 	/**
 		*  \brief Permet le changement de la vue actuelle
 		*	 \fn    void setVue (QString nom)
-		*	 \param nom Définit le nom de la vue à charger
+		*	 \param nom DÃ©finit le nom de la vue Ã  charger
 		*
-		*  Changement de vue pour la fenêtre principale
+		*  Changement de vue pour la fenÃªtre principale
 		*/
 	void setVue(QString nom);
 
 private:
-	Ui::QWITK *_ui; /**< Interface graphique liée à la classe */
+	Ui::QWITK *_ui; /**< Interface graphique liÃ©e Ã  la classe */
 	VueFactory *_vueFactory; /**< Fabrique de vue */
 };
 

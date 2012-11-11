@@ -1,4 +1,4 @@
-#include <QtGui/QApplication>
+﻿#include <QtGui/QApplication>
 #include "sources/headers/qwitk.h"
 
 int main(int argc, char *argv[])
