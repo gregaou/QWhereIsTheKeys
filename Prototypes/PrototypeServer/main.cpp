@@ -1,5 +1,6 @@
 #include <QtGui/QApplication>
 #include "mainwindow.h"
+#include "monserveur.h"
 
 int main(int argc, char *argv[])
 {
@@ -7,5 +8,8 @@ int main(int argc, char *argv[])
     MainWindow w;
     w.show();
     
+    MonServeur server;
+    server.startServer();
+
     return a.exec();
 }

@@ -5,14 +5,23 @@
 #-------------------------------------------------
 
 QT       += core gui
+CONFIG   += uitools
 
 TARGET = QWhereIsTheKeys
 TEMPLATE = app
 
 
-SOURCES += main.cpp\
-        mainwindow.cpp
+SOURCES += \
+    sources/main.cpp \
+    sources/qwhereisthekeyswindows.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += \
+    sources/headers/mainwindow.h
 
-FORMS    += mainwindow.ui
+FORMS    += \
+    interfaces/mainwindow.ui \
+    ressources/ui/accueil.ui \
+    ressources/ui/jeu.ui
+
+RESOURCES += \
+    ressources/ressources.qrc
