@@ -11,6 +11,8 @@
 
 #include <QMainWindow>
 
+#include "sources/headers/vue.h"
+
 /** \namespace Ui
  *
  * Espace de nommage pour les
@@ -40,7 +42,7 @@ public:
 		*/
 	explicit QWITK(QWidget *parent = 0);
 	/**
-		*  \brief Constructeur
+		*  \brief Destructeur
 		*	 \fn    ~QWITK ()
 		*
 		*  Destructeur de la classe QWITK
@@ -48,9 +50,18 @@ public:
 	~QWITK();
 
 public slots:
+	/**
+		*  \brief Permet le changement de la vue actuelle
+		*	 \fn    void setVue (QString nom)
+		*	 \param nom Définit le nom de la vue à charger
+		*
+		*  Changement de vue pour la fenêtre principale
+		*/
+	void setVue(QString nom);
 
 private:
-	Ui::QWITK *ui; /**< Interface graphique liée à la classe */
+	Ui::QWITK *_ui; /**< Interface graphique liée à la classe */
+	Vue *_vue; /**< Vue courante */
 };
 
 #endif // QWITK_H

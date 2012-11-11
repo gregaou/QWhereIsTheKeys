@@ -3,12 +3,17 @@
 
 QWITK::QWITK(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::QWITK)
+		_ui(new Ui::QWITK)
 {
-    ui->setupUi(this);
+		_ui->setupUi(this);
 }
 
 QWITK::~QWITK()
 {
-    delete ui;
+		delete _ui;
+}
+
+void QWITK::setVue(QString nom)
+{
+
 }
