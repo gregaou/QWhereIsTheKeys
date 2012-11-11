@@ -11,8 +11,10 @@ TEMPLATE = app
 
 
 SOURCES += sources/main.cpp\
-        sources/qwitk.cpp
+        sources/qwitk.cpp \
+    sources/profil.cpp
 
-HEADERS  += sources/headers/qwitk.h
+HEADERS  += sources/headers/qwitk.h \
+    sources/headers/profil.h
 
 FORMS    += ui/qwitk.ui
