@@ -1,6 +1,0 @@
-<RCC>
-    <qresource prefix="/ui">
-        <file alias="accueil.ui">ui/accueil.ui</file>
-        <file alias="jeu.ui">ui/jeu.ui</file>
-    </qresource>
-</RCC>

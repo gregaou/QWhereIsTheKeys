@@ -1,27 +1,18 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2012-11-09T10:30:19
+# Project created by QtCreator 2012-11-11T15:38:34
 #
 #-------------------------------------------------
 
 QT       += core gui
-CONFIG   += uitools
 
 TARGET = QWhereIsTheKeys
 TEMPLATE = app
 
 
-SOURCES += \
-    sources/main.cpp \
-    sources/qwhereisthekeyswindows.cpp
+SOURCES += main.cpp\
+        qwitkwindow.cpp
 
-HEADERS  += \
-    sources/headers/mainwindow.h
+HEADERS  += qwitkwindow.h
 
-FORMS    += \
-    interfaces/mainwindow.ui \
-    ressources/ui/accueil.ui \
-    ressources/ui/jeu.ui
-
-RESOURCES += \
-    ressources/ressources.qrc
+FORMS    += qwitkwindow.ui
