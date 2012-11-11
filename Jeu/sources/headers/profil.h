@@ -40,7 +40,7 @@ public:
 	QList getResultatsNiveaux();
 	/**
 		*  \brief Mutateur de la donnée membre _nom
-		*	 \fn    void setNom(QString nom);
+		*	 \fn    void setNom(QString nom)
 		*  \param nom Nouveau nom du profil
 		*/
 	void setNom(QString nom);
