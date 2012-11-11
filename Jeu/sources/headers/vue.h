@@ -9,11 +9,26 @@
 #ifndef VUE_H
 #define VUE_H
 
+#include <QWidget>
+
 /**
  * \class Vue
  * \brief Classe abstraite pour la gestion des vues
  */
-class Vue {
+class Vue : public QWidget{
+
+public:
+
+	Vue(QWidget *parent) :
+		QWidget(parent){}
+
+	~Vue(){}
+
+	/**
+		*  \brief Renvoi le nom de la vue
+		*	 \fn    virtual QString toString() = 0;
+		*/
+	virtual QString toString() = 0;
 
 signals:
 	/**
@@ -24,12 +39,6 @@ signals:
 	void setVue(QString);
 
 protected:
-	/**
-		*  \brief Renvoi le nom de la vue
-		*	 \fn    virtual QString toString() = 0;
-		*/
-	virtual QString toString() = 0;
-
 
 };
 

@@ -9,6 +9,7 @@
 #define PROFIL_H
 
 #include <QMap>
+#include <QString>
 /**
  * \class Profil
  * \brief Structure de donnée représentant un profil de joueur.
@@ -39,7 +40,7 @@ public:
 		*	 \fn    QMap getResultatsNiveaux()
 		*  \return Liste des temps réalisés sur les niveaux déjà complétés
 		*/
-	QMap getResultatsNiveaux();
+	QMap<int,int> getResultatsNiveaux();
 	/**
 		*  \brief Accesseur de la donnée temps de _resultatsNiveau en fonction du niveau
 		*	 \fn    int getResultat(int idNiveau)

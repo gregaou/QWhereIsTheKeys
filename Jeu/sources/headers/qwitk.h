@@ -11,7 +11,7 @@
 
 #include <QMainWindow>
 
-#include "sources/headers/vue.h"
+#include "sources/headers/vue_factory.h"
 
 /** \namespace Ui
  *
@@ -61,7 +61,7 @@ public slots:
 
 private:
 	Ui::QWITK *_ui; /**< Interface graphique liée à la classe */
-	Vue *_vue; /**< Vue courante */
+	VueFactory *_vueFactory; /**< Fabrique de vue */
 };
 
 #endif // QWITK_H

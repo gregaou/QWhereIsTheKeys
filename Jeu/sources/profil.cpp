@@ -2,41 +2,41 @@
 
 Profil::Profil(QString nom)
 {
-	this->_nom = nom;
-	this->_resultatsNiveaux->clear();
+	_nom = nom;
+	_resultatsNiveaux.clear();
 }
 
 QString Profil::getNom()
 {
-	return this->_nom;
+	return _nom;
 }
 
-QMap Profil::getResultatsNiveaux()
+QMap<int, int> Profil::getResultatsNiveaux()
 {
-	return this->_resultatsNiveaux;
+	return _resultatsNiveaux;
 }
 
 int Profil::getResultat(int idNiveau)
 {
-	if(!this->_resultatsNiveaux->contains(idNiveau))
+	if(!_resultatsNiveaux.contains(idNiveau))
 		return 0;
-	return this->_resultatsNiveaux[idNiveau];
+	return _resultatsNiveaux[idNiveau];
 }
 
 int Profil::getTempsTotal()
 {
 	int total = 0;
-	foreach(int v, this->_resultatsNiveaux)
+	foreach(int v, _resultatsNiveaux)
 		total += v;
 	return total;
 }
 
 void Profil::setNom(QString nom)
 {
-	this->_nom = nom;
+	_nom = nom;
 }
 
 void Profil::ajouterResultatNiveau(int idNiveau, int temps)
 {
-	this->_resultatsNiveaux->insert(idNiveau, temps);
+	_resultatsNiveaux.insert(idNiveau, temps);
 }
