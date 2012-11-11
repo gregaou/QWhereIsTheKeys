@@ -1,4 +1,4 @@
-#include "qwitk.h"
+#include "sources/headers/qwitk.h"
 #include "ui_qwitk.h"
 
 QWITK::QWITK(QWidget *parent) :

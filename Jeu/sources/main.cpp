@@ -1,5 +1,5 @@
 #include <QtGui/QApplication>
-#include "qwitk.h"
+#include "sources/headers/qwitk.h"
 
 int main(int argc, char *argv[])
 {
