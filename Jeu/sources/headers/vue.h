@@ -25,7 +25,7 @@ public:
 		*/
 	Vue(QWidget *parent) :
 		QWidget(parent),
-		_mainWindow(parent)
+		_qwitk(parent)
 	{}
 
 	/**
@@ -49,7 +49,7 @@ signals:
 	void setVue(QString);
 
 protected:
-	QWidget *_mainWindow;
+	QWidget *_qwitk; /**< Fenêtre principale */
 
 };
 
