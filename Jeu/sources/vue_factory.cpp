@@ -8,5 +8,11 @@ Vue* VueFactory::getVue(QString nom, QWidget *parent)
 	else if(nom == "VueProfilNouveau")
 		return new VueProfilNouveau(parent);
 
+	else if(nom == "VueProfilCharger")
+		return new VueProfilCharger(parent);
+
+	else if(nom == "VueProfilSupprimer")
+		return new VueProfilSupprimer(parent);
+
 	return new VueAccueil(parent);
 }

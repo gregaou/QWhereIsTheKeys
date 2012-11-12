@@ -1,13 +1,13 @@
 /**
- * \file	    vue_profil_nouveau.h
- * \brief	    Classe vue création nouveau profil
+ * \file	    vue_profil_charger.h
+ * \brief	    Classe vue charger nouveau profil
  * \author    Société de Développement de Projets Informatique
  * \version   1.0
  * \date      12/11/12
  */
 
-#ifndef VUE_PROFIL_NOUVEAU_H
-#define VUE_PROFIL_NOUVEAU_H
+#ifndef VUE_PROFIL_CHARGER_H
+#define VUE_PROFIL_CHARGER_H
 
 #include "sources/headers/vue_profil.h"
 
@@ -17,32 +17,32 @@
  * interfaces Qt
  */
 namespace Ui {
-	class VueProfilNouveau;
+	class VueProfilCharger;
 }
 
 /**
- * \class VueProfilNouveau
- * \brief Classe de la vue nouveau profil
+ * \class VueProfilCharger
+ * \brief Classe de la vue charger profil
  */
-class VueProfilNouveau : public VueProfil
+class VueProfilCharger : public VueProfil
 {
 	Q_OBJECT
 
 public:
 	/**
 		*  \brief Constructeur
-		*	 \fn    explicit VueProfilNouveau (QWidget *parent = 0)
+		*	 \fn    explicit VueProfilCharger (QWidget *parent = 0)
 		*  \param parent Définit le parent de la fenêtre
 		*/
-	explicit VueProfilNouveau(QWidget *parent = 0);
+	explicit VueProfilCharger(QWidget *parent = 0);
 
 	/**
-		*  \brief VueProfilNouveau
-		*	 \fn    ~VueProfilNouveau ()
+		*  \brief Destructeur
+		*	 \fn    ~VueProfilCharger ()
 		*
-		*  Destructeur de la classe VueProfilNouveau
+		*  Destructeur de la classe VueProfilCharger
 		*/
-	~VueProfilNouveau();
+	~VueProfilCharger();
 
 	/**
 		*  \brief Renvoi le nom de la vue
@@ -59,7 +59,7 @@ private slots:
 
 
 private:
-	Ui::VueProfilNouveau *_ui; /**< Interface graphique liée à la classe */
+	Ui::VueProfilCharger *_ui; /**< Interface graphique liée à la classe */
 
 	/**
 		*  \brief Connecte les signaux des éléments de l'interface à
@@ -69,4 +69,4 @@ private:
 	void connexionAffichage();
 };
 
-#endif // VUE_PROFIL_NOUVEAU_H
+#endif // VUE_PROFIL_CHARGER_H

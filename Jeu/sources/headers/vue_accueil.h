@@ -56,6 +56,16 @@ private slots:
 		*	 \fn    void onClicBoutonNouveauProfil();
 		*/
 	void onClicBoutonNouveauProfil();
+	/**
+		*  \brief Action lorsque l'on clic sur le bouton charger profil
+		*	 \fn    void onClicBoutonChargerProfil();
+		*/
+	void onClicBoutonChargerProfil();
+	/**
+		*  \brief Action lorsque l'on clic sur le bouton supprimer profil
+		*	 \fn    void onClicBoutonSupprimerProfil();
+		*/
+	void onClicBoutonSupprimerProfil();
 
 private:
 	Ui::VueAccueil *_ui; /**< Interface graphique liée à la classe */

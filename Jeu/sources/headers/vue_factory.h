@@ -13,6 +13,8 @@
 #include "sources/headers/vue.h"
 #include "sources/headers/vue_accueil.h"
 #include "sources/headers/vue_profil_nouveau.h"
+#include "sources/headers/vue_profil_charger.h"
+#include "sources/headers/vue_profil_supprimer.h"
 
 /**
  * \class VueFactory

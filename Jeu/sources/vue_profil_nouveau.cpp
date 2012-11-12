@@ -1,10 +1,8 @@
 #include "sources/headers/vue_profil_nouveau.h"
 #include "ui_vue_profil_nouveau.h"
 
-#include <QDebug>
-
 VueProfilNouveau::VueProfilNouveau(QWidget *parent) :
-	Vue(parent),
+	VueProfil(parent),
 	_ui(new Ui::VueProfilNouveau)
 {
 	_ui->setupUi(this);
