@@ -18,7 +18,8 @@ SOURCES += sources/main.cpp\
     sources/model_profil.cpp \
     sources/vue_profil_nouveau.cpp \
     sources/vue_profil_charger.cpp \
-    sources/vue_profil_supprimer.cpp
+    sources/vue_profil_supprimer.cpp \
+    sources/delegate_profil_supprimer.cpp
 
 HEADERS  += sources/headers/qwitk.h \
     sources/headers/vue.h \
@@ -30,7 +31,8 @@ HEADERS  += sources/headers/qwitk.h \
     sources/headers/vue_profil_nouveau.h \
     sources/headers/vue_profil_charger.h \
     sources/headers/vue_profil.h \
-    sources/headers/vue_profil_supprimer.h
+    sources/headers/vue_profil_supprimer.h \
+    sources/headers/delegate_profil_supprimer.h
 
 FORMS    += ui/qwitk.ui \
     ui/vue_accueil.ui \
