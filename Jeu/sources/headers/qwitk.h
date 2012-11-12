@@ -37,15 +37,11 @@ public:
 		*  \brief Constructeur
 		*	 \fn    explicit QWITK (QWidget *parent = 0)
 		*  \param parent Définit le parent de la fenêtre
-		*
-		*  Constructeur de la classe QWITK
 		*/
 	explicit QWITK(QWidget *parent = 0);
 	/**
 		*  \brief Destructeur
 		*	 \fn    ~QWITK ()
-		*
-		*  Destructeur de la classe QWITK
 		*/
 	~QWITK();
 
@@ -54,8 +50,6 @@ public slots:
 		*  \brief Permet le changement de la vue actuelle
 		*	 \fn    void setVue (QString nom)
 		*	 \param nom Définit le nom de la vue à charger
-		*
-		*  Changement de vue pour la fenêtre principale
 		*/
 	void setVue(QString nom);
 

@@ -12,21 +12,23 @@
 #include <QDebug>
 
 /**
- * \class Singleton
+ * \class Singleton<T>
  * \brief Classe modèle pour la création de singletons
  */
 template <typename T>
 class Singleton
 {
 protected:
+
 	/**
 		*  \brief Constructeur
 		*	 \fn    Singleton ()
 		*/
 	Singleton () {}
+
 	/**
 		*  \brief Destructeur
-		*	 \fn    Singleton ()
+		*	 \fn    ~Singleton ()
 		*/
 	~Singleton () {}
 
