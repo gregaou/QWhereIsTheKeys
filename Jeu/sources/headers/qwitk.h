@@ -44,18 +44,25 @@ public:
 		*	 \fn    ~QWITK ()
 		*/
 	~QWITK();
+	/**
+		*  \brief Connecte la vue actuelle avec le slot setVue(QString nom)
+		*	 \fn    void connexionVue ()
+		*/
+	void connexionVue();
+
 
 public slots:
 	/**
 		*  \brief Permet le changement de la vue actuelle
-		*	 \fn    void setVue (QString nom)
+		*	 \fn    void setVue (QString nom = "VueAccueil")
 		*	 \param nom Définit le nom de la vue à charger
 		*/
-	void setVue(QString nom);
+	void setVue(QString nom = "VueAccueil");
 
 private:
 	Ui::QWITK *_ui; /**< Interface graphique liée à la classe */
 	VueFactory *_vueFactory; /**< Fabrique de vue */
+	Vue *_vue; /**< Vue actuelle */
 };
 
 #endif // QWITK_H

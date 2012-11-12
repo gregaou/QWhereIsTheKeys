@@ -4,10 +4,12 @@
 QWITK::QWITK(QWidget *parent) :
 	QMainWindow(parent),
 	_ui(new Ui::QWITK),
-	_vueFactory(VueFactory::getInstance())
+	_vueFactory(VueFactory::getInstance()),
+	_vue(0)
 {
 	_ui->setupUi(this);
-	setVue("dsfsd");
+
+	setVue();
 }
 
 QWITK::~QWITK()
@@ -17,5 +19,16 @@ QWITK::~QWITK()
 
 void QWITK::setVue(QString nom)
 {
-	_ui->centralWidget = _vueFactory->getVue(nom,this);
+	if(_vue) {
+		_vue->deleteLater();
+		_vue = 0;
+	}
+	_vue = _vueFactory->getVue(nom,this);
+	connexionVue();
+	setCentralWidget(_vue);
+}
+
+void QWITK::connexionVue()
+{
+	connect(_vue,SIGNAL(setVue(QString)),this,SLOT(setVue(QString)));
 }

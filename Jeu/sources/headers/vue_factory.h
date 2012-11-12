@@ -12,6 +12,7 @@
 #include "sources/headers/singleton.h"
 #include "sources/headers/vue.h"
 #include "sources/headers/vue_accueil.h"
+#include "sources/headers/vue_profil_nouveau.h"
 
 /**
  * \class VueFactory
