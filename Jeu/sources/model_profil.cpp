@@ -87,3 +87,8 @@ bool ModelProfil::setData(const QModelIndex &index, const QVariant &value,
 	}
 	return false;
 }
+
+QList<Profil> ModelProfil::getList()
+{
+	return _profils;
+}

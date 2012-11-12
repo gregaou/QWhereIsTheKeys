@@ -88,6 +88,12 @@ public:
 		*  \return Vrai si réussite | Faux si echec
 		*/
 	bool setData(const QModelIndex &index, const QVariant &value, int role);
+	/**
+		*  \brief Retourne la liste des profils
+		*	 \fn    QList<Profil> getList()
+		*  \return Liste des profils
+		*/
+	QList<Profil> getList();
 };
 
 #endif // MODEL_PROFIL_H
