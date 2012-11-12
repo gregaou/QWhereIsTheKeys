@@ -7,7 +7,8 @@ VueAccueil::VueAccueil(QWidget *parent) :
 {
 	_ui->setupUi(this);
 
-	connect(_ui->boutonQuitter,SIGNAL(clicked()),_mainWindow,SLOT(close()));
+	connect(_ui->boutonQuitter,SIGNAL(clicked()),_qwitk,SLOT(close()));
+
 }
 
 VueAccueil::~VueAccueil()

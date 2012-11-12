@@ -17,5 +17,5 @@ QWITK::~QWITK()
 
 void QWITK::setVue(QString nom)
 {
-	setCentralWidget(_vueFactory->getVue(nom,this));
+	_ui->centralWidget = _vueFactory->getVue(nom,this);
 }
