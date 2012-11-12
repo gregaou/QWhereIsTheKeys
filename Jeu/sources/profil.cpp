@@ -46,3 +46,8 @@ void Profil::ajouterResultatNiveau(int idNiveau, int temps)
 {
 	_resultatsNiveaux.insert(idNiveau, temps);
 }
+
+bool Profil::operator ==(const Profil & p)
+{
+	return (_nom == p.getNom());
+}

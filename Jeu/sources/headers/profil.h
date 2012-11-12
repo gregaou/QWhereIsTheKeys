@@ -73,6 +73,12 @@ public:
 		*  \param temps Temps réalisé sur le niveau
 		*/
 	void ajouterResultatNiveau(int idNiveau, int temps);
+	/**
+		*  \brief Opérateur d'égalité
+		*	 \fn    bool operator== (const Profil & p)
+		*  \param p Profil à comparer
+		*/
+	bool operator== (const Profil & p);
 };
 
 #endif // PROFIL_H
