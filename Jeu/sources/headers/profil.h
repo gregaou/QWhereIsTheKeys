@@ -22,6 +22,13 @@ private:
 public:
 	/**
 		*  \brief Constructeur
+		*	 \fn    Profil()
+		*
+		*  Constructeur de la classe Profil
+		*/
+	Profil();
+	/**
+		*  \brief Constructeur
 		*	 \fn    Profil(QString nom)
 		*  \param nom Définit le nom du profil
 		*
@@ -30,16 +37,16 @@ public:
 	Profil(QString nom);
 	/**
 		*  \brief Accesseur de la donnée membre _nom
-		*	 \fn    QString getNom()
+		*	 \fn    QString getNom() const
 		*  \return Nom du profil
 		*/
-	QString getNom();
+	QString getNom() const;
 	/**
 		*  \brief Accesseur de la donnée membre _resultatsNiveaux
-		*	 \fn    QMap getResultatsNiveaux()
+		*	 \fn    QMap getResultatsNiveaux() const
 		*  \return Liste des temps réalisés sur les niveaux déjà complétés
 		*/
-	QMap<int,int> getResultatsNiveaux();
+	QMap<int,int> getResultatsNiveaux() const;
 	/**
 		*  \brief Accesseur de la donnée temps de _resultatsNiveau en fonction du niveau
 		*	 \fn    int getResultat(int idNiveau)

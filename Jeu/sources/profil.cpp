@@ -1,17 +1,23 @@
 ﻿#include "sources/headers/profil.h"
 
+Profil::Profil()
+{
+	_nom = "";
+	_resultatsNiveaux.clear();
+}
+
 Profil::Profil(QString nom)
 {
 	_nom = nom;
 	_resultatsNiveaux.clear();
 }
 
-QString Profil::getNom()
+QString Profil::getNom() const
 {
 	return _nom;
 }
 
-QMap<int, int> Profil::getResultatsNiveaux()
+QMap<int, int> Profil::getResultatsNiveaux() const
 {
 	return _resultatsNiveaux;
 }
