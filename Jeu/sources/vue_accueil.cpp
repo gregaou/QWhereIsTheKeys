@@ -16,6 +16,7 @@ VueAccueil::~VueAccueil()
 	delete _ui;
 }
 
+
 QString VueAccueil::toString()
 {
 	return QString("VueAccueil");
