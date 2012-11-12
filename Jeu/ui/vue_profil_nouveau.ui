@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>VueAccueil</class>
- <widget class="QWidget" name="VueAccueil">
+ <class>VueProfilNouveau</class>
+ <widget class="QWidget" name="VueProfilNouveau">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -21,7 +21,7 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <layout class="QHBoxLayout" name="Layout">
+    <layout class="QHBoxLayout" name="LayoutProfilNouveau">
      <item>
       <spacer name="spacerGauche">
        <property name="orientation">
@@ -51,42 +51,35 @@
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="boutonNouveauProfil">
+        <widget class="QLabel" name="titreFormulaire">
          <property name="text">
-          <string>Nouveau Profil</string>
+          <string>Nouveau profil :</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="boutonChargerProfil">
-         <property name="text">
-          <string>Charger Profil</string>
-         </property>
-        </widget>
+        <widget class="QLineEdit" name="nomProfil"/>
        </item>
        <item>
-        <widget class="QPushButton" name="boutonSupprimerProfil">
-         <property name="text">
-          <string>Supprimer Profil</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="boutonCredits">
-         <property name="enabled">
-          <bool>false</bool>
-         </property>
-         <property name="text">
-          <string>Crédits</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="boutonQuitter">
-         <property name="text">
-          <string>Quitter</string>
-         </property>
-        </widget>
+        <layout class="QHBoxLayout" name="validationLayout">
+         <item>
+          <widget class="QPushButton" name="boutonAnnuler">
+           <property name="text">
+            <string>Annuler</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="boutonValider">
+           <property name="text">
+            <string>Valider</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </item>
        <item>
         <spacer name="spacerBas">

@@ -38,7 +38,7 @@ public:
 
 	/**
 		*  \brief VueAccueil
-		*	 \fn    ~QWITK ()
+		*	 \fn    ~VueAccueil ()
 		*
 		*  Destructeur de la classe VueAccueil
 		*/
@@ -50,8 +50,22 @@ public:
 		*/
 	QString toString();
 
+private slots:
+	/**
+		*  \brief Action lorsque l'on clic sur le bouton nouveau profil
+		*	 \fn    void onClicBoutonNouveauProfil();
+		*/
+	void onClicBoutonNouveauProfil();
+
 private:
 	Ui::VueAccueil *_ui; /**< Interface graphique liée à la classe */
+
+	/**
+		*  \brief Connecte les signaux des éléments de l'interface à
+		*  leur fonction associé
+		*  \fn void connexionAffichage()
+		*/
+	void connexionAffichage();
 };
 
 #endif // VUE_ACCUEIL_H

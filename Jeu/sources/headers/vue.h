@@ -16,7 +16,7 @@
  * \brief Classe abstraite pour la gestion des vues
  */
 class Vue : public QWidget{
-
+	Q_OBJECT
 public:
 	/**
 		*  \brief Constructeur
@@ -50,6 +50,14 @@ signals:
 
 protected:
 	QWidget *_qwitk; /**< Fenêtre principale */
+
+	/**
+		*  \brief Connecte les signaux des éléments de l'interface à
+		*  leur fonction associé
+		*  \fn virtual void connexionAffichage() = 0
+		*/
+	virtual void connexionAffichage() = 0;
+
 
 };
 

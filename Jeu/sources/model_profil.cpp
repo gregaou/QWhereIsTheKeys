@@ -1,4 +1,4 @@
-﻿#include "sources/headers/model_profil.h"
+#include "sources/headers/model_profil.h"
 
 ModelProfil::ModelProfil() :
 	QAbstractListModel()
@@ -55,7 +55,7 @@ int role) const
 bool ModelProfil::insertRow(int row, const QModelIndex &parent)
 {
 	Q_UNUSED(parent);
-	if(row = _profils.size())
+	if(row == _profils.size())
 	{
 		Profil p;
 		_profils.insert(row, p);
