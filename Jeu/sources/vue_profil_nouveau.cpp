@@ -22,7 +22,6 @@ void VueProfilNouveau::onClicBoutonAnnuler()
 void VueProfilNouveau::onClicBoutonValider()
 {
 	QRegExp expProfil("^[A-Za-z0-9]*$");
-	qDebug() << expProfil.isValid();
 
 	if(!_ui->nomProfil->text().isEmpty() &&
 		 _ui->nomProfil->text().contains(expProfil))
