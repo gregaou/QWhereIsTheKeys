@@ -51,7 +51,7 @@
         </spacer>
        </item>
        <item>
-        <widget class="QLabel" name="label">
+        <widget class="QLabel" name="titreFormulaire">
          <property name="text">
           <string>Supprimer Profil :</string>
          </property>
@@ -62,17 +62,31 @@
        </item>
        <item>
         <widget class="QListView" name="listProfils">
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
          <property name="selectionMode">
-          <enum>QAbstractItemView::NoSelection</enum>
+          <enum>QAbstractItemView::SingleSelection</enum>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="boutonRetour">
-         <property name="text">
-          <string>Retour</string>
-         </property>
-        </widget>
+        <layout class="QHBoxLayout" name="boutonLayout">
+         <item>
+          <widget class="QPushButton" name="boutonRetour">
+           <property name="text">
+            <string>Retour</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="boutonSupprimer">
+           <property name="text">
+            <string>Supprimer</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </item>
        <item>
         <spacer name="spacerBas">
@@ -106,6 +120,11 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>listProfils</tabstop>
+  <tabstop>boutonRetour</tabstop>
+  <tabstop>boutonSupprimer</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

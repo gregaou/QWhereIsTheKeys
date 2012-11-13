@@ -9,7 +9,10 @@
 #ifndef VUE_PROFIL_H
 #define VUE_PROFIL_H
 
+#include <QSortFilterProxyModel>
+
 #include "sources/headers/vue.h"
+#include "sources/headers/model_profil.h"
 
 
 /**
@@ -27,7 +30,8 @@ public:
 		*  \param parent Définit le parent de la fenêtre
 		*/
 	explicit VueProfil(QWidget *parent = 0) :
-		Vue(parent) {}
+		Vue(parent),
+		_profils(ModelProfil::getInstance()){}
 	/**
 		*  \brief Destructeur
 		*	 \fn    ~VueProfil ()
@@ -62,6 +66,14 @@ protected:
 		*  \fn void connexionAffichage()
 		*/
 	virtual void connexionAffichage() = 0;
+
+	ModelProfil *_profils; /**< Modèle des données du profil */
+
+	/**
+		*  \brief Charge les données des profils dans la liste
+		*  \fn virtual void chargerDonnees()
+		*/
+	virtual void chargerDonnees() {}
 };
 
 #endif // VUE_PROFIL_H

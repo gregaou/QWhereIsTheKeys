@@ -3,12 +3,6 @@
 ModelProfil::ModelProfil() :
 	QAbstractListModel()
 {
-	Profil p1("t1");
-	Profil p2("t2");
-	Profil p3("t3");
-	_profils.push_back(p1);
-	_profils.push_back(p2);
-	_profils.push_back(p3);
 }
 
 int ModelProfil::rowCount(const QModelIndex &parent) const
@@ -35,7 +29,7 @@ QVariant ModelProfil::data(const QModelIndex &index, int role) const
 }
 
 QVariant ModelProfil::headerData(int section, Qt::Orientation orientation,
-int role) const
+																 int role) const
 {
 	if(orientation == Qt::Horizontal && role == Qt::DisplayRole)
 	{
@@ -75,7 +69,7 @@ bool ModelProfil::removeRow(int row, const QModelIndex &parent)
 }
 
 bool ModelProfil::setData(const QModelIndex &index, const QVariant &value,
-	int role)
+													int role)
 {
 	if(index.isValid() && role == Qt::EditRole)
 	{
@@ -88,7 +82,14 @@ bool ModelProfil::setData(const QModelIndex &index, const QVariant &value,
 	return false;
 }
 
-QList<Profil> ModelProfil::getList()
+QList<Profil> ModelProfil::getList() const
 {
 	return _profils;
+}
+
+Profil ModelProfil::getProfil(int i) const
+{
+	if(i >= 0 && i < _profils.size())
+		return _profils.at(i);
+	return Profil();
 }

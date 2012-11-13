@@ -10,6 +10,7 @@
 #define VUE_PROFIL_NOUVEAU_H
 
 #include "sources/headers/vue_profil.h"
+#include "sources/headers/model_profil.h"
 
 /** \namespace Ui
  *
@@ -53,10 +54,15 @@ public:
 private slots:
 	/**
 		*  \brief Action lorsque l'on clic sur le bouton annuler
-		*	 \fn    void onClicBoutonAnnuler();
+		*	 \fn    void onClicBoutonAnnuler ()
 		*/
 	void onClicBoutonAnnuler();
 
+	/**
+		*  \brief Action lorsque l'on clic sur le bouton valider
+		*	 \fn    void onClicBoutonValider ()
+		*/
+	void onClicBoutonValider();
 
 private:
 	Ui::VueProfilNouveau *_ui; /**< Interface graphique liée à la classe */
@@ -64,9 +70,17 @@ private:
 	/**
 		*  \brief Connecte les signaux des éléments de l'interface à
 		*  leur fonction associé
-		*  \fn void connexionAffichage()
+		*  \fn void connexionAffichage ()
 		*/
 	void connexionAffichage();
+
+	/**
+		*  \brief Ajoute un nouveau profil
+		*	 \fn    void ajouterProfil (QString nom)
+		*  \param nom QString contenant le nom du profil à créer
+		*/
+	void ajouterProfil(QString nom);
+
 };
 
 #endif // VUE_PROFIL_NOUVEAU_H

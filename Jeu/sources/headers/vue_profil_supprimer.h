@@ -55,6 +55,12 @@ private slots:
 		*/
 	void onClicBoutonRetour();
 
+	/**
+		*  \brief Action lorsque l'on clic sur le bouton supprimer
+		*	 \fn    void onClicBoutonSupprimer();
+		*/
+	void onClicBoutonSupprimer();
+
 
 private:
 	Ui::VueProfilSupprimer *_ui; /**< Interface graphique liée à la classe */
@@ -65,6 +71,18 @@ private:
 		*  \fn void connexionAffichage()
 		*/
 	void connexionAffichage();
+
+	/**
+		*  \brief Charge les données des profils dans la liste
+		*  \fn void chargerDonnees()
+		*/
+	void chargerDonnees();
+
+	/**
+		*  \brief Supprimer le / les profil(s) sélectionné(s)
+		*	 \fn    void supprimerProfil ()
+		*/
+	void supprimerProfil();
 };
 
 #endif // VUE_PROFIL_SUPPRIMER_H

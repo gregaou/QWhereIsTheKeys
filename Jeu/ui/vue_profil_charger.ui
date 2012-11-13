@@ -64,7 +64,7 @@
         <widget class="QListView" name="listProfils"/>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout">
+        <layout class="QHBoxLayout" name="boutonslLayout">
          <item>
           <widget class="QPushButton" name="boutonAnnuler">
            <property name="text">
@@ -74,6 +74,9 @@
          </item>
          <item>
           <widget class="QPushButton" name="boutonValider">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="text">
             <string>Valider</string>
            </property>

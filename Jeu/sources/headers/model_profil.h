@@ -90,10 +90,16 @@ public:
 	bool setData(const QModelIndex &index, const QVariant &value, int role);
 	/**
 		*  \brief Retourne la liste des profils
-		*	 \fn    QList<Profil> getList()
+		*	 \fn    QList<Profil> getList() const
 		*  \return Liste des profils
 		*/
-	QList<Profil> getList();
+	QList<Profil> getList() const;
+	/**
+		*  \brief Retourne le profil à l'indice i si il existe sinon  un profil vide
+		*	 \fn    Profil getProfil(int i) const
+		*  \return Profil à la position i
+		*/
+	Profil getProfil(int i) const;
 };
 
 #endif // MODEL_PROFIL_H

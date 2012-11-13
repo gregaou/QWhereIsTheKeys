@@ -10,6 +10,7 @@
 #define VUE_H
 
 #include <QWidget>
+#include <QMessageBox>
 
 /**
  * \class Vue

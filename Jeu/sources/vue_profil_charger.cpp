@@ -7,6 +7,7 @@ VueProfilCharger::VueProfilCharger(QWidget *parent) :
 {
 	_ui->setupUi(this);
 	connexionAffichage();
+	chargerDonnees();
 }
 
 VueProfilCharger::~VueProfilCharger()
@@ -24,6 +25,14 @@ void VueProfilCharger::connexionAffichage()
 {
 	connect(_ui->boutonAnnuler,SIGNAL(clicked()),this,
 					SLOT(onClicBoutonAnnuler()));
+}
+
+void VueProfilCharger::chargerDonnees()
+{
+	QSortFilterProxyModel *proxy = new QSortFilterProxyModel(this);
+	proxy->setSourceModel(_profils);
+	proxy->sort(0);
+	_ui->listProfils->setModel(proxy);
 }
 
 QString VueProfilCharger::toString()

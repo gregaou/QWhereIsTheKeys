@@ -67,6 +67,12 @@ private:
 		*  \fn void connexionAffichage()
 		*/
 	void connexionAffichage();
+
+	/**
+		*  \brief Charge les données des profils dans la liste
+		*  \fn void chargerDonnees()
+		*/
+	void chargerDonnees();
 };
 
 #endif // VUE_PROFIL_CHARGER_H
