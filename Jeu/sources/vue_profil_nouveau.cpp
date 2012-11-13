@@ -21,8 +21,17 @@ void VueProfilNouveau::onClicBoutonAnnuler()
 
 void VueProfilNouveau::onClicBoutonValider()
 {
-	// Vérifier champs pseudo
-	ajouterProfil(_ui->nomProfil->text());
+	QRegExp expProfil("^[A-Za-z0-9]*$");
+	qDebug() << expProfil.isValid();
+
+	if(!_ui->nomProfil->text().isEmpty() &&
+		 _ui->nomProfil->text().contains(expProfil))
+		ajouterProfil(_ui->nomProfil->text());
+	else
+		QMessageBox::information(this,"Profil non valide",
+														 QString("Le nom de profil ne doit contenir que ").
+														 append("des chiffres ou des lettres ").
+														 append("et ne doit pas être vide."));
 }
 
 void VueProfilNouveau::ajouterProfil(QString nom)
