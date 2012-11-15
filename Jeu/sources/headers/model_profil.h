@@ -9,7 +9,7 @@
 #define MODEL_PROFIL_H
 #include <QList>
 #include <QFile>
-#include <QAbstractlistmodel>
+#include <QAbstractListModel>
 #include "singleton.h"
 #include "profil.h"
 /**

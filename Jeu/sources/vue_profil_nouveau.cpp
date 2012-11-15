@@ -1,4 +1,5 @@
 #include "sources/headers/vue_profil_nouveau.h"
+#include "sources/headers/vue_menu_jeu.h"
 #include "ui_vue_profil_nouveau.h"
 
 VueProfilNouveau::VueProfilNouveau(QWidget *parent) :
@@ -44,6 +45,7 @@ void VueProfilNouveau::ajouterProfil(QString nom)
 
 		QModelIndex index = _profils->index(list.size());
 		_profils->setData(index,nom,Qt::EditRole);
+		emit setVue("VueMenuJeu");
 	}
 	else
 	{
@@ -51,6 +53,7 @@ void VueProfilNouveau::ajouterProfil(QString nom)
 														 QString("Le profil \"%1\" existe déjà !").
 														 arg(nom));
 	}
+
 }
 
 void VueProfilNouveau::connexionAffichage()

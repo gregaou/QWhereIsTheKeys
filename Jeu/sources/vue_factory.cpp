@@ -14,5 +14,8 @@ Vue* VueFactory::getVue(QString nom, QWidget *parent)
 	else if(nom == "VueProfilSupprimer")
 		return new VueProfilSupprimer(parent);
 
+	else if(nom == "VueMenuJeu")
+		return new VueMenuJeu(parent);
+
 	return new VueAccueil(parent);
 }
