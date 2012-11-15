@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">QWhereIsTheKey&#39;s++
-   &#160;<span id="projectnumber">v 1.x</span>
+   &#160;<span id="projectnumber">v 2.x</span>
    </div>
   </td>
  </tr>
@@ -68,7 +68,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Espaces de nommage</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Espaces de nommage</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -106,20 +106,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_q_w_i_t_k.html#afeca3d7ed275dfebb4aa861c959ca462" title="Constructeur.">QWITK</a>(QWidget *parent = 0);</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="class_q_w_i_t_k.html#a568ec2159568401b6a5b0045cd3eba7b" title="Destructeur.">~QWITK</a>();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_q_w_i_t_k.html#ad7da5b1f889df5f9fffc614be617c839" title="Permet le changement de la vue actuelle.">setVue</a>(QString nom);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    Ui::QWITK *_ui; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="class_vue_factory.html" title="Classe fabrique pour la gestion des vues.">VueFactory</a> *_vueFactory; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif // QWITK_H</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_q_w_i_t_k.html#a6e28421b860dc00742f4fa341fb0e2b1" title="Connecte la vue actuelle avec le slot setVue(QString nom)">connexionVue</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_q_w_i_t_k.html#a7f87afb36012b1a7ee8a0af0451a74f0" title="Permet le changement de la vue actuelle.">setVue</a>(QString nom = <span class="stringliteral">&quot;VueAccueil&quot;</span>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    Ui::QWITK *_ui; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="class_vue_factory.html" title="Classe fabrique pour la gestion des vues.">VueFactory</a> *_vueFactory; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="class_vue.html" title="Classe abstraite pour la gestion des vues.">Vue</a> *_vue; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif // QWITK_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Lundi Novembre 12 2012 08:12:14 pour QWhereIsTheKey's++ par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Jeudi Novembre 15 2012 23:18:10 pour QWhereIsTheKey's++ par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>QWhereIsTheKey&#39;s++:  Fichier source de D:/Cours/GL/QWhereIsTheKeys/Jeu/sources/vue_factory.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">QWhereIsTheKey&#39;s++
+   &#160;<span id="projectnumber">v 2.x</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="../../namespaces.html"><span>Espaces&#160;de&#160;nommage</span></a></li>
+      <li><a href="../../annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="../../files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="../../globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Espaces de nommage</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Amis</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_08d237fc27d4ecd563f71c5d52f2fecc.html">sources</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">vue_factory.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d5/d39/vue__factory_8cpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;﻿#include <span class="stringliteral">&quot;sources/headers/vue_factory.h&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="code" href="../../dd/da0/class_vue_factory.html#ad9504580b3aab73a8eb2992c3d3f9a14">    3</a></span>&#160;<a class="code" href="../../d4/dcc/class_vue.html" title="Classe abstraite pour la gestion des vues.">Vue</a>* <a class="code" href="../../dd/da0/class_vue_factory.html#ad9504580b3aab73a8eb2992c3d3f9a14" title="Renvoi l&#39;instance d&#39;une vue en fonction d&#39;un QString.">VueFactory::getVue</a>(QString nom, QWidget *parent)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keywordflow">if</span>(nom == <a class="code" href="../../de/d50/class_vue_accueil.html#ac5513d2577a58ad6b64e895d400eca74" title="Renvoi le nom de la vue.">VueAccueil::toString</a>())</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="../../de/d50/class_vue_accueil.html" title="Classe de la vue accueil.">VueAccueil</a>(parent);</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(nom == <a class="code" href="../../d2/def/class_vue_profil_nouveau.html#abf918f79519c310af82f89e33538462e" title="Renvoi le nom de la vue.">VueProfilNouveau::toString</a>())</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="../../d2/def/class_vue_profil_nouveau.html" title="Classe de la vue nouveau profil.">VueProfilNouveau</a>(parent);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(nom == <a class="code" href="../../de/d33/class_vue_profil_charger.html#a245e87988d7a70b8f1f7673c04f7beef" title="Renvoi le nom de la vue.">VueProfilCharger::toString</a>())</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="../../de/d33/class_vue_profil_charger.html" title="Classe de la vue charger profil.">VueProfilCharger</a>(parent);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(nom == <a class="code" href="../../d0/d74/class_vue_profil_supprimer.html#a819abd117ee5a9e29b66ffa666c7cb81" title="Renvoi le nom de la vue.">VueProfilSupprimer::toString</a>())</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="../../d0/d74/class_vue_profil_supprimer.html" title="Classe de la vue supprimer profil.">VueProfilSupprimer</a>(parent);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(nom == <a class="code" href="../../dd/db3/class_vue_menu_jeu.html#a5206ffd791a451c7c2d0437ab8274e91" title="Renvoi le nom de la vue.">VueMenuJeu::toString</a>())</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="../../dd/db3/class_vue_menu_jeu.html" title="Classe de la vue Menu Jeu.">VueMenuJeu</a>(parent);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(nom == <a class="code" href="../../dd/d14/class_vue_nouveau_jeu.html#af9dd3ad3c913852a48bd129a36ab1429" title="Renvoi le nom de la vue.">VueNouveauJeu::toString</a>())</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="../../dd/d14/class_vue_nouveau_jeu.html" title="Classe de la vue nouveau jeu.">VueNouveauJeu</a>(parent);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="../../de/d50/class_vue_accueil.html" title="Classe de la vue accueil.">VueAccueil</a>(parent);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Jeudi Novembre 15 2012 23:33:51 pour QWhereIsTheKey's++ par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.2
+</small></address>
+</body>
+</html>

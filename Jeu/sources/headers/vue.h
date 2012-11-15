@@ -45,7 +45,6 @@ signals:
 	/**
 		*  \brief Signal pour changer la vue
 		*	 \fn    void setVue (QString)
-		*  \param QString Nom de la nouvelle vue
 		*/
 	void setVue(QString);
 

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">QWhereIsTheKey&#39;s++
-   &#160;<span id="projectnumber">v 1.x</span>
+   &#160;<span id="projectnumber">v 2.x</span>
    </div>
   </td>
  </tr>
@@ -71,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Espaces de nommage</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Espaces de nommage</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -106,9 +106,9 @@ Graphe d'héritage de QWITK:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
 Connecteurs publics</h2></td></tr>
-<tr class="memitem:ad7da5b1f889df5f9fffc614be617c839"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_w_i_t_k.html#ad7da5b1f889df5f9fffc614be617c839">setVue</a> (QString nom)</td></tr>
-<tr class="memdesc:ad7da5b1f889df5f9fffc614be617c839"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet le changement de la vue actuelle.  <a href="#ad7da5b1f889df5f9fffc614be617c839"></a><br/></td></tr>
-<tr class="separator:ad7da5b1f889df5f9fffc614be617c839"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f87afb36012b1a7ee8a0af0451a74f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_w_i_t_k.html#a7f87afb36012b1a7ee8a0af0451a74f0">setVue</a> (QString nom=&quot;VueAccueil&quot;)</td></tr>
+<tr class="memdesc:a7f87afb36012b1a7ee8a0af0451a74f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet le changement de la vue actuelle.  <a href="#a7f87afb36012b1a7ee8a0af0451a74f0"></a><br/></td></tr>
+<tr class="separator:a7f87afb36012b1a7ee8a0af0451a74f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
@@ -119,6 +119,10 @@ Fonctions membres publiques</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_w_i_t_k.html#a568ec2159568401b6a5b0045cd3eba7b">~QWITK</a> ()</td></tr>
 <tr class="memdesc:a568ec2159568401b6a5b0045cd3eba7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur. <br/></td></tr>
 <tr class="separator:a568ec2159568401b6a5b0045cd3eba7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e28421b860dc00742f4fa341fb0e2b1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e28421b860dc00742f4fa341fb0e2b1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_w_i_t_k.html#a6e28421b860dc00742f4fa341fb0e2b1">connexionVue</a> ()</td></tr>
+<tr class="memdesc:a6e28421b860dc00742f4fa341fb0e2b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connecte la vue actuelle avec le slot <a class="el" href="class_q_w_i_t_k.html#a7f87afb36012b1a7ee8a0af0451a74f0" title="Permet le changement de la vue actuelle.">setVue(QString nom)</a> <br/></td></tr>
+<tr class="separator:a6e28421b860dc00742f4fa341fb0e2b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Classe de la fenêtre principale. </p>
@@ -161,7 +165,7 @@ Fonctions membres publiques</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Documentation des fonctions membres</h2>
-<a class="anchor" id="ad7da5b1f889df5f9fffc614be617c839"></a>
+<a class="anchor" id="a7f87afb36012b1a7ee8a0af0451a74f0"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -172,7 +176,7 @@ Fonctions membres publiques</h2></td></tr>
           <td class="memname">void QWITK::setVue </td>
           <td>(</td>
           <td class="paramtype">QString&#160;</td>
-          <td class="paramname"><em>nom</em></td><td>)</td>
+          <td class="paramname"><em>nom</em> = <code>&quot;VueAccueil&quot;</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -191,7 +195,7 @@ Fonctions membres publiques</h2></td></tr>
   </dd>
 </dl>
 
-<p>Définition à la ligne <a class="el" href="qwitk_8cpp_source.html#l00018">18</a> du fichier <a class="el" href="qwitk_8cpp_source.html">qwitk.cpp</a>.</p>
+<p>Définition à la ligne <a class="el" href="qwitk_8cpp_source.html#l00020">20</a> du fichier <a class="el" href="qwitk_8cpp_source.html">qwitk.cpp</a>.</p>
 
 </div>
 </div>
@@ -202,7 +206,7 @@ Fonctions membres publiques</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Lundi Novembre 12 2012 08:12:14 pour QWhereIsTheKey's++ par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Jeudi Novembre 15 2012 23:18:11 pour QWhereIsTheKey's++ par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

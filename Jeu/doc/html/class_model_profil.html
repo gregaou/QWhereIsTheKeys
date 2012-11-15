@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">QWhereIsTheKey&#39;s++
-   &#160;<span id="projectnumber">v 1.x</span>
+   &#160;<span id="projectnumber">v 2.x</span>
    </div>
   </td>
  </tr>
@@ -71,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Espaces de nommage</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Espaces de nommage</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -111,12 +111,40 @@ Fonctions membres publiques</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_profil.html#a5e6c34d7b64207a062531842b49456da">ModelProfil</a> ()</td></tr>
 <tr class="memdesc:a5e6c34d7b64207a062531842b49456da"><td class="mdescLeft">&#160;</td><td class="mdescRight">ConstructeurConstructeur de la classe <a class="el" href="class_model_profil.html" title="Structure de donnée représentant une collection de profils de joueurs.">ModelProfil</a>. <br/></td></tr>
 <tr class="separator:a5e6c34d7b64207a062531842b49456da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad51d48a9898859f72ab367c9479a433"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad51d48a9898859f72ab367c9479a433"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>rowCount</b> (const QModelIndex &amp;parent=QModelIndex()) const </td></tr>
+<tr class="memitem:a19e8c81f4af7db0a722b8974f338ea8e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a19e8c81f4af7db0a722b8974f338ea8e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_profil.html#a19e8c81f4af7db0a722b8974f338ea8e">~ModelProfil</a> ()</td></tr>
+<tr class="memdesc:a19e8c81f4af7db0a722b8974f338ea8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">DesstructeurDesstructeur de la classe <a class="el" href="class_model_profil.html" title="Structure de donnée représentant une collection de profils de joueurs.">ModelProfil</a>. <br/></td></tr>
+<tr class="separator:a19e8c81f4af7db0a722b8974f338ea8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7603e464ac32273b8aeb2dc709e69db2"><td class="memItemLeft" align="right" valign="top">QList&lt; <a class="el" href="class_profil.html">Profil</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_profil.html#a7603e464ac32273b8aeb2dc709e69db2">chargerProfils</a> (QString urlFichier)</td></tr>
+<tr class="memdesc:a7603e464ac32273b8aeb2dc709e69db2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne les profils joueur.  <a href="#a7603e464ac32273b8aeb2dc709e69db2"></a><br/></td></tr>
+<tr class="separator:a7603e464ac32273b8aeb2dc709e69db2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad51d48a9898859f72ab367c9479a433"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_profil.html#aad51d48a9898859f72ab367c9479a433">rowCount</a> (const QModelIndex &amp;parent=QModelIndex()) const </td></tr>
+<tr class="memdesc:aad51d48a9898859f72ab367c9479a433"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compte le nombre de profil.  <a href="#aad51d48a9898859f72ab367c9479a433"></a><br/></td></tr>
 <tr class="separator:aad51d48a9898859f72ab367c9479a433"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b5a73a121e3aee306e506406989eaad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b5a73a121e3aee306e506406989eaad"></a>
-QVariant&#160;</td><td class="memItemRight" valign="bottom"><b>data</b> (const QModelIndex &amp;index, int role) const </td></tr>
-<tr class="separator:a4b5a73a121e3aee306e506406989eaad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34800eaa80d231f9ab044b2eee2a0772"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_profil.html#a34800eaa80d231f9ab044b2eee2a0772">columnCount</a> (const QModelIndex &amp;parent) const </td></tr>
+<tr class="memdesc:a34800eaa80d231f9ab044b2eee2a0772"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compte le nombre de donnée d'un profil.  <a href="#a34800eaa80d231f9ab044b2eee2a0772"></a><br/></td></tr>
+<tr class="separator:a34800eaa80d231f9ab044b2eee2a0772"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb2037cbfbb7d3a2355a3097f9d2ece0"><td class="memItemLeft" align="right" valign="top">QVariant&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_profil.html#acb2037cbfbb7d3a2355a3097f9d2ece0">data</a> (const QModelIndex &amp;index, int role=Qt::DisplayRole) const </td></tr>
+<tr class="memdesc:acb2037cbfbb7d3a2355a3097f9d2ece0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne la donnée stockée à index.  <a href="#acb2037cbfbb7d3a2355a3097f9d2ece0"></a><br/></td></tr>
+<tr class="separator:acb2037cbfbb7d3a2355a3097f9d2ece0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fc575608f96df1ce2a7796acf131203"><td class="memItemLeft" align="right" valign="top">QVariant&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_profil.html#a2fc575608f96df1ce2a7796acf131203">headerData</a> (int section, Qt::Orientation orientation, int role) const </td></tr>
+<tr class="memdesc:a2fc575608f96df1ce2a7796acf131203"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne le nom de la section.  <a href="#a2fc575608f96df1ce2a7796acf131203"></a><br/></td></tr>
+<tr class="separator:a2fc575608f96df1ce2a7796acf131203"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ea0334cbabd26f4df13d2099b330fa4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_profil.html#a7ea0334cbabd26f4df13d2099b330fa4">insertRow</a> (int row, const QModelIndex &amp;parent)</td></tr>
+<tr class="memdesc:a7ea0334cbabd26f4df13d2099b330fa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insère un nouveau profil vide.  <a href="#a7ea0334cbabd26f4df13d2099b330fa4"></a><br/></td></tr>
+<tr class="separator:a7ea0334cbabd26f4df13d2099b330fa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a757bdfd750d5fd7c4f04f82dc259b322"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_profil.html#a757bdfd750d5fd7c4f04f82dc259b322">removeRow</a> (int row, const QModelIndex &amp;parent)</td></tr>
+<tr class="memdesc:a757bdfd750d5fd7c4f04f82dc259b322"><td class="mdescLeft">&#160;</td><td class="mdescRight">Supprime un profil d'index row.  <a href="#a757bdfd750d5fd7c4f04f82dc259b322"></a><br/></td></tr>
+<tr class="separator:a757bdfd750d5fd7c4f04f82dc259b322"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a175ae5e8735c6e0587d5d888680cafbe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_profil.html#a175ae5e8735c6e0587d5d888680cafbe">setData</a> (const QModelIndex &amp;index, const QVariant &amp;value, int role)</td></tr>
+<tr class="memdesc:a175ae5e8735c6e0587d5d888680cafbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecte un nom a un profil d'index index.  <a href="#a175ae5e8735c6e0587d5d888680cafbe"></a><br/></td></tr>
+<tr class="separator:a175ae5e8735c6e0587d5d888680cafbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a181a9b32c66c116bf8da86ddeb0bcb03"><td class="memItemLeft" align="right" valign="top">QList&lt; <a class="el" href="class_profil.html">Profil</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_profil.html#a181a9b32c66c116bf8da86ddeb0bcb03">getList</a> () const </td></tr>
+<tr class="memdesc:a181a9b32c66c116bf8da86ddeb0bcb03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne la liste des profils.  <a href="#a181a9b32c66c116bf8da86ddeb0bcb03"></a><br/></td></tr>
+<tr class="separator:a181a9b32c66c116bf8da86ddeb0bcb03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e06eaf9169e27fd4149955c1dbf0588"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_profil.html">Profil</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_profil.html#a8e06eaf9169e27fd4149955c1dbf0588">getProfil</a> (int i) const </td></tr>
+<tr class="memdesc:a8e06eaf9169e27fd4149955c1dbf0588"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne le profil à l'indice i si il existe sinon un profil vide.  <a href="#a8e06eaf9169e27fd4149955c1dbf0588"></a><br/></td></tr>
+<tr class="separator:a8e06eaf9169e27fd4149955c1dbf0588"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Amis</h2></td></tr>
@@ -137,14 +165,292 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>kill</b> ()</t
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Structure de donnée représentant une collection de profils de joueurs. </p>
 
-<p>Définition à la ligne <a class="el" href="model__profil_8h_source.html#l00018">18</a> du fichier <a class="el" href="model__profil_8h_source.html">model_profil.h</a>.</p>
-</div><hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
+<p>Définition à la ligne <a class="el" href="model__profil_8h_source.html#l00019">19</a> du fichier <a class="el" href="model__profil_8h_source.html">model_profil.h</a>.</p>
+</div><h2 class="groupheader">Documentation des fonctions membres</h2>
+<a class="anchor" id="a7603e464ac32273b8aeb2dc709e69db2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QList&lt; <a class="el" href="class_profil.html">Profil</a> &gt; ModelProfil::chargerProfils </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>urlFichier</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retourne les profils joueur. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">urlFichier</td><td>Localisation du fichier </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Liste des profils joueurs</dd></dl>
+<p>Desstructeur de la classe <a class="el" href="class_model_profil.html" title="Structure de donnée représentant une collection de profils de joueurs.">ModelProfil</a> </p>
+
+</div>
+</div>
+<a class="anchor" id="a34800eaa80d231f9ab044b2eee2a0772"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ModelProfil::columnCount </td>
+          <td>(</td>
+          <td class="paramtype">const QModelIndex &amp;&#160;</td>
+          <td class="paramname"><em>parent</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compte le nombre de donnée d'un profil. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Nombre de donnée d'un profil </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="model__profil_8cpp_source.html#l00014">14</a> du fichier <a class="el" href="model__profil_8cpp_source.html">model_profil.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acb2037cbfbb7d3a2355a3097f9d2ece0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVariant ModelProfil::data </td>
+          <td>(</td>
+          <td class="paramtype">const QModelIndex &amp;&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>role</em> = <code>Qt::DisplayRole</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retourne la donnée stockée à index. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Donnée stockée à index </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="model__profil_8cpp_source.html#l00020">20</a> du fichier <a class="el" href="model__profil_8cpp_source.html">model_profil.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a181a9b32c66c116bf8da86ddeb0bcb03"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QList&lt; <a class="el" href="class_profil.html">Profil</a> &gt; ModelProfil::getList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retourne la liste des profils. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Liste des profils </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="model__profil_8cpp_source.html#l00085">85</a> du fichier <a class="el" href="model__profil_8cpp_source.html">model_profil.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8e06eaf9169e27fd4149955c1dbf0588"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_profil.html">Profil</a> ModelProfil::getProfil </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retourne le profil à l'indice i si il existe sinon un profil vide. </p>
+<dl class="section return"><dt>Renvoie</dt><dd><a class="el" href="class_profil.html" title="Structure de donnée représentant un profil de joueur.">Profil</a> à la position i </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="model__profil_8cpp_source.html#l00090">90</a> du fichier <a class="el" href="model__profil_8cpp_source.html">model_profil.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2fc575608f96df1ce2a7796acf131203"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVariant ModelProfil::headerData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>section</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Qt::Orientation&#160;</td>
+          <td class="paramname"><em>orientation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>role</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retourne le nom de la section. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Nom de la section (Nom) </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="model__profil_8cpp_source.html#l00031">31</a> du fichier <a class="el" href="model__profil_8cpp_source.html">model_profil.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7ea0334cbabd26f4df13d2099b330fa4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ModelProfil::insertRow </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QModelIndex &amp;&#160;</td>
+          <td class="paramname"><em>parent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Insère un nouveau profil vide. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Vrai si réussite | Faux si echec </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="model__profil_8cpp_source.html#l00049">49</a> du fichier <a class="el" href="model__profil_8cpp_source.html">model_profil.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a757bdfd750d5fd7c4f04f82dc259b322"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ModelProfil::removeRow </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QModelIndex &amp;&#160;</td>
+          <td class="paramname"><em>parent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Supprime un profil d'index row. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Vrai si réussite | Faux si echec </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="model__profil_8cpp_source.html#l00061">61</a> du fichier <a class="el" href="model__profil_8cpp_source.html">model_profil.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aad51d48a9898859f72ab367c9479a433"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ModelProfil::rowCount </td>
+          <td>(</td>
+          <td class="paramtype">const QModelIndex &amp;&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>QModelIndex()</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compte le nombre de profil. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Nombre de profil </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="model__profil_8cpp_source.html#l00008">8</a> du fichier <a class="el" href="model__profil_8cpp_source.html">model_profil.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a175ae5e8735c6e0587d5d888680cafbe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ModelProfil::setData </td>
+          <td>(</td>
+          <td class="paramtype">const QModelIndex &amp;&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QVariant &amp;&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>role</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affecte un nom a un profil d'index index. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Vrai si réussite | Faux si echec </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="model__profil_8cpp_source.html#l00071">71</a> du fichier <a class="el" href="model__profil_8cpp_source.html">model_profil.cpp</a>.</p>
+
+</div>
+</div>
+<hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
 <li>D:/Cours/GL/QWhereIsTheKeys/Jeu/sources/headers/<a class="el" href="model__profil_8h_source.html">model_profil.h</a></li>
+<li>D:/Cours/GL/QWhereIsTheKeys/Jeu/sources/<a class="el" href="model__profil_8cpp_source.html">model_profil.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Lundi Novembre 12 2012 08:12:14 pour QWhereIsTheKey's++ par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Jeudi Novembre 15 2012 23:18:11 pour QWhereIsTheKey's++ par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

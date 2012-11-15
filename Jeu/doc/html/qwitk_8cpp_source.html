@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">QWhereIsTheKey&#39;s++
-   &#160;<span id="projectnumber">v 1.x</span>
+   &#160;<span id="projectnumber">v 2.x</span>
    </div>
   </td>
  </tr>
@@ -68,7 +68,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Espaces de nommage</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Espaces de nommage</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -93,25 +93,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00004"></a><span class="lineno"><a class="code" href="class_q_w_i_t_k.html#afeca3d7ed275dfebb4aa861c959ca462">    4</a></span>&#160;<a class="code" href="class_q_w_i_t_k.html#afeca3d7ed275dfebb4aa861c959ca462" title="Constructeur.">QWITK::QWITK</a>(QWidget *parent) :</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    QMainWindow(parent),</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    _ui(new Ui::<a class="code" href="class_q_w_i_t_k.html" title="Classe de la fenêtre principale.">QWITK</a>),</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    _vueFactory(<a class="code" href="class_vue_factory.html" title="Classe fabrique pour la gestion des vues.">VueFactory</a>::<a class="code" href="class_singleton.html#adb8a5fa1307802df267e0ab3497f0a0c" title="Permet l&#39;obtention de l&#39;instance de la classe T.">getInstance</a>())</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    _ui-&gt;setupUi(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_q_w_i_t_k.html#ad7da5b1f889df5f9fffc614be617c839" title="Permet le changement de la vue actuelle.">setVue</a>(<span class="stringliteral">&quot;dsfsd&quot;</span>);</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="code" href="class_q_w_i_t_k.html#a568ec2159568401b6a5b0045cd3eba7b">   13</a></span>&#160;<a class="code" href="class_q_w_i_t_k.html#a568ec2159568401b6a5b0045cd3eba7b" title="Destructeur.">QWITK::~QWITK</a>()</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">delete</span> _ui;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="class_q_w_i_t_k.html#ad7da5b1f889df5f9fffc614be617c839">   18</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_q_w_i_t_k.html#ad7da5b1f889df5f9fffc614be617c839" title="Permet le changement de la vue actuelle.">QWITK::setVue</a>(QString nom)</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    setCentralWidget(_vueFactory-&gt;<a class="code" href="class_vue_factory.html#ad9504580b3aab73a8eb2992c3d3f9a14" title="Renvoi l&#39;instance d&#39;une vue en fonction d&#39;un QString.">getVue</a>(nom,<span class="keyword">this</span>));</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    _vueFactory(<a class="code" href="class_vue_factory.html" title="Classe fabrique pour la gestion des vues.">VueFactory</a>::getInstance()),</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    _vue(0)</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    _ui-&gt;setupUi(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_q_w_i_t_k.html#a7f87afb36012b1a7ee8a0af0451a74f0" title="Permet le changement de la vue actuelle.">setVue</a>();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="code" href="class_q_w_i_t_k.html#a568ec2159568401b6a5b0045cd3eba7b">   15</a></span>&#160;<a class="code" href="class_q_w_i_t_k.html#a568ec2159568401b6a5b0045cd3eba7b" title="Destructeur.">QWITK::~QWITK</a>()</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">delete</span> _ui;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="class_q_w_i_t_k.html#a7f87afb36012b1a7ee8a0af0451a74f0">   20</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_q_w_i_t_k.html#a7f87afb36012b1a7ee8a0af0451a74f0" title="Permet le changement de la vue actuelle.">QWITK::setVue</a>(QString nom)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">if</span>(_vue) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        _vue-&gt;deleteLater();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        _vue = 0;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    _vue = _vueFactory-&gt;<a class="code" href="class_vue_factory.html#ad9504580b3aab73a8eb2992c3d3f9a14" title="Renvoi l&#39;instance d&#39;une vue en fonction d&#39;un QString.">getVue</a>(nom,<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_q_w_i_t_k.html#a6e28421b860dc00742f4fa341fb0e2b1" title="Connecte la vue actuelle avec le slot setVue(QString nom)">connexionVue</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    setCentralWidget(_vue);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="class_q_w_i_t_k.html#a6e28421b860dc00742f4fa341fb0e2b1">   31</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_q_w_i_t_k.html#a6e28421b860dc00742f4fa341fb0e2b1" title="Connecte la vue actuelle avec le slot setVue(QString nom)">QWITK::connexionVue</a>()</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    connect(_vue,SIGNAL(<a class="code" href="class_q_w_i_t_k.html#a7f87afb36012b1a7ee8a0af0451a74f0" title="Permet le changement de la vue actuelle.">setVue</a>(QString)),<span class="keyword">this</span>,SLOT(<a class="code" href="class_q_w_i_t_k.html#a7f87afb36012b1a7ee8a0af0451a74f0" title="Permet le changement de la vue actuelle.">setVue</a>(QString)));</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Lundi Novembre 12 2012 08:12:14 pour QWhereIsTheKey's++ par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Jeudi Novembre 15 2012 23:18:10 pour QWhereIsTheKey's++ par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>
