@@ -1,6 +1,7 @@
 #include "sources/headers/vue_menu_jeu.h"
 #include "ui_vue_menu_jeu.h"
 
+
 #include <QDebug>
 
 VueMenuJeu::VueMenuJeu(QWidget *parent) :
@@ -20,23 +21,29 @@ VueMenuJeu::~VueMenuJeu()
 
 void VueMenuJeu::onClicBoutonNouvellePartie()
 {
-	emit setVue("VueNouvellePartie");
+	emit setVue("VueNouveauJeu");
 }
 
 void VueMenuJeu::onClicBoutonChargerPartie()
 {
-	emit setVue("VueChargerPartie");
+	//emit setVue("VueChargerPartie");
 }
 
 void VueMenuJeu::onClicBoutonCreerPartieMultijoueur()
 {
-	emit setVue("VueCreerPartieEnLigne");
+	emit setVue("VueNouveauJeu");
 }
 
 void VueMenuJeu::onClicBoutonRejoindrePartieMultijoueur()
 {
-	emit setVue("VueRejoindrePartieEnLigne");
+	emit setVue("VueNouveauJeu");
 }
+
+void VueMenuJeu::onClicBoutonQuitterMenuJeu()
+{
+	emit setVue("VueAccueil");
+}
+
 
 void VueMenuJeu::connexionAffichage()
 {
@@ -45,9 +52,11 @@ void VueMenuJeu::connexionAffichage()
 	connect(_ui->boutonChargerPartie,SIGNAL(clicked()),this,
 					SLOT(onClicBoutonChargerPartie()));
 	connect(_ui->boutonCreerPartieMultijoueur,SIGNAL(clicked()),this,
-					SLOT(onClicCreerPartieMultijoueur()));
-	connect(_ui->boutonRejoindrePartieMulti,SIGNAL(clicked()),this,
+					SLOT(onClicBoutonCreerPartieMultijoueur()));
+	connect(_ui->boutonRejoindrePartieMultijoueur,SIGNAL(clicked()),this,
 					SLOT(onClicBoutonRejoindrePartieMultijoueur()));
+	connect(_ui->boutonQuitterMenuJeu,SIGNAL(clicked()),this,
+					SLOT(onClicBoutonQuitterMenuJeu()));
 }
 
 QString VueMenuJeu::toString()

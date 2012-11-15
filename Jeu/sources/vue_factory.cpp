@@ -17,5 +17,8 @@ Vue* VueFactory::getVue(QString nom, QWidget *parent)
 	else if(nom == "VueMenuJeu")
 		return new VueMenuJeu(parent);
 
+	else if(nom == "VueNouveauJeu")
+		return new VueNouveauJeu(parent);
+
 	return new VueAccueil(parent);
 }

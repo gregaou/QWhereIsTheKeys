@@ -79,9 +79,16 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="boutonRejoindrePartieMulti">
+        <widget class="QPushButton" name="boutonRejoindrePartieMultijoueur">
          <property name="text">
           <string>Rejoindre Partie Multijoueur</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="boutonQuitterMenuJeu">
+         <property name="text">
+          <string>Retour</string>
          </property>
         </widget>
        </item>

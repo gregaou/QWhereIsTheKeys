@@ -3,7 +3,7 @@
  * \brief	  Classe vue menu jeu
  * \author    Société de Développement de Projets Informatique
  * \version   1.0
- * \date      11/11/12
+ * \date      15/11/12
  */
 
 
@@ -11,6 +11,8 @@
 #define VUE_MENU_JEU_H
 
 #include "sources/headers/vue.h"
+#include "sources/headers/vue_accueil.h"
+#include "sources/headers/vue_nouveau_jeu.h"
 
 /** \namespace Ui
  *
@@ -41,7 +43,7 @@ public:
 		*  \brief VueMenuJeu
 		*	 \fn    ~VueMenuJeu ()
 		*
-		*  Destructeur de la classe VueAccueil
+		*  Destructeur de la classe VueMenuJeu
 		*/
 	~VueMenuJeu();
 
@@ -73,6 +75,11 @@ private slots:
 		*	 \fn    void onClicBoutonRejoindrePartieEnLigne();
 		*/
 	void onClicBoutonRejoindrePartieMultijoueur();
+	/**
+		*  \brief Action lorsque l'on clic sur le bouton Quitter Menu Jeu
+		*	 \fn    void onClicQuitterMenuJeu();
+		*/
+	void onClicBoutonQuitterMenuJeu();
 
 private:
 	Ui::VueMenuJeu *_ui; /**< Interface graphique liée à la classe */
