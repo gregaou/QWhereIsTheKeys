@@ -37,9 +37,9 @@ public:
 
 	/**
 		*  \brief Renvoi le nom de la vue
-		*	 \fn    virtual QString toString() = 0;
+		*	 \fn    static QString toString();
 		*/
-	virtual QString toString() = 0;
+	static QString toString();
 
 signals:
 	/**

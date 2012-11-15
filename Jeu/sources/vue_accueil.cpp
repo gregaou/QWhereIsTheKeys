@@ -19,17 +19,17 @@ VueAccueil::~VueAccueil()
 
 void VueAccueil::onClicBoutonNouveauProfil()
 {
-	emit setVue("VueProfilNouveau");
+	emit setVue(VueProfilNouveau::toString());
 }
 
 void VueAccueil::onClicBoutonChargerProfil()
 {
-	emit setVue("VueProfilCharger");
+	emit setVue(VueProfilCharger::toString());
 }
 
 void VueAccueil::onClicBoutonSupprimerProfil()
 {
-	emit setVue("VueProfilSupprimer");
+	emit setVue(VueProfilSupprimer::toString());
 }
 
 void VueAccueil::connexionAffichage()

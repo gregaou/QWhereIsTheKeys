@@ -17,7 +17,7 @@ VueProfilSupprimer::~VueProfilSupprimer()
 
 void VueProfilSupprimer::onClicBoutonRetour()
 {
-	emit setVue("VueAccueil");
+	emit setVue(VueAccueil::toString());
 }
 
 void VueProfilSupprimer::onClicBoutonSupprimer()

@@ -17,7 +17,7 @@ VueProfilNouveau::~VueProfilNouveau()
 
 void VueProfilNouveau::onClicBoutonAnnuler()
 {
-	emit setVue("VueAccueil");
+	emit setVue(VueAccueil::toString());
 }
 
 void VueProfilNouveau::onClicBoutonValider()
@@ -45,7 +45,7 @@ void VueProfilNouveau::ajouterProfil(QString nom)
 
 		QModelIndex index = _profils->index(list.size());
 		_profils->setData(index,nom,Qt::EditRole);
-		emit setVue("VueMenuJeu");
+		emit setVue(VueMenuJeu::toString());
 	}
 	else
 	{

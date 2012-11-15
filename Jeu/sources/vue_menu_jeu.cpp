@@ -21,27 +21,27 @@ VueMenuJeu::~VueMenuJeu()
 
 void VueMenuJeu::onClicBoutonNouvellePartie()
 {
-	emit setVue("VueNouveauJeu");
+	emit setVue(VueNouveauJeu::toString());
 }
 
 void VueMenuJeu::onClicBoutonChargerPartie()
 {
-	//emit setVue("VueChargerPartie");
+	//emit setVue(VueChargerPartie::toString());
 }
 
 void VueMenuJeu::onClicBoutonCreerPartieMultijoueur()
 {
-	emit setVue("VueNouveauJeu");
+	emit setVue(VueNouveauJeu::toString());
 }
 
 void VueMenuJeu::onClicBoutonRejoindrePartieMultijoueur()
 {
-	emit setVue("VueNouveauJeu");
+	emit setVue(VueNouveauJeu::toString());
 }
 
 void VueMenuJeu::onClicBoutonQuitterMenuJeu()
 {
-	emit setVue("VueAccueil");
+	emit setVue(VueAccueil::toString());
 }
 
 

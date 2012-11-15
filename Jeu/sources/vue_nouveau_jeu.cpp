@@ -20,7 +20,7 @@ VueNouveauJeu::~VueNouveauJeu()
 
 void VueNouveauJeu::onClicBoutonRetour()
 {
-	emit setVue("VueMenuJeu");
+	emit setVue(VueMenuJeu::toString());
 }
 
 

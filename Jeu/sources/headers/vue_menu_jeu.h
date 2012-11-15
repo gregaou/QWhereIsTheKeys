@@ -49,9 +49,9 @@ public:
 
 	/**
 		*  \brief Renvoi le nom de la vue
-		*	 \fn    QString toString();
+		*	 \fn    static QString toString();
 		*/
-	QString toString();
+	static QString toString();
 
 private slots:
 	/**
