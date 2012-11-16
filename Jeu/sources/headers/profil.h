@@ -10,6 +10,7 @@
 
 #include <QMap>
 #include <QString>
+#include <QStringList>
 /**
  * \class Profil
  * \brief Structure de donnée représentant un profil de joueur.
@@ -19,6 +20,7 @@ class Profil
 private:
 	QString _nom; /**< Nom du profil du joueur */
 	QMap<int, int> _resultatsNiveaux; /**< Liste des temps réalisés sur les niveaux déjà complétés */
+	static const QString _sep; /**< Séparateur */
 public:
 	/**
 		*  \brief Constructeur
@@ -77,8 +79,20 @@ public:
 		*  \brief Opérateur d'égalité
 		*	 \fn    bool operator== (const Profil & p)
 		*  \param p Profil à comparer
+		*  \return Vrai si égalité sinon Faux
 		*/
 	bool operator== (const Profil & p);
+	/**
+		*  \brief Créer un profil à partir d'une chaine de caractères
+		*	 \fn    void fromString(QString str)
+		*  \param str Chaine de caractères représentant un profil et ses scores, sous la forme "<nom_du_profil><séparateur><idNiveau><temps><séparateur><idNiveau><temps>..."
+		*/
+	void fromString(QString str);
+	/**
+		*  \brief Créer une chaine de caractères sous la forme "<nom_du_profil><séparateur><idNiveau><séparateur><temps><séparateur><idNiveau><séparateur><temps>..." à partir d'un Profil
+		*	 \fn    QString toString()
+		*/
+	QString toString();
 };
 
 #endif // PROFIL_H

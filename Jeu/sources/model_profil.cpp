@@ -1,8 +1,72 @@
+#include <QFile>
 #include "sources/headers/model_profil.h"
+
+const QString ModelProfil::UrlFichierSauvegarde = "sauvegarde/sauv.txt";
 
 ModelProfil::ModelProfil() :
 	QAbstractListModel()
 {
+	if(!ModelProfil::chargerProfils())
+	{
+		/**
+			*  \todo Warning : Fichier non disponible !
+			*/
+	}
+}
+
+bool ModelProfil::chargerProfils()
+{
+
+	QFile file(ModelProfil::UrlFichierSauvegarde);
+	if(!file.open(QIODevice::ReadOnly | QIODevice::Text))
+		return false;
+	QTextStream in(& file);
+	Profil profil;
+	QModelIndex index;
+	while(!file.atEnd())
+	{
+		profil.fromString(in.readLine());
+		index = this->index(this->rowCount());
+		this->insertRow(this->rowCount(), QModelIndex());
+		this->setData(index, profil.getNom(), Qt::EditRole);
+		_profils.push_back(profil);
+	}
+	file.close();
+	return true;
+}
+
+bool ModelProfil::chargerProfil(QString nom)
+{
+	QFile file(ModelProfil::UrlFichierSauvegarde);
+	if(!file.open(QIODevice::ReadOnly | QIODevice::Text))
+		return false;
+	QTextStream in(&file);
+	Profil profil;
+	QModelIndex index;
+	while(!file.atEnd())
+	{
+		profil.fromString(in.readLine());
+		if(profil.getNom() == nom)
+		{
+			index = this->index(this->rowCount());
+			this->insertRow(this->rowCount(), QModelIndex());
+			this->setData(index, nom, Qt::EditRole);
+		}
+		_profils.push_back(profil);
+	}
+	file.close();
+	return true;
+}
+
+bool ModelProfil::sauverProfil(Profil profil)
+{
+	QFile file(ModelProfil::UrlFichierSauvegarde);
+	if(!file.open(QIODevice::WriteOnly | QIODevice::Text))
+		return false;
+	QTextStream out(&file);
+	out << profil.toString() << "\n";
+	file.close();
+	return (out.status() == QTextStream::WriteFailed);
 }
 
 int ModelProfil::rowCount(const QModelIndex &parent) const
@@ -43,8 +107,6 @@ QVariant ModelProfil::headerData(int section, Qt::Orientation orientation,
 	}
 	return QVariant();
 }
-
-
 
 bool ModelProfil::insertRow(int row, const QModelIndex &parent)
 {

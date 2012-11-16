@@ -22,6 +22,7 @@ class ModelProfil : public Singleton<ModelProfil>, public QAbstractListModel
 private:
 	QList<Profil> _profils; /**< Collection de profils de joueurs */
 public:
+	static const QString UrlFichierSauvegarde; /**< Url du fichire de sauvegarde */
 	/**
 		*  \brief Constructeur
 		*	 \fn    ModelProfil()
@@ -30,21 +31,32 @@ public:
 		*/
 	ModelProfil();
 	/**
-		*  \brief Desstructeur
+		*  \brief Destructeur
 		*	 \fn    ~ModelProfil()
 		*
-		*  Desstructeur de la classe ModelProfil
+		*  Destructeur de la classe ModelProfil
 		*/
 	~ModelProfil() {}
 	/**
 		*  \brief Retourne les profils joueur
-		*	 \fn    QList<Profil> chargerProfils(QString urlFichier)
-		*	 \param urlFichier Localisation du fichier
-		*  \return Liste des profils joueurs
-		*
-		*  Desstructeur de la classe ModelProfil
+		*	 \fn    bool chargerProfils()
+		*	 \return Vrai le fichier de sauvegarde existe sinon Faux
 		*/
-	QList<Profil> chargerProfils(QString urlFichier);
+	bool chargerProfils();
+	/**
+		*  \brief Retourne le profil joueur d'identifiant nom
+		*	 \fn    bool chargerProfil(QString nom)
+		*  \param nom Chaine de caractère représentant le nom du profil à charger
+		*	 \return Vrai le profil existe sinon Faux
+		*/
+	bool chargerProfil(QString nom);
+	/**
+		*  \brief S
+		*	 \fn    bool sauverProfil(Profil profil)
+		*  \param profil Profil à sauvegarder
+		*	 \return Vrai le profil est sauvegardé sinon Faux
+		*/
+	bool sauverProfil(Profil profil);
 	/**
 		*  \brief Compte le nombre de profil
 		*	 \fn    int rowCount(const QModelIndex & parent = QModelIndex()) const
