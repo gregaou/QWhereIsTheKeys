@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">QWhereIsTheKey&#39;s++
-   &#160;<span id="projectnumber">v 1.x</span>
+   &#160;<span id="projectnumber">v 2.x</span>
    </div>
   </td>
  </tr>
@@ -68,7 +68,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Espaces de nommage</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Espaces de nommage</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -99,20 +99,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    QString _nom; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    QMap&lt;int, int&gt; _resultatsNiveaux; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_profil.html#a5f2a5bfdee888e6f282356e330d185ae" title="Constructeur.">Profil</a>(QString nom);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    QString <a class="code" href="class_profil.html#a14d2e1976d9e4f5eecfea9347a7647b0" title="Accesseur de la donnée membre _nom.">getNom</a>();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    QMap&lt;int,int&gt; <a class="code" href="class_profil.html#a2d65262724ec3b5d7e14d7ce0825218d" title="Accesseur de la donnée membre _resultatsNiveaux.">getResultatsNiveaux</a>();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_profil.html#aa2a65e3784c78f6f6dacb8a71638f3af" title="Accesseur de la donnée temps de _resultatsNiveau en fonction du niveau.">getResultat</a>(<span class="keywordtype">int</span> idNiveau);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_profil.html#a0643088d0c70d385a2b69cebf0dab41e" title="Calcule le temps total de tout les niveaux.">getTempsTotal</a>();</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_profil.html#ac08ca4441c6c1e101098d298f107e67b" title="Mutateur de la donnée membre _nom.">setNom</a>(QString nom);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_profil.html#a1737b68d6482858b25002e4f3ef3af37" title="Ajoute un couple (identifiant de niveau)/(temps pour terminer le niveau) dans la liste des résultats...">ajouterResultatNiveau</a>(<span class="keywordtype">int</span> idNiveau, <span class="keywordtype">int</span> temps);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;};</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif // PROFIL_H</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_profil.html#a9cf45b5f8ae024e79eaeb2c4639e2e1e" title="ConstructeurConstructeur de la classe Profil.">Profil</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_profil.html#a9cf45b5f8ae024e79eaeb2c4639e2e1e" title="ConstructeurConstructeur de la classe Profil.">Profil</a>(QString nom);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    QString <a class="code" href="class_profil.html#a90c713a16d507a760202148ce8fab2e2" title="Accesseur de la donnée membre _nom.">getNom</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    QMap&lt;int,int&gt; <a class="code" href="class_profil.html#a6c068d030eaa145bc6019e0bdc496ac1" title="Accesseur de la donnée membre _resultatsNiveaux.">getResultatsNiveaux</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_profil.html#aa2a65e3784c78f6f6dacb8a71638f3af" title="Accesseur de la donnée temps de _resultatsNiveau en fonction du niveau.">getResultat</a>(<span class="keywordtype">int</span> idNiveau);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_profil.html#a0643088d0c70d385a2b69cebf0dab41e" title="Calcule le temps total de tout les niveaux.">getTempsTotal</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_profil.html#ac08ca4441c6c1e101098d298f107e67b" title="Mutateur de la donnée membre _nom.">setNom</a>(QString nom);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_profil.html#a1737b68d6482858b25002e4f3ef3af37" title="Ajoute un couple (identifiant de niveau)/(temps pour terminer le niveau) dans la liste des résultats...">ajouterResultatNiveau</a>(<span class="keywordtype">int</span> idNiveau, <span class="keywordtype">int</span> temps);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_profil.html#af256d9a080ba8721032502303f65c887" title="Opérateur d&#39;égalité">operator== </a>(<span class="keyword">const</span> <a class="code" href="class_profil.html" title="Structure de donnée représentant un profil de joueur.">Profil</a> &amp; p);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;};</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#endif // PROFIL_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Lundi Novembre 12 2012 08:12:14 pour QWhereIsTheKey's++ par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Jeudi Novembre 15 2012 23:18:10 pour QWhereIsTheKey's++ par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

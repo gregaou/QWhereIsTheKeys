@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">QWhereIsTheKey&#39;s++
-   &#160;<span id="projectnumber">v 1.x</span>
+   &#160;<span id="projectnumber">v 2.x</span>
    </div>
   </td>
  </tr>
@@ -68,7 +68,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Espaces de nommage</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Espaces de nommage</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -91,12 +91,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno"><a class="code" href="class_vue_factory.html#ad9504580b3aab73a8eb2992c3d3f9a14">    3</a></span>&#160;<a class="code" href="class_vue.html" title="Classe abstraite pour la gestion des vues.">Vue</a>* <a class="code" href="class_vue_factory.html#ad9504580b3aab73a8eb2992c3d3f9a14" title="Renvoi l&#39;instance d&#39;une vue en fonction d&#39;un QString.">VueFactory::getVue</a>(QString nom, QWidget *parent)</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="class_vue_accueil.html" title="Classe de la vue accueil.">VueAccueil</a>(parent);</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;}</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keywordflow">if</span>(nom == <a class="code" href="class_vue_accueil.html#ac5513d2577a58ad6b64e895d400eca74" title="Renvoi le nom de la vue.">VueAccueil::toString</a>())</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="class_vue_accueil.html" title="Classe de la vue accueil.">VueAccueil</a>(parent);</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(nom == <a class="code" href="class_vue_profil_nouveau.html#abf918f79519c310af82f89e33538462e" title="Renvoi le nom de la vue.">VueProfilNouveau::toString</a>())</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="class_vue_profil_nouveau.html" title="Classe de la vue nouveau profil.">VueProfilNouveau</a>(parent);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(nom == <a class="code" href="class_vue_profil_charger.html#a245e87988d7a70b8f1f7673c04f7beef" title="Renvoi le nom de la vue.">VueProfilCharger::toString</a>())</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="class_vue_profil_charger.html" title="Classe de la vue charger profil.">VueProfilCharger</a>(parent);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(nom == <a class="code" href="class_vue_profil_supprimer.html#a819abd117ee5a9e29b66ffa666c7cb81" title="Renvoi le nom de la vue.">VueProfilSupprimer::toString</a>())</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="class_vue_profil_supprimer.html" title="Classe de la vue supprimer profil.">VueProfilSupprimer</a>(parent);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(nom == <a class="code" href="class_vue_menu_jeu.html#a5206ffd791a451c7c2d0437ab8274e91" title="Renvoi le nom de la vue.">VueMenuJeu::toString</a>())</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="class_vue_menu_jeu.html" title="Classe de la vue Menu Jeu.">VueMenuJeu</a>(parent);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(nom == <a class="code" href="class_vue_nouveau_jeu.html#af9dd3ad3c913852a48bd129a36ab1429" title="Renvoi le nom de la vue.">VueNouveauJeu::toString</a>())</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="class_vue_nouveau_jeu.html" title="Classe de la vue nouveau jeu.">VueNouveauJeu</a>(parent);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="class_vue_accueil.html" title="Classe de la vue accueil.">VueAccueil</a>(parent);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Lundi Novembre 12 2012 08:12:14 pour QWhereIsTheKey's++ par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Jeudi Novembre 15 2012 23:18:10 pour QWhereIsTheKey's++ par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

@@ -17,7 +17,7 @@ VueProfilCharger::~VueProfilCharger()
 
 void VueProfilCharger::onClicBoutonAnnuler()
 {
-	emit setVue("VueAccueil");
+	emit setVue(VueAccueil::toString());
 }
 
 

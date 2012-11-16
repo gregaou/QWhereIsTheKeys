@@ -1,6 +1,6 @@
 /**
- * \file	  vue_nouvelle_jeu.h
- * \brief	  Classe vue nouveau jeu
+ * \file	    vue_nouveau_jeu.h
+ * \brief	    Classe vue nouveau jeu
  * \author    Société de Développement de Projets Informatique
  * \version   1.0
  * \date      15/11/12
@@ -48,9 +48,9 @@ public:
 
 	/**
 		*  \brief Renvoi le nom de la vue
-		*	 \fn    QString toString();
+		*	 \fn    static QString toString();
 		*/
-	QString toString();
+	static QString toString();
 
 private slots:
 	/**

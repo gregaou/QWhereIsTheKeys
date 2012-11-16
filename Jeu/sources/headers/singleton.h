@@ -12,7 +12,7 @@
 #include <QDebug>
 
 /**
- * \class Singleton<T>
+ * \class Singleton
  * \brief Classe modèle pour la création de singletons
  */
 template <typename T>

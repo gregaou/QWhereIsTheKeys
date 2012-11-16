@@ -49,9 +49,9 @@ public:
 
 	/**
 		*  \brief Renvoi le nom de la vue
-		*	 \fn    QString toString();
+		*	 \fn    static QString toString();
 		*/
-	QString toString();
+	static QString toString();
 
 private slots:
 	/**
@@ -67,17 +67,17 @@ private slots:
 	void onClicBoutonChargerPartie();
 	/**
 		*  \brief Action lorsque l'on clic sur le bouton creer partie en ligne
-		*	 \fn    void onClicBoutonSupprimerProfil();
+		*	 \fn    void onClicBoutonCreerPartieMultijoueur();
 		*/
 	void onClicBoutonCreerPartieMultijoueur();
 	/**
 		*  \brief Action lorsque l'on clic sur le bouton rejoindre partie en ligne
-		*	 \fn    void onClicBoutonRejoindrePartieEnLigne();
+		*	 \fn    void onClicBoutonRejoindrePartieMultijoueur();
 		*/
 	void onClicBoutonRejoindrePartieMultijoueur();
 	/**
 		*  \brief Action lorsque l'on clic sur le bouton Quitter Menu Jeu
-		*	 \fn    void onClicQuitterMenuJeu();
+		*	 \fn    void onClicBoutonQuitterMenuJeu();
 		*/
 	void onClicBoutonQuitterMenuJeu();
 

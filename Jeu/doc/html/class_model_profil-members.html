@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">QWhereIsTheKey&#39;s++
-   &#160;<span id="projectnumber">v 1.x</span>
+   &#160;<span id="projectnumber">v 2.x</span>
    </div>
   </td>
  </tr>
@@ -71,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Espaces de nommage</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Espaces de nommage</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -89,18 +89,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
 <p>Liste complète des membres de <a class="el" href="class_model_profil.html">ModelProfil</a>, y compris les membres hérités :</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0"class="even"><td class="entry"><b>data</b>(const QModelIndex &amp;index, int role) const  (défini dans <a class="el" href="class_model_profil.html">ModelProfil</a>)</td><td class="entry"><a class="el" href="class_model_profil.html">ModelProfil</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_model_profil.html#a7603e464ac32273b8aeb2dc709e69db2">chargerProfils</a>(QString urlFichier)</td><td class="entry"><a class="el" href="class_model_profil.html">ModelProfil</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_model_profil.html#a34800eaa80d231f9ab044b2eee2a0772">columnCount</a>(const QModelIndex &amp;parent) const </td><td class="entry"><a class="el" href="class_model_profil.html">ModelProfil</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_model_profil.html#acb2037cbfbb7d3a2355a3097f9d2ece0">data</a>(const QModelIndex &amp;index, int role=Qt::DisplayRole) const </td><td class="entry"><a class="el" href="class_model_profil.html">ModelProfil</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_singleton.html#adb8a5fa1307802df267e0ab3497f0a0c">getInstance</a>()</td><td class="entry"><a class="el" href="class_singleton.html">Singleton&lt; ModelProfil &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_model_profil.html#a181a9b32c66c116bf8da86ddeb0bcb03">getList</a>() const </td><td class="entry"><a class="el" href="class_model_profil.html">ModelProfil</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_model_profil.html#a8e06eaf9169e27fd4149955c1dbf0588">getProfil</a>(int i) const </td><td class="entry"><a class="el" href="class_model_profil.html">ModelProfil</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_model_profil.html#a2fc575608f96df1ce2a7796acf131203">headerData</a>(int section, Qt::Orientation orientation, int role) const </td><td class="entry"><a class="el" href="class_model_profil.html">ModelProfil</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_model_profil.html#a7ea0334cbabd26f4df13d2099b330fa4">insertRow</a>(int row, const QModelIndex &amp;parent)</td><td class="entry"><a class="el" href="class_model_profil.html">ModelProfil</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_singleton.html#ac2686bdea2194fe911e68c5765924d7a">kill</a>()</td><td class="entry"><a class="el" href="class_singleton.html">Singleton&lt; ModelProfil &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_model_profil.html#a5e6c34d7b64207a062531842b49456da">ModelProfil</a>()</td><td class="entry"><a class="el" href="class_model_profil.html">ModelProfil</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"class="even"><td class="entry"><b>rowCount</b>(const QModelIndex &amp;parent=QModelIndex()) const  (défini dans <a class="el" href="class_model_profil.html">ModelProfil</a>)</td><td class="entry"><a class="el" href="class_model_profil.html">ModelProfil</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_model_profil.html#a757bdfd750d5fd7c4f04f82dc259b322">removeRow</a>(int row, const QModelIndex &amp;parent)</td><td class="entry"><a class="el" href="class_model_profil.html">ModelProfil</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_model_profil.html#aad51d48a9898859f72ab367c9479a433">rowCount</a>(const QModelIndex &amp;parent=QModelIndex()) const </td><td class="entry"><a class="el" href="class_model_profil.html">ModelProfil</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_model_profil.html#a175ae5e8735c6e0587d5d888680cafbe">setData</a>(const QModelIndex &amp;index, const QVariant &amp;value, int role)</td><td class="entry"><a class="el" href="class_model_profil.html">ModelProfil</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_singleton.html#a923b995920da9c06590adb170ab2f890">Singleton</a>()</td><td class="entry"><a class="el" href="class_singleton.html">Singleton&lt; ModelProfil &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">protected</span></td></tr>
   <tr bgcolor="#f0f0f0"class="even"><td class="entry"><b>Singleton&lt; ModelProfil &gt;</b> (défini dans <a class="el" href="class_model_profil.html">ModelProfil</a>)</td><td class="entry"><a class="el" href="class_model_profil.html">ModelProfil</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_singleton.html#ac6e7af82cba33f561bd64e5e0243e7f8">~Singleton</a>()</td><td class="entry"><a class="el" href="class_singleton.html">Singleton&lt; ModelProfil &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_model_profil.html#a19e8c81f4af7db0a722b8974f338ea8e">~ModelProfil</a>()</td><td class="entry"><a class="el" href="class_model_profil.html">ModelProfil</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_singleton.html#ac6e7af82cba33f561bd64e5e0243e7f8">~Singleton</a>()</td><td class="entry"><a class="el" href="class_singleton.html">Singleton&lt; ModelProfil &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">protected</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Lundi Novembre 12 2012 08:12:14 pour QWhereIsTheKey's++ par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Jeudi Novembre 15 2012 23:18:11 pour QWhereIsTheKey's++ par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

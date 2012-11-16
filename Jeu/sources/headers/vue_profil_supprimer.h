@@ -10,6 +10,7 @@
 #define VUE_PROFIL_SUPPRIMER_H
 
 #include "sources/headers/vue_profil.h"
+#include "sources/headers/vue_accueil.h"
 
 /** \namespace Ui
  *
@@ -44,9 +45,9 @@ public:
 
 	/**
 		*  \brief Renvoi le nom de la vue
-		*	 \fn    QString toString();
+		*	 \fn    static QString toString();
 		*/
-	QString toString();
+	static QString toString();
 
 private slots:
 	/**

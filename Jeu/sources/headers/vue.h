@@ -37,15 +37,14 @@ public:
 
 	/**
 		*  \brief Renvoi le nom de la vue
-		*	 \fn    virtual QString toString() = 0;
+		*	 \fn    static QString toString();
 		*/
-	virtual QString toString() = 0;
+	static QString toString();
 
 signals:
 	/**
 		*  \brief Signal pour changer la vue
 		*	 \fn    void setVue (QString)
-		*  \param QString Nom de la nouvelle vue
 		*/
 	void setVue(QString);
 

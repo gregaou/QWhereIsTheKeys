@@ -10,6 +10,9 @@
 #define VUE_ACCUEIL_H
 
 #include "sources/headers/vue.h"
+#include "sources/headers/vue_profil_nouveau.h"
+#include "sources/headers/vue_profil_charger.h"
+#include "sources/headers/vue_profil_supprimer.h"
 
 /** \namespace Ui
  *
@@ -48,7 +51,7 @@ public:
 		*  \brief Renvoi le nom de la vue
 		*	 \fn    QString toString();
 		*/
-	QString toString();
+	static QString toString();
 
 private slots:
 	/**
