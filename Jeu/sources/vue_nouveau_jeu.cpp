@@ -31,4 +31,3 @@ QString VueNouveauJeu::toString()
 {
 	return QString("VueNouveauJeu");
 }
-

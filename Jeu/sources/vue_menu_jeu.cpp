@@ -1,8 +1,6 @@
 #include "sources/headers/vue_menu_jeu.h"
 #include "ui_vue_menu_jeu.h"
 
-
-
 VueMenuJeu::VueMenuJeu(QWidget *parent) :
 	Vue(parent),
 	_ui(new Ui::VueMenuJeu)
