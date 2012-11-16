@@ -9,7 +9,9 @@
 #define MODEL_PROFIL_H
 #include <QList>
 #include <QFile>
+#include <QDir>
 #include <QAbstractListModel>
+#include <QTextStream>
 #include "singleton.h"
 #include "profil.h"
 /**
@@ -106,6 +108,7 @@ public:
 		*/
 	Profil getProfil(int i) const;
 	Profil getProfilByName(QString nom) const;
+	int getIdProfilByName(QString nom) const;
 };
 
 #endif // MODEL_PROFIL_H

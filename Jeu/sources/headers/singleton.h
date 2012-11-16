@@ -38,7 +38,7 @@ public:
 		*/
 	static T *getInstance ()
 	{
-		if (NULL == _singleton)
+		if (0 == _singleton)
 			_singleton = new T;
 
 		return (static_cast<T*> (_singleton));
@@ -50,10 +50,10 @@ public:
 		*/
 	static void kill ()
 	{
-		if (NULL != _singleton)
+		if (0 != _singleton)
 		{
 			delete _singleton;
-			_singleton = NULL;
+			_singleton = 0;
 		}
 	}
 
@@ -62,6 +62,6 @@ private:
 };
 
 template <typename T>
-T *Singleton<T>::_singleton = NULL;
+T *Singleton<T>::_singleton = 0;
 
 #endif // SINGLETON_H

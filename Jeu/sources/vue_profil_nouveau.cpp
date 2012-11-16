@@ -1,6 +1,6 @@
 #include "sources/headers/vue_profil_nouveau.h"
-#include "sources/headers/vue_menu_jeu.h"
 #include "ui_vue_profil_nouveau.h"
+#include "sources/headers/vue_menu_jeu.h"
 
 VueProfilNouveau::VueProfilNouveau(QWidget *parent) :
 	VueProfil(parent),

@@ -83,6 +83,7 @@ private slots:
 
 private:
 	Ui::VueMenuJeu *_ui; /**< Interface graphique liée à la classe */
+	ModelJeu *_mJeu; /**< Modèle de données du jeu */
 
 	/**
 		*  \brief Connecte les signaux des éléments de l'interface à

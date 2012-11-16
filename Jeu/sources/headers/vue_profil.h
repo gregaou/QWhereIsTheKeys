@@ -13,7 +13,7 @@
 
 #include "sources/headers/vue.h"
 #include "sources/headers/model_profil.h"
-
+#include "sources/headers/model_jeu.h"
 
 /**
  * \class VueProfil

@@ -1,5 +1,3 @@
-#include <QFile>
-#include <QDir>
 #include "sources/headers/model_profil.h"
 
 const QString ModelProfil::UrlFichierSauvegarde = "sauvegarde/sauv.txt";
@@ -179,4 +177,16 @@ Profil ModelProfil::getProfilByName(QString nom) const
 	}
 	Profil p;
 	return p;
+}
+
+int ModelProfil::getIdProfilByName(QString nom) const
+{
+	QList<Profil> profils;
+	profils = this->getList();
+	for(int i = 0; i < profils.size(); i++)
+	{
+		if(profils.at(i).getNom() == nom)
+			return i;
+	}
+	return -1;
 }

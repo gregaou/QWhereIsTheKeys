@@ -7,6 +7,11 @@ void ModelJeu::setIdProfil(int id)
 	_idProfil = id;
 }
 
+QString ModelJeu::getNomProfil()
+{
+	return _profils->getProfil(_idProfil).getNom();
+}
+
 int ModelJeu::getDernierNiveauTermine()
 {
 	Profil p;

@@ -58,6 +58,12 @@ private slots:
 		*/
 	void onClicBoutonAnnuler();
 
+	/**
+		*  \brief Action lorsque l'on clic sur le bouton charger
+		*	 \fn    void onClicBoutonValider();
+		*/
+	void onClicBoutonValider();
+
 
 private:
 	Ui::VueProfilCharger *_ui; /**< Interface graphique liée à la classe */

@@ -3,11 +3,12 @@
 
 VueMenuJeu::VueMenuJeu(QWidget *parent) :
 	Vue(parent),
-	_ui(new Ui::VueMenuJeu)
+	_ui(new Ui::VueMenuJeu),
+	_mJeu(ModelJeu::getInstance())
 {
 
 	_ui->setupUi(this);
-	_ui->labelProfilNom->setText("plop");
+	_ui->labelProfilNom->setText(_mJeu->getNomProfil());
 	connexionAffichage();
 }
 

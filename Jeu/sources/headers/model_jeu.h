@@ -34,6 +34,14 @@ public:
 		*/
 	void setIdProfil(int id);
 	/**
+		*  \brief Récupère le nom du profil
+		*	 \fn    void getNomProfil()
+		*  \return QString le nom du profil
+		*/
+	QString getNomProfil();
+
+
+	/**
 		*  \brief Retourne le dernier niveau terminé et sauvegardé
 		*	 \fn    virtual int getDernierNiveauTermine()
 		*	 \return Dernier niveau terminé et sauvegardé
