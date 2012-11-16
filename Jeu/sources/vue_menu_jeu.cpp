@@ -2,7 +2,6 @@
 #include "ui_vue_menu_jeu.h"
 
 
-#include <QDebug>
 
 VueMenuJeu::VueMenuJeu(QWidget *parent) :
 	Vue(parent),

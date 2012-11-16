@@ -1,9 +1,6 @@
 #include "sources/headers/vue_nouveau_jeu.h"
 #include "ui_vue_nouveau_jeu.h"
 
-
-#include <QDebug>
-
 VueNouveauJeu::VueNouveauJeu(QWidget *parent) :
 	Vue(parent),
 	_ui(new Ui::VueNouveauJeu)

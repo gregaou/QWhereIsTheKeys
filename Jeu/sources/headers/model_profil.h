@@ -21,8 +21,6 @@ class ModelProfil : public Singleton<ModelProfil>, public QAbstractListModel
 	friend class Singleton<ModelProfil>;
 private:
 	QList<Profil> _profils; /**< Collection de profils de joueurs */
-public:
-	static const QString UrlFichierSauvegarde; /**< Url du fichire de sauvegarde */
 	/**
 		*  \brief Constructeur
 		*	 \fn    ModelProfil()
@@ -30,13 +28,8 @@ public:
 		*  Constructeur de la classe ModelProfil
 		*/
 	ModelProfil();
-	/**
-		*  \brief Destructeur
-		*	 \fn    ~ModelProfil()
-		*
-		*  Destructeur de la classe ModelProfil
-		*/
-	~ModelProfil() {}
+public:
+	static const QString UrlFichierSauvegarde; /**< Url du fichier de sauvegarde */
 	/**
 		*  \brief Retourne les profils joueur
 		*	 \fn    bool chargerProfils()
@@ -51,12 +44,12 @@ public:
 		*/
 	bool chargerProfil(QString nom);
 	/**
-		*  \brief S
-		*	 \fn    bool sauverProfil(Profil profil)
-		*  \param profil Profil à sauvegarder
-		*	 \return Vrai le profil est sauvegardé sinon Faux
+		*  \brief Sauvegarde les profils dans le fichier
+		*	 \fn    static bool sauverProfils()
+		*  \param profils Liste de profils à sauvegarder
+		*	 \return Vrai les profils sont sauvegardés sinon Faux
 		*/
-	bool sauverProfil(Profil profil);
+	bool sauverProfils();
 	/**
 		*  \brief Compte le nombre de profil
 		*	 \fn    int rowCount(const QModelIndex & parent = QModelIndex()) const
@@ -112,6 +105,7 @@ public:
 		*  \return Profil à la position i
 		*/
 	Profil getProfil(int i) const;
+	Profil getProfilByName(QString nom) const;
 };
 
 #endif // MODEL_PROFIL_H

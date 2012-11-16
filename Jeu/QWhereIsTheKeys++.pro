@@ -20,7 +20,8 @@ SOURCES += sources/main.cpp\
     sources/vue_profil_charger.cpp \
     sources/vue_profil_supprimer.cpp \
     sources/vue_menu_jeu.cpp \
-    sources/vue_nouveau_jeu.cpp
+    sources/vue_nouveau_jeu.cpp \
+    sources/model_jeu.cpp
 
 HEADERS  += sources/headers/qwitk.h \
     sources/headers/vue.h \
@@ -34,7 +35,8 @@ HEADERS  += sources/headers/qwitk.h \
     sources/headers/vue_profil.h \
     sources/headers/vue_profil_supprimer.h \
     sources/headers/vue_menu_jeu.h \
-    sources/headers/vue_nouveau_jeu.h
+    sources/headers/vue_nouveau_jeu.h \
+    sources/headers/model_jeu.h
 
 FORMS    += ui/qwitk.ui \
     ui/vue_accueil.ui \

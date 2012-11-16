@@ -84,10 +84,11 @@ public:
 	bool operator== (const Profil & p);
 	/**
 		*  \brief Créer un profil à partir d'une chaine de caractères
-		*	 \fn    void fromString(QString str)
+		*	 \fn    static Profil* fromString(QString str)
 		*  \param str Chaine de caractères représentant un profil et ses scores, sous la forme "<nom_du_profil><séparateur><idNiveau><temps><séparateur><idNiveau><temps>..."
+		*  \return Profil correspondant à la chaine de caractères
 		*/
-	void fromString(QString str);
+	static Profil* fromString(QString str);
 	/**
 		*  \brief Créer une chaine de caractères sous la forme "<nom_du_profil><séparateur><idNiveau><séparateur><temps><séparateur><idNiveau><séparateur><temps>..." à partir d'un Profil
 		*	 \fn    QString toString()

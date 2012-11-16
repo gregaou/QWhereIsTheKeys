@@ -1,5 +1,4 @@
 ﻿#include <QtGui/QApplication>
-#include <QDebug>
 #include <QTextCodec>
 #include <QTranslator>
 #include <QLibraryInfo>

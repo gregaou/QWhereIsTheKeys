@@ -54,19 +54,21 @@ bool Profil::operator ==(const Profil & p)
 	return (_nom == p.getNom());
 }
 
-void Profil::fromString(QString str)
+Profil* Profil::fromString(QString str)
 {
 	QStringList list(str.split(Profil::_sep, QString::SkipEmptyParts));
+	Profil *p = new Profil();
 	int i;
 	if(!list.isEmpty())
 	{
-		_nom = list.takeFirst();
+		p->_nom = list.takeFirst();
 		while(!list.isEmpty())
 		{
 			i = list.takeFirst().toInt();
-			_resultatsNiveaux[i] = list.takeFirst().toInt();
+			p->_resultatsNiveaux[i] = list.takeFirst().toInt();
 		}
 	}
+	return p;
 }
 
 QString Profil::toString()
@@ -76,7 +78,7 @@ QString Profil::toString()
 	while(i.hasNext())
 	{
 		i.next();
-		strProfil += (Profil::_sep + i.key() + Profil::_sep + i.value());
+		strProfil += (_sep + i.key() + _sep + i.value());
 	}
 	return strProfil;
 }

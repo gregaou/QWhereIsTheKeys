@@ -1,4 +1,5 @@
 #include <QFile>
+#include <QDir>
 #include "sources/headers/model_profil.h"
 
 const QString ModelProfil::UrlFichierSauvegarde = "sauvegarde/sauv.txt";
@@ -6,7 +7,7 @@ const QString ModelProfil::UrlFichierSauvegarde = "sauvegarde/sauv.txt";
 ModelProfil::ModelProfil() :
 	QAbstractListModel()
 {
-	if(!ModelProfil::chargerProfils())
+	if(!chargerProfils())
 	{
 		/**
 			*  \todo Warning : Fichier non disponible !
@@ -16,20 +17,26 @@ ModelProfil::ModelProfil() :
 
 bool ModelProfil::chargerProfils()
 {
-
-	QFile file(ModelProfil::UrlFichierSauvegarde);
+	QFile file(UrlFichierSauvegarde);
+	if(!file.exists())
+	{
+		QDir d;
+		d.mkdir(UrlFichierSauvegarde.split("/")[0]);
+		file.open(QIODevice::Append);
+		file.close();
+	}
 	if(!file.open(QIODevice::ReadOnly | QIODevice::Text))
 		return false;
-	QTextStream in(& file);
-	Profil profil;
-	QModelIndex index;
-	while(!file.atEnd())
+	QTextStream in(&file);
+	Profil *profil;
+	QString str;
+	while(!in.atEnd())
 	{
-		profil.fromString(in.readLine());
-		index = this->index(this->rowCount());
+		str = in.readLine();
+		profil = Profil::fromString(str);
 		this->insertRow(this->rowCount(), QModelIndex());
-		this->setData(index, profil.getNom(), Qt::EditRole);
-		_profils.push_back(profil);
+		QModelIndex index = this->index(this->rowCount() - 1);
+		this->setData(index, profil->getNom(), Qt::EditRole);
 	}
 	file.close();
 	return true;
@@ -43,7 +50,7 @@ bool ModelProfil::chargerProfil(QString nom)
 	QTextStream in(&file);
 	Profil profil;
 	QModelIndex index;
-	while(!file.atEnd())
+	while(!in.atEnd())
 	{
 		profil.fromString(in.readLine());
 		if(profil.getNom() == nom)
@@ -52,19 +59,24 @@ bool ModelProfil::chargerProfil(QString nom)
 			this->insertRow(this->rowCount(), QModelIndex());
 			this->setData(index, nom, Qt::EditRole);
 		}
-		_profils.push_back(profil);
 	}
 	file.close();
 	return true;
 }
 
-bool ModelProfil::sauverProfil(Profil profil)
+bool ModelProfil::sauverProfils()
 {
+	QList<Profil> profils = getList();
 	QFile file(ModelProfil::UrlFichierSauvegarde);
 	if(!file.open(QIODevice::WriteOnly | QIODevice::Text))
 		return false;
 	QTextStream out(&file);
-	out << profil.toString() << "\n";
+	QString strProfil;
+	if(profils.size() > 0)
+		strProfil += profils[0].toString();
+	for(int i = 1; i < profils.size(); i++)
+		strProfil += ("\n" + profils[i].toString());
+	out << strProfil;
 	file.close();
 	return (out.status() == QTextStream::WriteFailed);
 }
@@ -139,7 +151,7 @@ bool ModelProfil::setData(const QModelIndex &index, const QVariant &value,
 		Profil p;
 		p.setNom(value.toString());
 		_profils.replace(row, p);
-		return true;
+		return sauverProfils();
 	}
 	return false;
 }
@@ -154,4 +166,17 @@ Profil ModelProfil::getProfil(int i) const
 	if(i >= 0 && i < _profils.size())
 		return _profils.at(i);
 	return Profil();
+}
+
+Profil ModelProfil::getProfilByName(QString nom) const
+{
+	QList<Profil> profils;
+	profils = this->getList();
+	for(int i = 0; i < profils.size(); i++)
+	{
+		if(profils.at(i).getNom() == nom)
+			return profils.at(i);
+	}
+	Profil p;
+	return p;
 }

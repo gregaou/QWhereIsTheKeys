@@ -9,7 +9,6 @@
 #ifndef SINGLETON_H
 #define SINGLETON_H
 
-#include <QDebug>
 
 /**
  * \class Singleton
