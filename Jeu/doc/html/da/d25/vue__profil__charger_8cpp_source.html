@@ -90,50 +90,67 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Recherche');
 <div class="contents">
 <a href="../../da/d25/vue__profil__charger_8cpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/d81/vue__profil__charger_8h.html" title="Classe abstraite pour les vues profil.">sources/headers/vue_profil_charger.h</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;ui_vue_profil_charger.h&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno"><a class="code" href="../../de/d33/class_vue_profil_charger.html#a555b0c16579bf2dab2f127399aeb4397">    4</a></span>&#160;<a class="code" href="../../de/d33/class_vue_profil_charger.html#a555b0c16579bf2dab2f127399aeb4397" title="Constructeur.">VueProfilCharger::VueProfilCharger</a>(QWidget *parent) :</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <a class="code" href="../../da/d04/class_vue_profil.html" title="Classe abstraite pour les vues profil.">VueProfil</a>(parent),</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    _ui(new Ui::<a class="code" href="../../de/d33/class_vue_profil_charger.html" title="Classe de la vue charger profil.">VueProfilCharger</a>)</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    _ui-&gt;setupUi(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    connexionAffichage();</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    chargerDonnees();</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="code" href="../../de/d33/class_vue_profil_charger.html#a321cb581aa08abdd48b419d6b48003d9">   13</a></span>&#160;<a class="code" href="../../de/d33/class_vue_profil_charger.html#a321cb581aa08abdd48b419d6b48003d9" title="DestructeurDestructeur de la classe VueProfilCharger.">VueProfilCharger::~VueProfilCharger</a>()</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">delete</span> _ui;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">void</span> VueProfilCharger::onClicBoutonAnnuler()</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    emit <a class="code" href="../../d4/dcc/class_vue.html#a09c9642719b58e6f5bde5885f70c3b1f" title="Signal pour changer la vue.">setVue</a>(<a class="code" href="../../de/d50/class_vue_accueil.html#ac5513d2577a58ad6b64e895d400eca74" title="Renvoi le nom de la vue.">VueAccueil::toString</a>());</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">void</span> VueProfilCharger::connexionAffichage()</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    connect(_ui-&gt;boutonAnnuler,SIGNAL(clicked()),<span class="keyword">this</span>,</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                    SLOT(onClicBoutonAnnuler()));</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">void</span> VueProfilCharger::chargerDonnees()</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    QSortFilterProxyModel *proxy = <span class="keyword">new</span> QSortFilterProxyModel(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    proxy-&gt;setSourceModel(<a class="code" href="../../da/d04/class_vue_profil.html#a1885b1407fcf2eb1a4d04114dffec545">_profils</a>);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    proxy-&gt;sort(0);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    _ui-&gt;listProfils-&gt;setModel(proxy);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="code" href="../../de/d33/class_vue_profil_charger.html#a245e87988d7a70b8f1f7673c04f7beef">   38</a></span>&#160;QString <a class="code" href="../../de/d33/class_vue_profil_charger.html#a245e87988d7a70b8f1f7673c04f7beef" title="Renvoi le nom de la vue.">VueProfilCharger::toString</a>()</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">return</span> QString(<span class="stringliteral">&quot;VueProfilCharger&quot;</span>);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d4b/vue__menu__jeu_8h.html" title="Classe vue menu jeu.">sources/headers/vue_menu_jeu.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QDebug&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="code" href="../../de/d33/class_vue_profil_charger.html#a555b0c16579bf2dab2f127399aeb4397">    7</a></span>&#160;<a class="code" href="../../de/d33/class_vue_profil_charger.html#a555b0c16579bf2dab2f127399aeb4397" title="Constructeur.">VueProfilCharger::VueProfilCharger</a>(QWidget *parent) :</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="../../da/d04/class_vue_profil.html" title="Classe abstraite pour les vues profil.">VueProfil</a>(parent),</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    _ui(new Ui::<a class="code" href="../../de/d33/class_vue_profil_charger.html" title="Classe de la vue charger profil.">VueProfilCharger</a>)</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    _ui-&gt;setupUi(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    connexionAffichage();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    chargerDonnees();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="code" href="../../de/d33/class_vue_profil_charger.html#a321cb581aa08abdd48b419d6b48003d9">   16</a></span>&#160;<a class="code" href="../../de/d33/class_vue_profil_charger.html#a321cb581aa08abdd48b419d6b48003d9" title="DestructeurDestructeur de la classe VueProfilCharger.">VueProfilCharger::~VueProfilCharger</a>()</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">delete</span> _ui;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">void</span> VueProfilCharger::onClicBoutonAnnuler()</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    emit <a class="code" href="../../d4/dcc/class_vue.html#a09c9642719b58e6f5bde5885f70c3b1f" title="Signal pour changer la vue.">setVue</a>(<a class="code" href="../../de/d50/class_vue_accueil.html#ac5513d2577a58ad6b64e895d400eca74" title="Renvoi le nom de la vue.">VueAccueil::toString</a>());</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">void</span> VueProfilCharger::onClicBoutonValider()</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">if</span>(_ui-&gt;listProfils-&gt;currentIndex().row() != -1)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="../../d6/dc5/class_model_jeu.html" title="Structure de donnée représentant un jeu.">ModelJeu</a> *jeu = <a class="code" href="../../d3/dbc/class_singleton.html#adb8a5fa1307802df267e0ab3497f0a0c">ModelJeu::getInstance</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        jeu-&gt;<a class="code" href="../../d6/dc5/class_model_jeu.html#a73b7851254025750ead079f688072706" title="Mutateur de la donnée membre idProfil.">setIdProfil</a>(<a class="code" href="../../da/d04/class_vue_profil.html#a1885b1407fcf2eb1a4d04114dffec545">_profils</a>-&gt;<a class="code" href="../../d8/d31/class_model_profil.html#ab34e80bf874bf07b21cc8bfddccb483c">getIdProfilByName</a>(</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                                             _ui-&gt;listProfils-&gt;currentIndex().data().toString()));</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        emit <a class="code" href="../../d4/dcc/class_vue.html#a09c9642719b58e6f5bde5885f70c3b1f" title="Signal pour changer la vue.">setVue</a>(<a class="code" href="../../dd/db3/class_vue_menu_jeu.html#a5206ffd791a451c7c2d0437ab8274e91" title="Renvoi le nom de la vue.">VueMenuJeu::toString</a>());</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keywordtype">void</span> VueProfilCharger::connexionAffichage()</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    connect(_ui-&gt;boutonAnnuler,SIGNAL(clicked()),<span class="keyword">this</span>,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                    SLOT(onClicBoutonAnnuler()));</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    connect(_ui-&gt;boutonValider,SIGNAL(clicked()),<span class="keyword">this</span>,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                    SLOT(onClicBoutonValider()));</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">void</span> VueProfilCharger::chargerDonnees()</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    QSortFilterProxyModel *proxy = <span class="keyword">new</span> QSortFilterProxyModel(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    proxy-&gt;setSourceModel(<a class="code" href="../../da/d04/class_vue_profil.html#a1885b1407fcf2eb1a4d04114dffec545">_profils</a>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    proxy-&gt;sort(0);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    _ui-&gt;listProfils-&gt;setModel(proxy);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="code" href="../../de/d33/class_vue_profil_charger.html#a245e87988d7a70b8f1f7673c04f7beef">   55</a></span>&#160;QString <a class="code" href="../../de/d33/class_vue_profil_charger.html#a245e87988d7a70b8f1f7673c04f7beef" title="Renvoi le nom de la vue.">VueProfilCharger::toString</a>()</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">return</span> QString(<span class="stringliteral">&quot;VueProfilCharger&quot;</span>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Jeudi Novembre 15 2012 23:33:51 pour QWhereIsTheKey's++ par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Samedi Novembre 17 2012 16:11:57 pour QWhereIsTheKey's++ par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

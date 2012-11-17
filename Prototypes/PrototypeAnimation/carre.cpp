@@ -1,14 +1,15 @@
 #include "carre.h"
 
 #include <QDebug>
+#include <QGraphicsScene>
 
-Carre::Carre() : _dx(0), _dy(0)
+Carre::Carre() : _dx(0), _dy(5)
 {
 }
 
 QRectF Carre::boundingRect() const
 {
-	return QRect(-10,-10,20,20);
+	return QRect(0,0,20,20);
 }
 
 QPainterPath Carre::shape() const
@@ -28,7 +29,8 @@ void Carre::advance(int step)
 {
 		if (!step)
 				return;
-		moveBy(_dx,_dy);
+		if(scene()->sceneRect().contains(boundingRect().translated(_dx,_dy).translated(pos())))
+			moveBy(_dx,_dy);
 
 }
 
@@ -40,4 +42,5 @@ void Carre::setDx(qreal r)
 void Carre::setDy(qreal r)
 {
 	_dy= r;
+	_dy = 5;
 }

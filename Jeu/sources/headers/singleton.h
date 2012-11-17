@@ -34,7 +34,7 @@ protected:
 public:
 	/**
 		*  \brief Permet l'obtention de l'instance de la classe T
-		*	 \fn    static T *getInstanboutonNouvellePartiece ()
+		*	 \fn    static T *getInstance ()
 		*/
 	static T *getInstance ()
 	{

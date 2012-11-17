@@ -48,7 +48,6 @@ public:
 	/**
 		*  \brief Sauvegarde les profils dans le fichier
 		*	 \fn    static bool sauverProfils()
-		*  \param profils Liste de profils à sauvegarder
 		*	 \return Vrai les profils sont sauvegardés sinon Faux
 		*/
 	bool sauverProfils();

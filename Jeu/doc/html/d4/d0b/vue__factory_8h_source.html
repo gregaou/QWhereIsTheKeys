@@ -100,27 +100,28 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Recherche');
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../db/d7d/vue__profil__supprimer_8h.html" title="Classe vue supprimer profil.">sources/headers/vue_profil_supprimer.h</a>&quot;</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d4b/vue__menu__jeu_8h.html" title="Classe vue menu jeu.">sources/headers/vue_menu_jeu.h</a>&quot;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/d23/vue__nouveau__jeu_8h.html" title="Classe vue nouveau jeu.">sources/headers/vue_nouveau_jeu.h</a>&quot;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="code" href="../../dd/da0/class_vue_factory.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../dd/da0/class_vue_factory.html" title="Classe fabrique pour la gestion des vues.">VueFactory</a> : <span class="keyword">public</span> <a class="code" href="../../d3/dbc/class_singleton.html" title="Classe modèle pour la création de singletons.">Singleton</a>&lt;VueFactory&gt;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="../../dd/da0/class_vue_factory.html#a4cd8528e5244a0ec2ba884726fa951e5">   27</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../d3/dbc/class_singleton.html" title="Classe modèle pour la création de singletons.">Singleton</a>&lt;<a class="code" href="../../dd/da0/class_vue_factory.html" title="Classe fabrique pour la gestion des vues.">VueFactory</a>&gt;;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="../../dd/da0/class_vue_factory.html" title="Classe fabrique pour la gestion des vues.">VueFactory</a> ()    {}</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    ~<a class="code" href="../../dd/da0/class_vue_factory.html" title="Classe fabrique pour la gestion des vues.">VueFactory</a> () { }</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">static</span> <a class="code" href="../../d4/dcc/class_vue.html" title="Classe abstraite pour la gestion des vues.">Vue</a>* <a class="code" href="../../dd/da0/class_vue_factory.html#ad9504580b3aab73a8eb2992c3d3f9a14" title="Renvoi l&#39;instance d&#39;une vue en fonction d&#39;un QString.">getVue</a>(QString nom, QWidget *parent);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#endif // VUE_FACTORY_H</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/dc4/vue__chargement__jeu_8h.html">sources/headers/vue_chargement_jeu.h</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="../../dd/da0/class_vue_factory.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../dd/da0/class_vue_factory.html" title="Classe fabrique pour la gestion des vues.">VueFactory</a> : <span class="keyword">public</span> <a class="code" href="../../d3/dbc/class_singleton.html" title="Classe modèle pour la création de singletons.">Singleton</a>&lt;VueFactory&gt;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="../../dd/da0/class_vue_factory.html#a4cd8528e5244a0ec2ba884726fa951e5">   28</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../d3/dbc/class_singleton.html" title="Classe modèle pour la création de singletons.">Singleton</a>&lt;<a class="code" href="../../dd/da0/class_vue_factory.html" title="Classe fabrique pour la gestion des vues.">VueFactory</a>&gt;;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="../../dd/da0/class_vue_factory.html" title="Classe fabrique pour la gestion des vues.">VueFactory</a> ()    {}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    ~<a class="code" href="../../dd/da0/class_vue_factory.html" title="Classe fabrique pour la gestion des vues.">VueFactory</a> () { }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">static</span> <a class="code" href="../../d4/dcc/class_vue.html" title="Classe abstraite pour la gestion des vues.">Vue</a>* <a class="code" href="../../dd/da0/class_vue_factory.html#ad9504580b3aab73a8eb2992c3d3f9a14" title="Renvoi l&#39;instance d&#39;une vue en fonction d&#39;un QString.">getVue</a>(QString nom, QWidget *parent);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;};</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif // VUE_FACTORY_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Jeudi Novembre 15 2012 23:33:51 pour QWhereIsTheKey's++ par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Samedi Novembre 17 2012 16:11:56 pour QWhereIsTheKey's++ par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

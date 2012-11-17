@@ -94,28 +94,32 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Recherche');
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;QMap&gt;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;QString&gt;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="../../d1/d04/class_profil.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d1/d04/class_profil.html" title="Structure de donnée représentant un profil de joueur.">Profil</a></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    QString _nom; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    QMap&lt;int, int&gt; _resultatsNiveaux; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="../../d1/d04/class_profil.html#a9cf45b5f8ae024e79eaeb2c4639e2e1e" title="ConstructeurConstructeur de la classe Profil.">Profil</a>();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="../../d1/d04/class_profil.html#a9cf45b5f8ae024e79eaeb2c4639e2e1e" title="ConstructeurConstructeur de la classe Profil.">Profil</a>(QString nom);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    QString <a class="code" href="../../d1/d04/class_profil.html#a90c713a16d507a760202148ce8fab2e2" title="Accesseur de la donnée membre _nom.">getNom</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    QMap&lt;int,int&gt; <a class="code" href="../../d1/d04/class_profil.html#a6c068d030eaa145bc6019e0bdc496ac1" title="Accesseur de la donnée membre _resultatsNiveaux.">getResultatsNiveaux</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d1/d04/class_profil.html#aa2a65e3784c78f6f6dacb8a71638f3af" title="Accesseur de la donnée temps de _resultatsNiveau en fonction du niveau.">getResultat</a>(<span class="keywordtype">int</span> idNiveau);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d1/d04/class_profil.html#a0643088d0c70d385a2b69cebf0dab41e" title="Calcule le temps total de tout les niveaux.">getTempsTotal</a>();</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/d04/class_profil.html#ac08ca4441c6c1e101098d298f107e67b" title="Mutateur de la donnée membre _nom.">setNom</a>(QString nom);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/d04/class_profil.html#a1737b68d6482858b25002e4f3ef3af37" title="Ajoute un couple (identifiant de niveau)/(temps pour terminer le niveau) dans la liste des résultats...">ajouterResultatNiveau</a>(<span class="keywordtype">int</span> idNiveau, <span class="keywordtype">int</span> temps);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d1/d04/class_profil.html#af256d9a080ba8721032502303f65c887" title="Opérateur d&#39;égalité">operator== </a>(<span class="keyword">const</span> <a class="code" href="../../d1/d04/class_profil.html" title="Structure de donnée représentant un profil de joueur.">Profil</a> &amp; p);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;};</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#endif // PROFIL_H</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;QStringList&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="../../d1/d04/class_profil.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d1/d04/class_profil.html" title="Structure de donnée représentant un profil de joueur.">Profil</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    QString _nom; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    QMap&lt;int, int&gt; _resultatsNiveaux; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> QString _sep; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="../../d1/d04/class_profil.html#a9cf45b5f8ae024e79eaeb2c4639e2e1e" title="ConstructeurConstructeur de la classe Profil.">Profil</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="../../d1/d04/class_profil.html#a9cf45b5f8ae024e79eaeb2c4639e2e1e" title="ConstructeurConstructeur de la classe Profil.">Profil</a>(QString nom);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    QString <a class="code" href="../../d1/d04/class_profil.html#a90c713a16d507a760202148ce8fab2e2" title="Accesseur de la donnée membre _nom.">getNom</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    QMap&lt;int,int&gt; <a class="code" href="../../d1/d04/class_profil.html#a6c068d030eaa145bc6019e0bdc496ac1" title="Accesseur de la donnée membre _resultatsNiveaux.">getResultatsNiveaux</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d1/d04/class_profil.html#aa2a65e3784c78f6f6dacb8a71638f3af" title="Accesseur de la donnée temps de _resultatsNiveau en fonction du niveau.">getResultat</a>(<span class="keywordtype">int</span> idNiveau);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d1/d04/class_profil.html#a0643088d0c70d385a2b69cebf0dab41e" title="Calcule le temps total de tout les niveaux.">getTempsTotal</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/d04/class_profil.html#ac08ca4441c6c1e101098d298f107e67b" title="Mutateur de la donnée membre _nom.">setNom</a>(QString nom);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/d04/class_profil.html#a1737b68d6482858b25002e4f3ef3af37" title="Ajoute un couple (identifiant de niveau)/(temps pour terminer le niveau) dans la liste des résultats...">ajouterResultatNiveau</a>(<span class="keywordtype">int</span> idNiveau, <span class="keywordtype">int</span> temps);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d1/d04/class_profil.html#af256d9a080ba8721032502303f65c887" title="Opérateur d&#39;égalité">operator== </a>(<span class="keyword">const</span> <a class="code" href="../../d1/d04/class_profil.html" title="Structure de donnée représentant un profil de joueur.">Profil</a> &amp; p);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">static</span> <a class="code" href="../../d1/d04/class_profil.html" title="Structure de donnée représentant un profil de joueur.">Profil</a>* <a class="code" href="../../d1/d04/class_profil.html#a8c8a81265f9791af262dac7543becb46" title="Créer un profil à partir d&#39;une chaine de caractères.">fromString</a>(QString str);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    QString <a class="code" href="../../d1/d04/class_profil.html#a37861e082f161c5d0e30ab5637407d15" title="Créer une chaine de caractères sous la forme &quot;&lt;nom_du_profil&gt;&lt;séparateur&gt;&lt;idNiveau&gt;&lt;séparateur&gt;&...">toString</a>();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;};</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#endif // PROFIL_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Jeudi Novembre 15 2012 23:33:51 pour QWhereIsTheKey's++ par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Samedi Novembre 17 2012 16:11:56 pour QWhereIsTheKey's++ par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

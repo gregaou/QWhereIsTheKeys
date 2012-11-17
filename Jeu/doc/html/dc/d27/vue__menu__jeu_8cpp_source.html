@@ -91,16 +91,16 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Recherche');
 <a href="../../dc/d27/vue__menu__jeu_8cpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d4b/vue__menu__jeu_8h.html" title="Classe vue menu jeu.">sources/headers/vue_menu_jeu.h</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;ui_vue_menu_jeu.h&quot;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QDebug&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="code" href="../../dd/db3/class_vue_menu_jeu.html#a812556e37cafc8e1ad28bfc513b0390f">    7</a></span>&#160;<a class="code" href="../../dd/db3/class_vue_menu_jeu.html#a812556e37cafc8e1ad28bfc513b0390f" title="Constructeur.">VueMenuJeu::VueMenuJeu</a>(QWidget *parent) :</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="../../d4/dcc/class_vue.html" title="Classe abstraite pour la gestion des vues.">Vue</a>(parent),</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    _ui(new Ui::<a class="code" href="../../dd/db3/class_vue_menu_jeu.html" title="Classe de la vue Menu Jeu.">VueMenuJeu</a>)</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="code" href="../../dd/db3/class_vue_menu_jeu.html#a812556e37cafc8e1ad28bfc513b0390f">    4</a></span>&#160;<a class="code" href="../../dd/db3/class_vue_menu_jeu.html#a812556e37cafc8e1ad28bfc513b0390f" title="Constructeur.">VueMenuJeu::VueMenuJeu</a>(QWidget *parent) :</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <a class="code" href="../../d4/dcc/class_vue.html" title="Classe abstraite pour la gestion des vues.">Vue</a>(parent),</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    _ui(new Ui::<a class="code" href="../../dd/db3/class_vue_menu_jeu.html" title="Classe de la vue Menu Jeu.">VueMenuJeu</a>),</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    _mJeu(<a class="code" href="../../d6/dc5/class_model_jeu.html" title="Structure de donnée représentant un jeu.">ModelJeu</a>::getInstance())</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    _ui-&gt;setupUi(<span class="keyword">this</span>);</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    _ui-&gt;setupUi(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    _ui-&gt;labelProfilNom-&gt;setText(<span class="stringliteral">&quot;plop&quot;</span>);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    _ui-&gt;labelProfilNom-&gt;setText(_mJeu-&gt;<a class="code" href="../../d6/dc5/class_model_jeu.html#a46f1bd4717d6ebb3abcad046ca3cbb3f" title="Récupère le nom du profil.">getNomProfil</a>());</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    connexionAffichage();</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
@@ -116,7 +116,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Recherche');
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">void</span> VueMenuJeu::onClicBoutonChargerPartie()</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">//emit setVue(VueChargerPartie::toString());</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    emit <a class="code" href="../../d4/dcc/class_vue.html#a09c9642719b58e6f5bde5885f70c3b1f" title="Signal pour changer la vue.">setVue</a>(<a class="code" href="../../de/d97/class_vue_chargement_jeu.html#afd9e6e61d2dcd56aa69d86f605da0a5a" title="Renvoi le nom de la vue.">VueChargementJeu::toString</a>());</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">void</span> VueMenuJeu::onClicBoutonCreerPartieMultijoueur()</div>
@@ -157,7 +157,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Recherche');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Jeudi Novembre 15 2012 23:33:51 pour QWhereIsTheKey's++ par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Samedi Novembre 17 2012 16:11:56 pour QWhereIsTheKey's++ par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>
