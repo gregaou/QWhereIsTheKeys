@@ -13,6 +13,7 @@
 #include "sources/headers/vue.h"
 #include "sources/headers/vue_accueil.h"
 #include "sources/headers/vue_nouveau_jeu.h"
+#include "sources/headers/vue_chargement_jeu.h"
 
 /** \namespace Ui
  *

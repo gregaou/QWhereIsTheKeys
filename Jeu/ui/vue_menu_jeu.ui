@@ -50,10 +50,29 @@
          </property>
         </spacer>
        </item>
-       <item>
+       <item alignment="Qt::AlignHCenter">
         <widget class="QLabel" name="labelProfilNom">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <family>URW Chancery L</family>
+           <pointsize>20</pointsize>
+           <italic>true</italic>
+          </font>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::NoContextMenu</enum>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
          <property name="text">
-          <string>Nom Du Profil</string>
+          <string> Nom Du Profil</string>
          </property>
         </widget>
        </item>

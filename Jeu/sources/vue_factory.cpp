@@ -20,5 +20,8 @@ Vue* VueFactory::getVue(QString nom, QWidget *parent)
 	else if(nom == VueNouveauJeu::toString())
 		return new VueNouveauJeu(parent);
 
+	else if(nom == VueChargementJeu::toString())
+		return new VueChargementJeu(parent);
+
 	return new VueAccueil(parent);
 }

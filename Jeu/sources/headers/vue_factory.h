@@ -17,6 +17,7 @@
 #include "sources/headers/vue_profil_supprimer.h"
 #include "sources/headers/vue_menu_jeu.h"
 #include "sources/headers/vue_nouveau_jeu.h"
+#include "sources/headers/vue_chargement_jeu.h"
 
 /**
  * \class VueFactory

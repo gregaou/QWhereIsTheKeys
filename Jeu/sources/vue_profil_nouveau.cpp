@@ -26,7 +26,9 @@ void VueProfilNouveau::onClicBoutonValider()
 
 	if(!_ui->nomProfil->text().isEmpty() &&
 		 _ui->nomProfil->text().contains(expProfil))
+	{
 		ajouterProfil(_ui->nomProfil->text());
+	}
 	else
 		QMessageBox::information(this,"Profil non valide",
 														 QString("Le nom de profil ne doit contenir que ").
@@ -37,6 +39,7 @@ void VueProfilNouveau::onClicBoutonValider()
 void VueProfilNouveau::ajouterProfil(QString nom)
 {
 	QList<Profil> list = _profils->getList();
+	ModelJeu *jeu = ModelJeu::getInstance();
 	Profil p(nom);
 
 	if(!list.contains(p))
@@ -45,6 +48,7 @@ void VueProfilNouveau::ajouterProfil(QString nom)
 
 		QModelIndex index = _profils->index(list.size());
 		_profils->setData(index,nom,Qt::EditRole);
+		jeu->setIdProfil(_profils->getIdProfilByName(nom));
 		emit setVue(VueMenuJeu::toString());
 	}
 	else

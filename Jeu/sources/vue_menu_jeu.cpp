@@ -8,7 +8,9 @@ VueMenuJeu::VueMenuJeu(QWidget *parent) :
 {
 
 	_ui->setupUi(this);
+
 	_ui->labelProfilNom->setText(_mJeu->getNomProfil());
+
 	connexionAffichage();
 }
 
@@ -24,7 +26,7 @@ void VueMenuJeu::onClicBoutonNouvellePartie()
 
 void VueMenuJeu::onClicBoutonChargerPartie()
 {
-	//emit setVue(VueChargerPartie::toString());
+	emit setVue(VueChargementJeu::toString());
 }
 
 void VueMenuJeu::onClicBoutonCreerPartieMultijoueur()
