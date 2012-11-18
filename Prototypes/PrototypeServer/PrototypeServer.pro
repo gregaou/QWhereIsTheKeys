@@ -1,22 +1,22 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2012-11-11T12:07:30
+# Project created by QtCreator 2012-11-18T11:32:25
 #
 #-------------------------------------------------
 
-QT       += core gui network
+QT       += core network
+
+QT       -= gui
 
 TARGET = PrototypeServer
+CONFIG   += console
+CONFIG   -= app_bundle
+
 TEMPLATE = app
 
 
-SOURCES += main.cpp\
-        mainwindow.cpp \
-    monserveur.cpp \
-    monthread.cpp
+SOURCES += main.cpp \
+    monserveur.cpp
 
-HEADERS  += mainwindow.h \
-    monserveur.h \
-    monthread.h
-
-FORMS    += mainwindow.ui
+HEADERS += \
+    monserveur.h

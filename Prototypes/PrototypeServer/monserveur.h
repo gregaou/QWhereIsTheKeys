@@ -2,23 +2,30 @@
 #define MONSERVEUR_H
 
 #include <QTcpServer>
+#include <QTcpSocket>
 #include <QDebug>
-#include "monthread.h"
 
 class MonServeur : public QTcpServer
 {
-    Q_OBJECT
+		Q_OBJECT
 public:
-    explicit MonServeur(QObject *parent = 0);
-    void startServer();
+		explicit MonServeur(QObject *parent = 0);
+		void startServer();
 
 signals:
-    
-protected:
-    void incomingConnection(int sDescriptor);
 
 public slots:
-    
+		void dataIncoming();
+		void clientDisconnected();
+
+protected:
+		void incomingConnection(int sDescriptor);
+
+private:
+		void sendAll (const QString &message);
+		QList<QTcpSocket *> _clients;
+		quint16 _sizeMessage;
+
 };
 
 #endif // MONSERVEUR_H
