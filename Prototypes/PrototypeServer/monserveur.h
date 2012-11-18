@@ -7,24 +7,24 @@
 
 class MonServeur : public QTcpServer
 {
-		Q_OBJECT
+	Q_OBJECT
 public:
-		explicit MonServeur(QObject *parent = 0);
-		void startServer();
+	explicit MonServeur(QObject *parent = 0);
+	void startServer();
 
 signals:
 
 public slots:
-		void dataIncoming();
-		void clientDisconnected();
+	void dataIncoming();
+	void clientDisconnected();
 
-protected:
-		void incomingConnection(int sDescriptor);
+protected slots:
+	void newClientConnection();
 
 private:
-		void sendAll (const QString &message);
-		QList<QTcpSocket *> _clients;
-		quint16 _sizeMessage;
+	void sendAll (const QString &message);
+	QList<QTcpSocket *> _clients;
+	quint16 _sizeMessage;
 
 };
 

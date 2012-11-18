@@ -3,12 +3,14 @@
 MonServeur::MonServeur(QObject *parent) :
 	QTcpServer(parent)
 {
+	connect(this,SIGNAL(newConnection()),this,SLOT(newClientConnection()));
+	_sizeMessage = 0;
 }
 
 void MonServeur::startServer()
 {
 	qDebug() << "Start server :";
-			if(!listen(QHostAddress::Any,1234))
+	if(!listen(QHostAddress::Any,1234))
 	{
 		qDebug() << "Could not start server";
 	}
@@ -18,13 +20,11 @@ void MonServeur::startServer()
 	}
 }
 
-void MonServeur::incomingConnection(int sDescriptor)
+void MonServeur::newClientConnection()
 {
-	qDebug() << sDescriptor <<" New Client";
 
-	QTcpSocket *newClient;
-	newClient->setSocketDescriptor(sDescriptor);
-
+	QTcpSocket *newClient = nextPendingConnection();
+	qDebug() << "New Client ";
 	_clients << newClient;
 
 	connect(newClient,SIGNAL(readyRead()),this,SLOT(dataIncoming()));
@@ -33,18 +33,19 @@ void MonServeur::incomingConnection(int sDescriptor)
 
 void MonServeur::sendAll(const QString &message)
 {
-		QByteArray paquet;
-		QDataStream out(&paquet, QIODevice::WriteOnly);
+	qDebug() << message;
+	QByteArray paquet;
+	QDataStream out(&paquet, QIODevice::WriteOnly);
 
-		out << (quint16) 0;
-		out << message;
-		out.device()->seek(0);
-		out << (quint16) (paquet.size() - sizeof(quint16));
+	out << (quint16) 0;
+	out << message;
+	out.device()->seek(0);
+	out << (quint16) (paquet.size() - sizeof(quint16));
 
-		for (int i = 0; i < _clients.size(); i++)
-		{
-				_clients[i]->write(paquet);
-		}
+	for (int i = 0; i < _clients.size(); i++)
+	{
+		_clients[i]->write(paquet);
+	}
 }
 
 void MonServeur::clientDisconnected()
@@ -53,9 +54,9 @@ void MonServeur::clientDisconnected()
 
 	QTcpSocket *socket = qobject_cast<QTcpSocket *>(sender());
 	if (socket == 0)
-			return;
+		return;
 
-	qDebug() << socket->socketDescriptor() << " disconnected";
+	qDebug() << "Client disconnected";
 
 	_clients.removeOne(socket);
 	socket->deleteLater();
@@ -63,27 +64,28 @@ void MonServeur::clientDisconnected()
 
 void MonServeur::dataIncoming()
 {
-		QTcpSocket *socket = qobject_cast<QTcpSocket *>(sender());
-		if (socket == 0)
-				return;
+	QTcpSocket *socket = qobject_cast<QTcpSocket *>(sender());
 
-		QDataStream in(socket);
+	if (socket == 0)
+		return;
 
-		if (_sizeMessage == 0)
-		{
-				if (socket->bytesAvailable() < (int)sizeof(quint16))
-						 return;
+	QDataStream in(socket);
 
-				in >> _sizeMessage;
-		}
+	if (_sizeMessage == 0)
+	{
+		if (socket->bytesAvailable() < (int)sizeof(quint16))
+			return;
 
-		if (socket->bytesAvailable() < _sizeMessage)
-				return;
+		in >> _sizeMessage;
+	}
 
-		QString message;
-		in >> message;
+	if (socket->bytesAvailable() < _sizeMessage)
+		return;
 
-		sendAll(message);
+	QString message;
+	in >> message;
 
-		_sizeMessage = 0;
+	sendAll(message);
+
+	_sizeMessage = 0;
 }
