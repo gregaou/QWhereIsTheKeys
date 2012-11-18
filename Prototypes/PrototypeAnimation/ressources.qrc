@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/fond">
+        <file alias="fond">fond.png</file>
+    </qresource>
+</RCC>

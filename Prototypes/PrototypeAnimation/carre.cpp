@@ -3,7 +3,7 @@
 #include <QDebug>
 #include <QGraphicsScene>
 
-Carre::Carre() : _dx(0), _dy(5)
+Carre::Carre() : _dx(0), _dy(0)
 {
 }
 
@@ -29,8 +29,14 @@ void Carre::advance(int step)
 {
 		if (!step)
 				return;
-		if(scene()->sceneRect().contains(boundingRect().translated(_dx,_dy).translated(pos())))
-			moveBy(_dx,_dy);
+		if(_dy < 3)
+			_dy += 0.1;
+
+		if(scene()->sceneRect().contains(boundingRect().translated(_dx,0).translated(pos())))
+			moveBy(_dx,0);
+
+		if(scene()->sceneRect().contains(boundingRect().translated(0,_dy).translated(pos())))
+			moveBy(0,_dy);
 
 }
 
@@ -42,5 +48,10 @@ void Carre::setDx(qreal r)
 void Carre::setDy(qreal r)
 {
 	_dy= r;
-	_dy = 5;
+}
+
+void Carre::saut()
+{
+	if(_dy >= 3)
+	_dy=-_dy;
 }

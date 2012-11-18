@@ -15,6 +15,7 @@ public:
 
 		void setDx(qreal r);
 		void setDy(qreal r);
+		void saut();
 
 protected:
 		void advance(int step);

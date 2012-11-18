@@ -11,6 +11,8 @@ VueJeu::VueJeu(QWidget *parent) :
 	c = new Carre();
 	_scene.addItem(c);
 
+	_view.setBackgroundBrush(QImage(":/fond/fond"));
+
 	QTimer * timer = new QTimer();
 	connect(timer,SIGNAL(timeout()),&_scene,SLOT(advance()));
 	timer->start(15);
@@ -25,17 +27,14 @@ void VueJeu::keyPressEvent(QKeyEvent *event)
 {
 	switch(event->key())
 	{
-		case Qt::Key_Up :
-			c->setDy(-1);
-			break;
-		case Qt::Key_Down :
-			c->setDy(1);
-			break;
 		case Qt::Key_Right :
 			c->setDx(1);
 			break;
 		case Qt::Key_Left :
 			c->setDx(-1);
+			break;
+		case Qt::Key_Space :
+			c->saut();
 			break;
 
 	}
@@ -45,12 +44,6 @@ void VueJeu::keyReleaseEvent(QKeyEvent *event)
 {
 	switch(event->key())
 	{
-		case Qt::Key_Up :
-			c->setDy(0);
-			break;
-		case Qt::Key_Down :
-			c->setDy(0);
-			break;
 		case Qt::Key_Right :
 			c->setDx(0);
 			break;

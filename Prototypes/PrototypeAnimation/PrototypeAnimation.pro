@@ -14,14 +14,20 @@ SOURCES += main.cpp\
     carre.cpp \
     vue_jeu.cpp \
     objet_jeu.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    objetjeufactory.cpp
 
 HEADERS  += \
     carre.h \
     vue_jeu.h \
     objet_jeu.h \
-    mainwindow.h
+    mainwindow.h \
+    singleton.h \
+    objetjeufactory.h
 
 FORMS    += \
     vue_jeu.ui \
     mainwindow.ui
+
+RESOURCES += \
+    ressources.qrc
