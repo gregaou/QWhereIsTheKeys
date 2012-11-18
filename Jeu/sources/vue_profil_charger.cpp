@@ -25,7 +25,6 @@ void VueProfilCharger::onClicBoutonAnnuler()
 
 void VueProfilCharger::onClicBoutonValider()
 {
-
 	if(_ui->listProfils->currentIndex().row() != -1)
 	{
 		ModelJeu *jeu = ModelJeu::getInstance();

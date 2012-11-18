@@ -48,7 +48,7 @@ void VueProfilNouveau::ajouterProfil(QString nom)
 
 		QModelIndex index = _profils->index(list.size());
 		_profils->setData(index,nom,Qt::EditRole);
-		jeu->setIdProfil(_profils->getIdProfilByName(nom));
+		jeu->setIdProfil(list.size());
 		emit setVue(VueMenuJeu::toString());
 	}
 	else

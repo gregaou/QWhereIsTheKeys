@@ -41,6 +41,7 @@ void VueMenuJeu::onClicBoutonRejoindrePartieMultijoueur()
 
 void VueMenuJeu::onClicBoutonQuitterMenuJeu()
 {
+	_mJeu->kill();
 	emit setVue(VueAccueil::toString());
 }
 
