@@ -1,5 +1,4 @@
-﻿#include <QDebug>
-#include "sources/headers/profil.h"
+﻿#include "sources/headers/profil.h"
 
 const QString Profil::_sep = "*|*";
 

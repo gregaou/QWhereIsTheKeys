@@ -2,8 +2,6 @@
 #include "ui_vue_profil_charger.h"
 #include "sources/headers/vue_menu_jeu.h"
 
-#include <QDebug>
-
 VueProfilCharger::VueProfilCharger(QWidget *parent) :
 	VueProfil(parent),
 	_ui(new Ui::VueProfilCharger)

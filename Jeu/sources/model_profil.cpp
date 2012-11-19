@@ -1,4 +1,3 @@
-#include <QDebug>
 #include "sources/headers/model_profil.h"
 
 const QString ModelProfil::UrlFichierSauvegarde = "sauvegarde/sauv.txt";
@@ -36,29 +35,7 @@ bool ModelProfil::chargerProfils()
 		this->insertRow(this->rowCount(), QModelIndex());
 		QModelIndex index = this->index(this->rowCount() - 1);
 		_profils.replace(index.row(), *profil);
-		this->setData(index, profil->getNom(), Qt::EditRole);
-	}
-	file.close();
-	return true;
-}
-
-bool ModelProfil::chargerProfil(QString nom)
-{
-	QFile file(ModelProfil::UrlFichierSauvegarde);
-	if(!file.open(QIODevice::ReadOnly | QIODevice::Text))
-		return false;
-	QTextStream in(&file);
-	Profil profil;
-	QModelIndex index;
-	while(!in.atEnd())
-	{
-		profil.fromString(in.readLine());
-		if(profil.getNom() == nom)
-		{
-			index = this->index(this->rowCount());
-			this->insertRow(this->rowCount(), QModelIndex());
-			this->setData(index, nom, Qt::EditRole);
-		}
+		this->setData(index, profil->getNom(), Qt::DisplayRole);
 	}
 	file.close();
 	return true;
@@ -145,14 +122,16 @@ bool ModelProfil::removeRow(int row, const QModelIndex &parent)
 bool ModelProfil::setData(const QModelIndex &index, const QVariant &value,
 													int role)
 {
-	if(index.isValid() && role == Qt::EditRole)
+	if(index.isValid())
 	{
 		int row = index.row();
 		Profil p;
 		p.setNom(value.toString());
 		p.setResultatsNiveaux(getList().at(row).getResultatsNiveaux());
 		_profils.replace(row, p);
-		return sauverProfils();
+		if(role == Qt::EditRole)
+			return sauverProfils();
+		return true;
 	}
 	return false;
 }

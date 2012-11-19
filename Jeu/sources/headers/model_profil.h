@@ -39,13 +39,6 @@ public:
 		*/
 	bool chargerProfils();
 	/**
-		*  \brief Retourne le profil joueur d'identifiant nom
-		*	 \fn    bool chargerProfil(QString nom)
-		*  \param nom Chaine de caractère représentant le nom du profil à charger
-		*	 \return Vrai le profil existe sinon Faux
-		*/
-	bool chargerProfil(QString nom);
-	/**
 		*  \brief Sauvegarde les profils dans le fichier
 		*	 \fn    static bool sauverProfils()
 		*	 \return Vrai les profils sont sauvegardés sinon Faux
