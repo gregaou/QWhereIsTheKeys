@@ -11,7 +11,7 @@ VueJeu::VueJeu(QWidget *parent) :
 	ObjetJeu *p = new Plateforme(0,550,200,25);
 	c = new Carre(10,10);
 	_scene.addItem(c);
-	_scene.addItem(p);
+	//_scene.addItem(p);
 
 	_view.setBackgroundBrush(QImage(":/fond/fond"));
 

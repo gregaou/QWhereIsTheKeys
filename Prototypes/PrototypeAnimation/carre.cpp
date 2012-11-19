@@ -40,22 +40,11 @@ void Carre::advance(int step)
 	}
 
 
-
-	QList<QGraphicsItem *> list;
-
 	if(scene()->sceneRect().contains(boundingRect().translated(_dx,0).translated(pos())))
 		moveBy(_dx,0);
 
-	if(scene()->sceneRect().contains(boundingRect().translated(0,_dy).translated(pos()))
-		 && scene()->items(pos().x(),pos().y()+21,20,1).isEmpty()
-		 && scene()->items(pos().x(),pos().y()-1,20,1).isEmpty())
+	if(scene()->sceneRect().contains(boundingRect().translated(0,_dy).translated(pos())))
 		moveBy(0,_dy);
-
-	list = collidingItems();
-
-
-
-
 }
 
 void Carre::droite(bool t)
