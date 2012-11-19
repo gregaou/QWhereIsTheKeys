@@ -44,6 +44,11 @@ void Profil::setNom(QString nom)
 	_nom = nom;
 }
 
+void Profil::setResultatsNiveaux(QMap<int,int> resultatsNiveaux)
+{
+	_resultatsNiveaux = resultatsNiveaux;
+}
+
 void Profil::ajouterResultatNiveau(int idNiveau, int temps)
 {
 	_resultatsNiveaux.insert(idNiveau, temps);

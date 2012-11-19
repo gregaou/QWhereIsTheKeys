@@ -69,6 +69,12 @@ public:
 		*/
 	void setNom(QString nom);
 	/**
+		*  \brief Mutateur de la donnée membre _resultatsNiveaux
+		*	 \fn    void setResultatsNiveaux(QMap<int,int> resultatsNiveaux)
+		*  \param resultatsNiveaux Nouveaux scores
+		*/
+	void setResultatsNiveaux(QMap<int,int> resultatsNiveaux);
+	/**
 		*  \brief Ajoute un couple (identifiant de niveau)/(temps pour terminer le niveau) dans la liste des résultats
 		*	 \fn    bool ajouterResultatNiveau(int idNiveau, int temps)
 		*  \param idNiveau Identifiant du niveau

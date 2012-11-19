@@ -148,6 +148,7 @@ bool ModelProfil::setData(const QModelIndex &index, const QVariant &value,
 		int row = index.row();
 		Profil p;
 		p.setNom(value.toString());
+		p.setResultatsNiveaux(getList().at(row).getResultatsNiveaux());
 		_profils.replace(row, p);
 		return sauverProfils();
 	}
