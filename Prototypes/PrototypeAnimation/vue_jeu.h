@@ -3,6 +3,7 @@
 
 #include "zone_jeu.h"
 #include "carre.h"
+#include "plateforme.h"
 
 class VueJeu : public QWidget
 {

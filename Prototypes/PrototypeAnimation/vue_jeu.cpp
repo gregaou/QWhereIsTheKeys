@@ -8,8 +8,10 @@ VueJeu::VueJeu(QWidget *parent) :
 	_scene(0, 0, 800, 600,this),
 	_view(&_scene, this)
 {
-	c = new Carre();
+	ObjetJeu *p = new Plateforme(0,550,200,25);
+	c = new Carre(10,10);
 	_scene.addItem(c);
+	_scene.addItem(p);
 
 	_view.setBackgroundBrush(QImage(":/fond/fond"));
 
@@ -25,6 +27,12 @@ VueJeu::~VueJeu()
 
 void VueJeu::keyPressEvent(QKeyEvent *event)
 {
+	if(event->isAutoRepeat())
+	{
+		event->ignore();
+		return;
+	}
+
 	switch(event->key())
 	{
 		case Qt::Key_Right :
@@ -42,6 +50,13 @@ void VueJeu::keyPressEvent(QKeyEvent *event)
 
 void VueJeu::keyReleaseEvent(QKeyEvent *event)
 {
+
+	if(event->isAutoRepeat())
+	{
+		event->ignore();
+		return;
+	}
+
 	switch(event->key())
 	{
 		case Qt::Key_Right :

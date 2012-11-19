@@ -2,7 +2,7 @@
 
 #include <QGraphicsItem>
 
-ObjetJeu::ObjetJeu()
+ObjetJeu::ObjetJeu(qreal x, qreal y)
 {
-
+	setPos(x,y);
 }

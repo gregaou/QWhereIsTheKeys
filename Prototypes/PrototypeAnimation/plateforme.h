@@ -1,31 +1,24 @@
-#ifndef CARRE_H
-#define CARRE_H
+#ifndef PLATEFORME_H
+#define PLATEFORME_H
 
 #include "objet_jeu.h"
 
-class Carre : public ObjetJeu
+class Plateforme : public ObjetJeu
 {
 public:
-		Carre(qreal x, qreal y);
+		Plateforme(qreal x, qreal y, qreal w, qreal h);
+
 
 		QRectF boundingRect() const;
 		QPainterPath shape() const;
 		void paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 							 QWidget *widget);
 
-		void droite(bool t);
-		void gauche(bool t);
-
-		void setDx(qreal r);
-		void setDy(qreal r);
-		void saut();
-
 protected:
 		void advance(int step);
 
 private:
-		qreal _dx;
-		qreal _dy;
+		qreal _x, _y, _w, _h;
 };
 
-#endif // CARRE_H
+#endif // PLATEFORME_H

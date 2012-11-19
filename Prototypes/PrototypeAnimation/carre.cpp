@@ -3,7 +3,7 @@
 #include <QDebug>
 #include <QGraphicsScene>
 
-Carre::Carre() : _dx(0), _dy(0)
+Carre::Carre(qreal x , qreal y) :ObjetJeu(x,y), _dx(0), _dy(0)
 {
 }
 
@@ -29,20 +29,32 @@ void Carre::advance(int step)
 {
 	if (!step)
 		return;
-	if(_dy < 3)
+	if(_dy < 5)
 		_dy += 0.1;
 
-	if(_dx)
+	if(_dx) {
 		if(_dx > 0 && _dx+0.2 < 2)
 			_dx += 0.2;
 		else if (_dx < 0 && _dx-0.2 > -2)
 			_dx -= 0.2;
+	}
+
+
+
+	QList<QGraphicsItem *> list;
 
 	if(scene()->sceneRect().contains(boundingRect().translated(_dx,0).translated(pos())))
 		moveBy(_dx,0);
 
-	if(scene()->sceneRect().contains(boundingRect().translated(0,_dy).translated(pos())))
+	if(scene()->sceneRect().contains(boundingRect().translated(0,_dy).translated(pos()))
+		 && scene()->items(pos().x(),pos().y()+21,20,1).isEmpty()
+		 && scene()->items(pos().x(),pos().y()-1,20,1).isEmpty())
 		moveBy(0,_dy);
+
+	list = collidingItems();
+
+
+
 
 }
 
@@ -74,6 +86,6 @@ void Carre::setDy(qreal r)
 
 void Carre::saut()
 {
-	if(_dy >= 3)
+	if(_dy >= 5)
 		_dy=-_dy;
 }
