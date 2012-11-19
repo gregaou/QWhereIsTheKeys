@@ -1,4 +1,5 @@
-﻿#include "sources/headers/profil.h"
+﻿#include <QDebug>
+#include "sources/headers/profil.h"
 
 const QString Profil::_sep = "*|*";
 
@@ -83,7 +84,8 @@ QString Profil::toString()
 	while(i.hasNext())
 	{
 		i.next();
-		strProfil += (_sep + i.key() + _sep + i.value());
+		strProfil += (_sep + QString::number(i.key()) + _sep +
+									QString::number(i.value()));
 	}
 	return strProfil;
 }

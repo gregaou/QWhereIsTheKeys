@@ -75,7 +75,7 @@ QString VueChargementJeu::toString()
 void VueChargementJeu::actualiseListeNiveaux()
 {
 	//en attendant, on test les acces aux niveaux en modifiant i manuellement.
-	int i = 0;   //_mJeu->getDernierNiveauTermine();
+	int i = _mJeu->getDernierNiveauTermine();
 
 	if(i>=1){
 		_ui->boutonNiveau2->setEnabled(1);

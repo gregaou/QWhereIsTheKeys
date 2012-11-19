@@ -1,3 +1,4 @@
+#include <QDebug>
 #include "sources/headers/model_jeu.h"
 
 ModelJeu::ModelJeu() : _profils(ModelProfil::getInstance()){}
@@ -18,6 +19,7 @@ int ModelJeu::getDernierNiveauTermine()
 	QMap<int, int> resultatsNiveaux;
 	p = _profils->getProfil(_idProfil);
 	resultatsNiveaux = p.getResultatsNiveaux();
+	qDebug() << resultatsNiveaux.count();
 	return resultatsNiveaux.count();
 }
 

@@ -1,3 +1,4 @@
+#include <QDebug>
 #include "sources/headers/model_profil.h"
 
 const QString ModelProfil::UrlFichierSauvegarde = "sauvegarde/sauv.txt";
@@ -34,6 +35,7 @@ bool ModelProfil::chargerProfils()
 		profil = Profil::fromString(str);
 		this->insertRow(this->rowCount(), QModelIndex());
 		QModelIndex index = this->index(this->rowCount() - 1);
+		_profils.replace(index.row(), *profil);
 		this->setData(index, profil->getNom(), Qt::EditRole);
 	}
 	file.close();
