@@ -1,6 +1,6 @@
 ################################################################################
 #     Projet: QWhereIsTheKey's++                                               #
-#     Prototype animation.                                                     #
+#     Prototype réseau Serveur.                                                #
 #     Création du fichier: 19/11/12                                            #
 #     Dernière mise à jour: 19/11/12                                           #
 ################################################################################
@@ -16,9 +16,13 @@
  ______________________________________________________________________________
 | Utilisation.                                                                 |
 |------------------------------------------------------------------------------|
-| 1) Lancer le prototype animation.                                            |
-| 2) Utiliser les flèches directionnelles pour se déplacer; avec la flèche de  |
-|    droite le personnage se déplace vers la droite et avec celle de gauche il |
-|    va à gauche. Utiliser la barre d'espace pour effectuer un saut.           |
+| 1) Lancer le serveur.                                                        |
+| 2) Attendre d'éventuels clients, ou s'y connecter via protocole TCP,         |
+|    ou en utilisant le prototype client.                                      |
+| 3) Le serveur reçoit des messages par ses clients et les renvoies à tous     |
+|    ceux qui lui sont connecté, auteur du messages inclus.                    |
+| 4) Quitter le serveur, les clients encore connectés seront recevront un      |
+|    message d'erreur leur indiquant que le serveur est déconnecté.            |
+|                                                                              |
+| Note : Par defaut, le port utiliser par le serveur est "1234".               |
 |______________________________________________________________________________|
-

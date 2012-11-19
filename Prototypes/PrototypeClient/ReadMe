@@ -1,0 +1,39 @@
+################################################################################
+#     Projet: QWhereIsTheKey's++                                               #
+#     Prototype réseau Client.                                                 #
+#     Création du fichier: 19/11/12                                            #
+#     Dernière mise à jour: 19/11/12                                           #
+################################################################################
+
+                                         ##        #### 
+     #######                           ##    ##   ##
+  ### ### ###                         ##      ## ##
+##  ##  ##  ##########################################
+##  ##  ##  ######                 #  # #  # ##  ###
+ ###  ### ###                       ####   # #### ####
+    #######                          ## #      #   #
+
+ ______________________________________________________________________________
+| Utilisation.                                                                 |
+|------------------------------------------------------------------------------|
+| 1) Lancer le client.                                                         |
+| 2) Entrez l'adresse ip du serveur (si le serveur et sur la même machine que  |
+|    le client, "localhost" fonctionne aussi).                                 |
+| 3) Entrez le port du serveur sur lequel se connecter (par défaut, le port    |
+|    du prototype serveur est "1234").                                         |
+| 4) Optionellement, vous pouvez entrer votre pseudonyme, si vous l'entrez, il |
+|    apparaîtra devant les messages que vous enverrez plus tard.               |
+| 5) Appuyez sur le bouton "connexion"; si le serveur est lancé et que les     |
+|    informations entrées sont correctes, la connexion devrait se faire        |
+|    correctement. Autrement l'application essaie de se connecter pendant      |
+|    plusieurs secondes puis autorise à nouveau la saisie des informations.    |
+| 6) Une fois connecté, il est possible d'écrire des messages en bas de        |
+|    l'écran, ces messages seront envoyés au serveur qui les enverra à tous    |
+|    les clients connectés.                                                    |
+| 7) Apres avoir envoyé le nécessaire ou si l'on souhaite changer de serveur,  |
+|    il est possible de se déconnecter du serveur actuel grâce au bouton       |
+|    correspondant.                                                            |
+|______________________________________________________________________________|
+
+ 
+
