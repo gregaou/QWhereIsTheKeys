@@ -28,10 +28,10 @@ void VueJeu::keyPressEvent(QKeyEvent *event)
 	switch(event->key())
 	{
 		case Qt::Key_Right :
-			c->setDx(1);
+			c->droite(true);
 			break;
 		case Qt::Key_Left :
-			c->setDx(-1);
+			c->gauche(true);
 			break;
 		case Qt::Key_Space :
 			c->saut();
@@ -45,10 +45,10 @@ void VueJeu::keyReleaseEvent(QKeyEvent *event)
 	switch(event->key())
 	{
 		case Qt::Key_Right :
-			c->setDx(0);
+			c->gauche(false);
 			break;
 		case Qt::Key_Left :
-			c->setDx(0);
+			c->gauche(false);
 			break;
 	}
 }

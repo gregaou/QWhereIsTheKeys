@@ -13,6 +13,9 @@ public:
 		void paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 							 QWidget *widget);
 
+		void droite(bool t);
+		void gauche(bool t);
+
 		void setDx(qreal r);
 		void setDy(qreal r);
 		void saut();

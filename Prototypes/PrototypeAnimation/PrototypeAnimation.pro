@@ -15,7 +15,7 @@ SOURCES += main.cpp\
     vue_jeu.cpp \
     objet_jeu.cpp \
     mainwindow.cpp \
-    objetjeufactory.cpp
+    objet_jeu_factory.cpp
 
 HEADERS  += \
     carre.h \
@@ -23,7 +23,7 @@ HEADERS  += \
     objet_jeu.h \
     mainwindow.h \
     singleton.h \
-    objetjeufactory.h
+    objet_jeu_factory.h
 
 FORMS    += \
     vue_jeu.ui \

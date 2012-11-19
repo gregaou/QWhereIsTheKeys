@@ -27,17 +27,39 @@ void Carre::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidget *
 
 void Carre::advance(int step)
 {
-		if (!step)
-				return;
-		if(_dy < 3)
-			_dy += 0.1;
+	if (!step)
+		return;
+	if(_dy < 3)
+		_dy += 0.1;
 
-		if(scene()->sceneRect().contains(boundingRect().translated(_dx,0).translated(pos())))
-			moveBy(_dx,0);
+	if(_dx)
+		if(_dx > 0 && _dx+0.2 < 2)
+			_dx += 0.2;
+		else if (_dx < 0 && _dx-0.2 > -2)
+			_dx -= 0.2;
 
-		if(scene()->sceneRect().contains(boundingRect().translated(0,_dy).translated(pos())))
-			moveBy(0,_dy);
+	if(scene()->sceneRect().contains(boundingRect().translated(_dx,0).translated(pos())))
+		moveBy(_dx,0);
 
+	if(scene()->sceneRect().contains(boundingRect().translated(0,_dy).translated(pos())))
+		moveBy(0,_dy);
+
+}
+
+void Carre::droite(bool t)
+{
+	if(t)
+		_dx = 0.2;
+	else
+		_dx = 0;
+}
+
+void Carre::gauche(bool t)
+{
+	if(t)
+		_dx = -0.2;
+	else
+		_dx = 0;
 }
 
 void Carre::setDx(qreal r)
@@ -53,5 +75,5 @@ void Carre::setDy(qreal r)
 void Carre::saut()
 {
 	if(_dy >= 3)
-	_dy=-_dy;
+		_dy=-_dy;
 }
