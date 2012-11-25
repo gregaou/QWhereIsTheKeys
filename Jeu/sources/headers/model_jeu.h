@@ -19,6 +19,7 @@ class ModelJeu : public Singleton<ModelJeu>
 private:
 	ModelProfil * _profils; /**< Modèle de profils de joueurs */
 	int _idProfil; /**< Identifiant du profil chargé */
+	int _niveauSelectionne; /**< Identifiant du niveau sélectionné */
 	/**
 		*  \brief Constructeur
 		*	 \fn    ModelJeu()
@@ -33,6 +34,18 @@ public:
 		*	 \param id Identifiant du profil chargé
 		*/
 	void setIdProfil(int id);
+	/**
+		*  \brief Mutateur de la donnée membre niveauSelectionne
+		*	 \fn    void setNiveauSelectionne(int niveauSelectionne)
+		*	 \param niveauSelectionne Identifiant du niveau sélectionné
+		*/
+	void setNiveauSelectionne(int niveauSelectionne);
+	/**
+		*  \brief Récupère le niveau sélectionné
+		*	 \fn    int getNiveauSelectionne()
+		*  \return Le niveau sélectionné
+		*/
+	int getNiveauSelectionne();
 	/**
 		*  \brief Récupère le nom du profil
 		*	 \fn    void getNomProfil()
