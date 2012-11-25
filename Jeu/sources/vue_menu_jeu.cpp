@@ -21,7 +21,7 @@ VueMenuJeu::~VueMenuJeu()
 
 void VueMenuJeu::onClicBoutonNouvellePartie()
 {
-	emit setVue(VueNouveauJeu::toString());
+	emit setVue(VueJeu::toString());
 }
 
 void VueMenuJeu::onClicBoutonChargerPartie()

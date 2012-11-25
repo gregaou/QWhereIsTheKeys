@@ -2,4 +2,15 @@
     <qresource prefix="/icon">
         <file alias="key.png">icons/key.png</file>
     </qresource>
+    <qresource prefix="/fond">
+        <file alias="fond.png">images/fond.png</file>
+    </qresource>
+    <qresource prefix="/heros">
+        <file alias="h_d1.png">images/heros/hero_down1.png</file>
+        <file alias="h_d2.png">images/heros/hero_down2.png</file>
+        <file alias="h_l1.png">images/heros/hero_left1.png</file>
+        <file alias="h_l2.png">images/heros/hero_left2.png</file>
+        <file alias="h_r1.png">images/heros/hero_right1.png</file>
+        <file alias="h_r2.png">images/heros/hero_right2.png</file>
+    </qresource>
 </RCC>

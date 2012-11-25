@@ -46,31 +46,6 @@ public:
 
 private slots:
 	/**
-		*  \brief Action lorsque l'on clic sur le bouton niveau 1
-		*	 \fn    void onClicBoutonNiveau1();
-		*/
-	void onClicBoutonNiveau1();
-	/**
-		*  \brief Action lorsque l'on clic sur le bouton niveau 2
-		*	 \fn    void onClicBoutonNiveau2();
-		*/
-	void onClicBoutonNiveau2();
-	/**
-		*  \brief Action lorsque l'on clic sur le bouton niveau 3
-		*	 \fn    void onClicBoutonNiveau3();
-		*/
-	void onClicBoutonNiveau3();
-	/**
-		*  \brief Action lorsque l'on clic sur le bouton niveau 4
-		*	 \fn    void onClicBoutonNiveau4();
-		*/
-	void onClicBoutonNiveau4();
-	/**
-		*  \brief Action lorsque l'on clic sur le bouton niveau 5
-		*	 \fn    void onClicBoutonNiveau5();
-		*/
-	void onClicBoutonNiveau5();
-	/**
 		*  \brief Action lorsque l'on clic sur le bouton retour
 		*	 \fn    void onClicBoutonRetour();
 		*/
@@ -79,6 +54,7 @@ private slots:
 private:
 	Ui::VueChargementJeu *_ui; /**< Interface graphique liée à la classe */
 	ModelJeu *_mJeu;					/**< Modèle de données du jeu */
+	QList<QPushButton> _listeB;
 
 	/**
 		*  \brief Connecte les signaux des éléments de l'interface à

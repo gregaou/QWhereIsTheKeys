@@ -26,6 +26,7 @@ void QWITK::setVue(QString nom)
 	_vue = _vueFactory->getVue(nom,this);
 	connexionVue();
 	setCentralWidget(_vue);
+	_vue->setFocus();
 }
 
 void QWITK::connexionVue()

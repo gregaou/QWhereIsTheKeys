@@ -11,6 +11,7 @@
 
 #include <QWidget>
 #include <QMessageBox>
+#include <QDebug>
 
 /**
  * \class Vue
@@ -57,6 +58,9 @@ protected:
 		*  \fn virtual void connexionAffichage() = 0
 		*/
 	virtual void connexionAffichage() = 0;
+
+	virtual void keyPressEvent(QKeyEvent *event) {}
+	virtual void keyReleaseEvent(QKeyEvent *event) {}
 
 
 };

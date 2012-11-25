@@ -22,7 +22,11 @@ SOURCES += sources/main.cpp\
     sources/vue_menu_jeu.cpp \
     sources/vue_nouveau_jeu.cpp \
     sources/model_jeu.cpp \
-    sources/vue_chargement_jeu.cpp
+    sources/vue_chargement_jeu.cpp \
+    sources/vue_jeu.cpp \
+    sources/objet_jeu.cpp \
+    sources/oj_heros.cpp \
+    sources/objet_jeu_mobile.cpp
 
 HEADERS  += sources/headers/qwitk.h \
     sources/headers/vue.h \
@@ -38,7 +42,11 @@ HEADERS  += sources/headers/qwitk.h \
     sources/headers/vue_menu_jeu.h \
     sources/headers/vue_nouveau_jeu.h \
     sources/headers/model_jeu.h \
-    sources/headers/vue_chargement_jeu.h
+    sources/headers/vue_chargement_jeu.h \
+    sources/headers/vue_jeu.h \
+    sources/headers/objet_jeu.h \
+    sources/headers/oj_heros.h \
+    sources/headers/objet_jeu_mobile.h
 
 FORMS    += ui/qwitk.ui \
     ui/vue_accueil.ui \
@@ -47,7 +55,8 @@ FORMS    += ui/qwitk.ui \
     ui/vue_profil_supprimer.ui \
     ui/vue_menu_jeu.ui \
     ui/vue_nouveau_jeu.ui \
-    ui/vue_chargement_jeu.ui
+    ui/vue_chargement_jeu.ui \
+    ui/vue_jeu.ui
 
 RESOURCES += \
     ressources/ressources.qrc
