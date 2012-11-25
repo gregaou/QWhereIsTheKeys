@@ -6,6 +6,15 @@ void ModelJeu::setIdProfil(int id)
 {
 	_idProfil = id;
 }
+void ModelJeu::setNiveauSelectionne(int niveauSelectionne)
+{
+	_niveauSelectionne = niveauSelectionne;
+}
+
+int ModelJeu::getNiveauSelectionne()
+{
+	return _niveauSelectionne;
+}
 
 QString ModelJeu::getNomProfil()
 {
