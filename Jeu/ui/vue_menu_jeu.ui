@@ -60,9 +60,11 @@
          </property>
          <property name="font">
           <font>
-           <family>URW Chancery L</family>
+           <family>Ubuntu</family>
            <pointsize>20</pointsize>
+           <weight>75</weight>
            <italic>true</italic>
+           <bold>true</bold>
           </font>
          </property>
          <property name="contextMenuPolicy">

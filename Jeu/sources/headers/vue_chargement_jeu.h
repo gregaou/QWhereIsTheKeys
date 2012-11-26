@@ -46,15 +46,20 @@ public:
 
 private slots:
 	/**
-		*  \brief Action lorsque l'on clic sur le bouton retour
-		*	 \fn    void onClicBoutonRetour();
+		*  \brief Permet de faire un retour
+		*	 \fn    void onClicBoutonRetour()
 		*/
 	void onClicBoutonRetour();
+	/**
+		*  \brief Charge le niveau selectionné
+		*	 \fn    void onclicBoutonNiveau(int choixNiveau)
+		*	 \param choixNiveau définit le niveau choisi
+		*/
+	void onclicBoutonNiveau(int choixNiveau);
 
 private:
 	Ui::VueChargementJeu *_ui; /**< Interface graphique liée à la classe */
 	ModelJeu *_mJeu;					/**< Modèle de données du jeu */
-	QList<QPushButton> _listeB;
 
 	/**
 		*  \brief Connecte les signaux des éléments de l'interface à
