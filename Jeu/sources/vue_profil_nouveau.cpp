@@ -33,7 +33,7 @@ void VueProfilNouveau::onClicBoutonValider()
 		QMessageBox::information(this,"Profil non valide",
 														 QString("Le nom de profil ne doit contenir que ").
 														 append("des chiffres ou des lettres ").
-														 append("et ne doit pas �tre vide."));
+														 append("et ne doit pas être vide."));
 }
 
 void VueProfilNouveau::ajouterProfil(QString nom)
@@ -54,7 +54,7 @@ void VueProfilNouveau::ajouterProfil(QString nom)
 	else
 	{
 		QMessageBox::information(this,"Profil existant",
-														 QString("Le profil \"%1\" existe d�j�  !").
+														 QString("Le profil \"%1\" existe déjà  !").
 														 arg(nom));
 	}
 
