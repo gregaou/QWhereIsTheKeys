@@ -7,14 +7,14 @@
  */
 
 
-#ifndef VUE_MENU_JEU_H
-#define VUE_MENU_JEU_H
+#ifndef VUE_JEU_MENU_H
+#define VUE_JEU_MENU_H
 
 #include "sources/headers/vue.h"
 #include "sources/headers/vue_jeu.h"
 #include "sources/headers/vue_accueil.h"
-#include "sources/headers/vue_nouveau_jeu.h"
-#include "sources/headers/vue_chargement_jeu.h"
+#include "sources/headers/vue_jeu_nouveau.h"
+#include "sources/headers/vue_jeu_charger.h"
 
 /** \namespace Ui
  *
@@ -22,32 +22,32 @@
  * interfaces Qt
  */
 namespace Ui {
-	class VueMenuJeu;
+	class VueJeuMenu;
 }
 
 /**
- * \class VueMenuJeu
- * \brief Classe de la vue Menu Jeu
+ * \class VueJeuMenu
+ * \brief Classe de la vue Jeu Menu
  */
-class VueMenuJeu : public Vue
+class VueJeuMenu : public Vue
 {
 	Q_OBJECT
 
 public:
 	/**
 		*  \brief Constructeur
-		*	 \fn    explicit VueMenuJeu (QWidget *parent = 0)
+		*	 \fn    explicit VueJeuMenu (QWidget *parent = 0)
 		*  \param parent Définit le parent de la fenêtre
 		*/
-	explicit VueMenuJeu(QWidget *parent = 0);
+	explicit VueJeuMenu(QWidget *parent = 0);
 
 	/**
-		*  \brief VueMenuJeu
-		*	 \fn    ~VueMenuJeu ()
+		*  \brief VueJeuMenu
+		*	 \fn    ~VueJeuMenu ()
 		*
-		*  Destructeur de la classe VueMenuJeu
+		*  Destructeur de la classe VueJeuMenu
 		*/
-	~VueMenuJeu();
+	~VueJeuMenu();
 
 	/**
 		*  \brief Renvoi le nom de la vue
@@ -84,7 +84,7 @@ private slots:
 	void onClicBoutonQuitterMenuJeu();
 
 private:
-	Ui::VueMenuJeu *_ui; /**< Interface graphique liée à la classe */
+	Ui::VueJeuMenu *_ui; /**< Interface graphique liée à la classe */
 	ModelJeu *_mJeu; /**< Modèle de données du jeu */
 
 	/**
@@ -95,4 +95,4 @@ private:
 	void connexionAffichage();
 };
 
-#endif // VUE_MENU_JEU_H
+#endif // VUE_JEU_MENU_H

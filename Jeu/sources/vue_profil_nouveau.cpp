@@ -1,6 +1,6 @@
 #include "sources/headers/vue_profil_nouveau.h"
 #include "ui_vue_profil_nouveau.h"
-#include "sources/headers/vue_menu_jeu.h"
+#include "sources/headers/vue_jeu_menu.h"
 
 VueProfilNouveau::VueProfilNouveau(QWidget *parent) :
 	VueProfil(parent),
@@ -33,7 +33,7 @@ void VueProfilNouveau::onClicBoutonValider()
 		QMessageBox::information(this,"Profil non valide",
 														 QString("Le nom de profil ne doit contenir que ").
 														 append("des chiffres ou des lettres ").
-														 append("et ne doit pas être vide."));
+														 append("et ne doit pas ï¿½tre vide."));
 }
 
 void VueProfilNouveau::ajouterProfil(QString nom)
@@ -49,12 +49,12 @@ void VueProfilNouveau::ajouterProfil(QString nom)
 		QModelIndex index = _profils->index(list.size());
 		_profils->setData(index,nom,Qt::EditRole);
 		jeu->setIdProfil(list.size());
-		emit setVue(VueMenuJeu::toString());
+		emit setVue(VueJeuMenu::toString());
 	}
 	else
 	{
 		QMessageBox::information(this,"Profil existant",
-														 QString("Le profil \"%1\" existe déjà  !").
+														 QString("Le profil \"%1\" existe dï¿½jï¿½  !").
 														 arg(nom));
 	}
 

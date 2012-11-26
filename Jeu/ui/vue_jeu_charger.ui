@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>VueChargementJeu</class>
- <widget class="QWidget" name="VueChargementJeu">
+ <class>VueJeuCharger</class>
+ <widget class="QWidget" name="VueJeuCharger">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -50,7 +50,7 @@
     </widget>
    </item>
    <item row="5" column="0" colspan="2">
-    <layout class="QGridLayout" name="gridLayoutChargerJeu"/>
+    <layout class="QGridLayout" name="gridLayoutJeuCharger" rowstretch="0"/>
    </item>
    <item row="10" column="0">
     <spacer name="horizontalSpacer">

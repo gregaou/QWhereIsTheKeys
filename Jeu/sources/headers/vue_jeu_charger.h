@@ -1,9 +1,9 @@
-#ifndef VUE_CHARGEMENT_JEU_H
-#define VUE_CHARGEMENT_JEU_H
+#ifndef VUE_JEU_CHARGER_H
+#define VUE_JEU_CHARGER_H
 
 #include "sources/headers/vue.h"
 #include "sources/headers/vue_profil.h"
-#include "sources/headers/vue_menu_jeu.h"
+#include "sources/headers/vue_jeu_menu.h"
 
 /** \namespace Ui
  *
@@ -11,32 +11,32 @@
  * interfaces Qt
  */
 namespace Ui {
-	class VueChargementJeu;
+	class VueJeuCharger;
 }
 
 /**
- * \class VueChargementJeu
- * \brief Classe de la Vue Chargement Jeu
+ * \class VueJeuCharger
+ * \brief Classe de la Vue Jeu Charger
  */
-class VueChargementJeu : public Vue
+class VueJeuCharger : public Vue
 {
 	Q_OBJECT
 
 public:
 	/**
 		*  \brief Constructeur
-		*	 \fn    explicit VueChargementJeu (QWidget *parent = 0)
+		*	 \fn    explicit VueJeuCharger (QWidget *parent = 0)
 		*  \param parent Définit le parent de la fenêtre
 		*/
-	explicit VueChargementJeu(QWidget *parent = 0);
+	explicit VueJeuCharger(QWidget *parent = 0);
 
 	/**
-		*  \brief VueChargementJeu
-		*	 \fn    ~VueChargementJeu ()
+		*  \brief VueJeuCharger
+		*	 \fn    ~VueJeuCharger ()
 		*
-		*  Destructeur de la classe VueChargementJeu
+		*  Destructeur de la classe VueJeuCharger
 		*/
-	~VueChargementJeu();
+	~VueJeuCharger();
 
 	/**
 		*  \brief Renvoi le nom de la vue
@@ -58,7 +58,7 @@ private slots:
 	void onclicBoutonNiveau(int choixNiveau);
 
 private:
-	Ui::VueChargementJeu *_ui; /**< Interface graphique liée à la classe */
+	Ui::VueJeuCharger *_ui; /**< Interface graphique liée à la classe */
 	ModelJeu *_mJeu;					/**< Modèle de données du jeu */
 
 	/**
@@ -75,4 +75,4 @@ private:
 };
 
 
-#endif // VUE_CHARGEMENT_JEU_H
+#endif // VUE_JEU_CHARGER_H
