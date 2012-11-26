@@ -59,8 +59,8 @@ protected:
 		*/
 	virtual void connexionAffichage() = 0;
 
-	virtual void keyPressEvent(QKeyEvent *event) {}
-	virtual void keyReleaseEvent(QKeyEvent *event) {}
+    virtual void keyPressEvent(QKeyEvent *event) { Q_UNUSED(event) }
+    virtual void keyReleaseEvent(QKeyEvent *event) { Q_UNUSED(event) }
 
 
 };

@@ -26,7 +26,8 @@ SOURCES += sources/main.cpp\
     sources/vue_jeu.cpp \
     sources/objet_jeu.cpp \
     sources/oj_heros.cpp \
-    sources/objet_jeu_mobile.cpp
+    sources/objet_jeu_mobile.cpp \
+    sources/oj_plateforme.cpp
 
 HEADERS  += sources/headers/qwitk.h \
     sources/headers/vue.h \
@@ -46,7 +47,8 @@ HEADERS  += sources/headers/qwitk.h \
     sources/headers/vue_jeu.h \
     sources/headers/objet_jeu.h \
     sources/headers/oj_heros.h \
-    sources/headers/objet_jeu_mobile.h
+    sources/headers/objet_jeu_mobile.h \
+    sources/headers/oj_plateforme.h
 
 FORMS    += ui/qwitk.ui \
     ui/vue_accueil.ui \

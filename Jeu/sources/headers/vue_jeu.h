@@ -15,6 +15,7 @@
 
 #include "sources/headers/vue.h"
 #include "sources/headers/model_jeu.h"
+#include "sources/headers/oj_plateforme.h"
 #include "sources/headers/oj_heros.h"
 
 /** \namespace Ui

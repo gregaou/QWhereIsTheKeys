@@ -28,7 +28,7 @@ protected:
 	int _currentFrame;
 	QList<Frame> _frames;
 
-	virtual QList<QPixmap> loadListPixmap() const = 0;
+	virtual QList<QPixmap> loadListPixmap() const { return QList<QPixmap>(); }
 
 protected slots:
 	//void onCollisionHeros(Heros *h0);

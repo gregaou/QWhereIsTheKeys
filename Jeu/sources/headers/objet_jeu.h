@@ -10,6 +10,7 @@ class ObjetJeu : public QGraphicsItem
 {
 public:
 	explicit ObjetJeu(qreal x, qreal y, const QList<QPixmap> &animation);
+	explicit ObjetJeu(qreal x, qreal y, qreal w, qreal h, const QPixmap & fond);
 
 	virtual QRectF boundingRect() const;
 	virtual QPainterPath shape() const;
@@ -26,7 +27,7 @@ public:
 	virtual void process() = 0;
 
 protected:
-	virtual void advance(int phase) {}
+		virtual void advance(int phase) { Q_UNUSED(phase) }
 
 	struct Frame {
 			QPixmap pixmap;
@@ -34,10 +35,14 @@ protected:
 			QRectF boundingRect;
 	};
 
+	QPixmap * _fond;
+
 	int _currentFrame;
 	QList<Frame> _frames;
 
-	virtual QList<QPixmap> loadListPixmap() const = 0;
+	qreal _w,_h;
+
+	virtual QList<QPixmap> loadListPixmap() const { return QList<QPixmap>(); }
 
 };
 

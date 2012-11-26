@@ -17,6 +17,9 @@ VueJeu::VueJeu(QWidget *parent) :
 	_ui->setupUi(this);
 	_ui->LayoutJeu->addWidget(&_view);
 
+	ObjetJeu *p = new OjPlateforme(0,576,100,10);
+	_scene.addItem(p);
+
 	h = new OjHeros(0,0);
 	_scene.addItem(h);
 

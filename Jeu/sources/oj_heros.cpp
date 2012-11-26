@@ -39,8 +39,6 @@ void OjHeros::process()
 						( y() < 0 ) ? 0 : ( y() + h > sh )? sh - h : y());
 	}
 	animation();
-
-	qDebug() << boundingRect();
 }
 
 void OjHeros::droite(bool t)
@@ -61,7 +59,7 @@ void OjHeros::gauche(bool t)
 
 void OjHeros::saut()
 {
-	if(_dy == GRAVITE_MAX)
+		if(_dy == GRAVITE_MAX)
 		_dy = -GRAVITE_MAX;
 }
 
