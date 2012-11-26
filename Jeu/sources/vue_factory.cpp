@@ -1,4 +1,4 @@
-﻿#include "sources/headers/vue_factory.h"
+#include "sources/headers/vue_factory.h"
 
 Vue* VueFactory::getVue(QString nom, QWidget *parent)
 {
@@ -14,14 +14,14 @@ Vue* VueFactory::getVue(QString nom, QWidget *parent)
 	else if(nom == VueProfilSupprimer::toString())
 		return new VueProfilSupprimer(parent);
 
-	else if(nom == VueMenuJeu::toString())
-		return new VueMenuJeu(parent);
+	else if(nom == VueJeuMenu::toString())
+		return new VueJeuMenu(parent);
 
-	else if(nom == VueNouveauJeu::toString())
-		return new VueNouveauJeu(parent);
+	else if(nom == VueJeuNouveau::toString())
+		return new VueJeuNouveau(parent);
 
-	else if(nom == VueChargementJeu::toString())
-		return new VueChargementJeu(parent);
+	else if(nom == VueJeuCharger::toString())
+		return new VueJeuCharger(parent);
 
 	else if(nom == VueJeu::toString())
 		return new VueJeu(parent);

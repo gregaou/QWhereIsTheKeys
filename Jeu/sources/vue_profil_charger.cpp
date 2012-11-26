@@ -1,7 +1,6 @@
 #include "sources/headers/vue_profil_charger.h"
 #include "ui_vue_profil_charger.h"
-#include "sources/headers/vue_menu_jeu.h"
-
+#include "sources/headers/vue_jeu_menu.h"
 VueProfilCharger::VueProfilCharger(QWidget *parent) :
 	VueProfil(parent),
 	_ui(new Ui::VueProfilCharger)
@@ -29,7 +28,7 @@ void VueProfilCharger::onClicBoutonValider()
 		jeu->setIdProfil(_profils->getIdProfilByName(
 											 _ui->listProfils->currentIndex().data().toString()));
 
-		emit setVue(VueMenuJeu::toString());
+		emit setVue(VueJeuMenu::toString());
 	}
 }
 

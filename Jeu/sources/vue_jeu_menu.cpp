@@ -1,9 +1,9 @@
-#include "sources/headers/vue_menu_jeu.h"
-#include "ui_vue_menu_jeu.h"
+#include "sources/headers/vue_jeu_menu.h"
+#include "ui_vue_jeu_menu.h"
 
-VueMenuJeu::VueMenuJeu(QWidget *parent) :
+VueJeuMenu::VueJeuMenu(QWidget *parent) :
 	Vue(parent),
-	_ui(new Ui::VueMenuJeu),
+	_ui(new Ui::VueJeuMenu),
 	_mJeu(ModelJeu::getInstance())
 {
 
@@ -14,39 +14,39 @@ VueMenuJeu::VueMenuJeu(QWidget *parent) :
 	connexionAffichage();
 }
 
-VueMenuJeu::~VueMenuJeu()
+VueJeuMenu::~VueJeuMenu()
 {
 	delete _ui;
 }
 
-void VueMenuJeu::onClicBoutonNouvellePartie()
+void VueJeuMenu::onClicBoutonNouvellePartie()
 {
 	emit setVue(VueJeu::toString());
 }
 
-void VueMenuJeu::onClicBoutonChargerPartie()
+void VueJeuMenu::onClicBoutonChargerPartie()
 {
-	emit setVue(VueChargementJeu::toString());
+	emit setVue(VueJeuCharger::toString());
 }
 
-void VueMenuJeu::onClicBoutonCreerPartieMultijoueur()
+void VueJeuMenu::onClicBoutonCreerPartieMultijoueur()
 {
-	emit setVue(VueNouveauJeu::toString());
+	emit setVue(VueJeuNouveau::toString());
 }
 
-void VueMenuJeu::onClicBoutonRejoindrePartieMultijoueur()
+void VueJeuMenu::onClicBoutonRejoindrePartieMultijoueur()
 {
-	emit setVue(VueNouveauJeu::toString());
+	emit setVue(VueJeuNouveau::toString());
 }
 
-void VueMenuJeu::onClicBoutonQuitterMenuJeu()
+void VueJeuMenu::onClicBoutonQuitterMenuJeu()
 {
 	_mJeu->kill();
 	emit setVue(VueAccueil::toString());
 }
 
 
-void VueMenuJeu::connexionAffichage()
+void VueJeuMenu::connexionAffichage()
 {
 	connect(_ui->boutonNouvellePartie,SIGNAL(clicked()),
 					SLOT(onClicBoutonNouvellePartie()));
@@ -60,8 +60,8 @@ void VueMenuJeu::connexionAffichage()
 					SLOT(onClicBoutonQuitterMenuJeu()));
 }
 
-QString VueMenuJeu::toString()
+QString VueJeuMenu::toString()
 {
-	return QString("VueMenuJeu");
+	return QString("VueJeuMenu");
 }
 

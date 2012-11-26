@@ -6,12 +6,12 @@
  * \date      15/11/12
  */
 
-#ifndef VUE_NOUVEAU_JEU_H
-#define VUE_NOUVEAU_JEU_H
+#ifndef VUE_JEU_NOUVEAU_H
+#define VUE_JEU_NOUVEAU_H
 
 #include "sources/headers/vue.h"
 #include "sources/headers/vue_accueil.h"
-#include "sources/headers/vue_menu_jeu.h"
+#include "sources/headers/vue_jeu_menu.h"
 
 /** \namespace Ui
  *
@@ -19,32 +19,32 @@
  * interfaces Qt
  */
 namespace Ui {
-	class VueNouveauJeu;
+	class VueJeuNouveau;
 }
 
 /**
- * \class VueNouveauJeu
- * \brief Classe de la vue nouveau jeu
+ * \class VueJeuNouveau
+ * \brief Classe de la vue jeu nouveau
  */
-class VueNouveauJeu : public Vue
+class VueJeuNouveau : public Vue
 {
 	Q_OBJECT
 
 public:
 	/**
 		*  \brief Constructeur
-		*	 \fn    explicit VueNouveauJeu (QWidget *parent = 0)
+		*	 \fn    explicit VueJeuNouveau (QWidget *parent = 0)
 		*  \param parent Définit le parent de la fenêtre
 		*/
-	explicit VueNouveauJeu(QWidget *parent = 0);
+	explicit VueJeuNouveau(QWidget *parent = 0);
 
 	/**
-		*  \brief VueNouveauJeu
-		*	 \fn    ~VueNouveauJeu ()
+		*  \brief VueJeuNouveau
+		*	 \fn    ~VueJeuNouveau ()
 		*
-		*  Destructeur de la classe VueNouveauJeu
+		*  Destructeur de la classe VueJeuNouveau
 		*/
-	~VueNouveauJeu();
+	~VueJeuNouveau();
 
 	/**
 		*  \brief Renvoi le nom de la vue
@@ -62,7 +62,7 @@ private slots:
 
 
 private:
-	Ui::VueNouveauJeu *_ui; /**< Interface graphique liée à la classe */
+	Ui::VueJeuNouveau *_ui; /**< Interface graphique liée à la classe */
 
 	/**
 		*  \brief Connecte les signaux des éléments de l'interface à
@@ -72,4 +72,4 @@ private:
 	void connexionAffichage();
 };
 
-#endif // VUE_NOUVEAU_JEU_H
+#endif // VUE_JEU_NOUVEAU_H
