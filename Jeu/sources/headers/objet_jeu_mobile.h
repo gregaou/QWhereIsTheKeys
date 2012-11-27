@@ -3,6 +3,8 @@
 
 #include "sources/headers/objet_jeu.h"
 
+class OjHeros;
+
 class ObjetJeuMobile : public ObjetJeu
 {
 public:
@@ -14,6 +16,8 @@ public:
 	inline qreal yVelocity() const                  { return _dy; }
 
 	virtual void process() = 0;
+
+	virtual void herosCollision(OjHeros *h) = 0;
 
 protected:
 	void advance(int phase);
@@ -29,9 +33,6 @@ protected:
 	QList<Frame> _frames;
 
 	virtual QList<QPixmap> loadListPixmap() const { return QList<QPixmap>(); }
-
-protected slots:
-	//void onCollisionHeros(Heros *h0);
 };
 
 #endif // OBJET_JEU_MOBILE_H

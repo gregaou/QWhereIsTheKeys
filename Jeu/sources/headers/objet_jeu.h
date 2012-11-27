@@ -6,6 +6,8 @@
 #include <QKeyEvent>
 #include <QBitmap>
 
+class OjHeros;
+
 class ObjetJeu : public QGraphicsItem
 {
 public:
@@ -25,6 +27,8 @@ public:
 															_frames.at(frame % _frames.size()).pixmap; }
 
 	virtual void process() = 0;
+
+	virtual void herosCollision(OjHeros *h) = 0;
 
 protected:
 		virtual void advance(int phase) { Q_UNUSED(phase) }

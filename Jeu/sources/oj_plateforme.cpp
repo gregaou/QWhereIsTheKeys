@@ -15,3 +15,16 @@ void OjPlateforme::process()
 {
 
 }
+
+void OjPlateforme::herosCollision(OjHeros *h)
+{
+	if(!collidesWithItem(h))
+		return;
+
+	QRectF inters = boundingRect().intersect(h->boundingRect());
+
+	// collision par le haut
+	if(inters.x() == boundingRect().x())
+		h->setPos(h->x(), y()-h->boundingRect().height());
+
+}

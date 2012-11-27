@@ -21,6 +21,10 @@ protected:
 
 	int counter;
 
+	void herosCollision(OjHeros *h) { Q_UNUSED(h) }
+
+	qreal gravite;
+
 
 };
 

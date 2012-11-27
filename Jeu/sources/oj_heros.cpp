@@ -3,7 +3,8 @@
 #include <QDebug>
 #include <QGraphicsScene>
 
-#define GRAVITE_MAX 5
+#define GRAVITE 5
+#define PGRAVITE 0.2
 
 #define NB_FPS_ANIMATION(X)  ((1000/20)/X)
 
@@ -26,7 +27,8 @@ QList<QPixmap> OjHeros::loadListPixmap() const
 
 void OjHeros::process()
 {
-	_dy = (_dy < GRAVITE_MAX) ? _dy + 0.2  : GRAVITE_MAX;
+
+	_dy = (_dy < GRAVITE)? _dy+PGRAVITE : GRAVITE;
 
 	if(!scene()->sceneRect().contains(boundingRect().translated(pos())))
 	{
@@ -35,10 +37,21 @@ void OjHeros::process()
 		h=boundingRect().height();
 		sw=scene()->width();
 		sh=scene()->height();
+
 		setPos( ( x() < 0 ) ? 0 : ( x() + w > sw )? sw - w : x(),
 						( y() < 0 ) ? 0 : ( y() + h > sh )? sh - h : y());
+
 	}
+
 	animation();
+
+	QList<QGraphicsItem*> listCollision = collidingItems();
+
+	for(int i=0;i<listCollision.size();++i)
+	{
+		ObjetJeu *oj = dynamic_cast<ObjetJeu*>(listCollision.at(i));
+		oj->herosCollision(this);
+	}
 }
 
 void OjHeros::droite(bool t)
@@ -59,8 +72,8 @@ void OjHeros::gauche(bool t)
 
 void OjHeros::saut()
 {
-		if(_dy == GRAVITE_MAX)
-		_dy = -GRAVITE_MAX;
+		if(_dy == GRAVITE)
+		_dy = -GRAVITE;
 }
 
 void OjHeros::animation()
@@ -77,5 +90,7 @@ void OjHeros::animation()
 	else if( _dx == 0 )
 		setFrame(0);
 }
+
+
 
 

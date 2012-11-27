@@ -2,7 +2,7 @@
 #define OJ_PLATEFORME_H
 
 #include "sources/headers/objet_jeu.h"
-
+#include "sources/headers/oj_heros.h"
 
 class OjPlateforme : public ObjetJeu
 {
@@ -11,6 +11,8 @@ public:
 										 const qreal h);
 
 		void process();
+
+		void herosCollision(OjHeros *h);
 
 };
 
