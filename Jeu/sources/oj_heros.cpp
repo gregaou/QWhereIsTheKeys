@@ -30,18 +30,18 @@ void OjHeros::process()
 
 	_dy = (_dy < GRAVITE)? _dy+PGRAVITE : GRAVITE;
 
-	if(!scene()->sceneRect().contains(boundingRect().translated(pos())))
-	{
-		int w,h,sw,sh;
-		w=boundingRect().width();
-		h=boundingRect().height();
-		sw=scene()->width();
-		sh=scene()->height();
+//	if(!scene()->sceneRect().contains(boundingRect().translated(pos())))
+//	{
+//		int w,h,sw,sh;
+//		w=boundingRect().width();
+//		h=boundingRect().height();
+//		sw=scene()->width();
+//		sh=scene()->height();
 
-		setPos( ( x() < 0 ) ? 0 : ( x() + w > sw )? sw - w : x(),
-						( y() < 0 ) ? 0 : ( y() + h > sh )? sh - h : y());
+//		setPos( ( x() < 0 ) ? 0 : ( x() + w > sw )? sw - w : x(),
+//						( y() < 0 ) ? 0 : ( y() + h > sh )? sh - h : y());
 
-	}
+//	}
 
 	animation();
 
@@ -72,7 +72,9 @@ void OjHeros::gauche(bool t)
 
 void OjHeros::saut()
 {
-		if(_dy == GRAVITE)
+		if(!scene()->items(mapToScene(0,boundingRect().height()+1,
+																	boundingRect().width(),0.1)).isEmpty()
+			 && _dy  > 0 )
 		_dy = -GRAVITE;
 }
 

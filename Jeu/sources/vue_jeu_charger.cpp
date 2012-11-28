@@ -30,7 +30,8 @@ void VueJeuCharger::onClicBoutonRetour()
 
 void VueJeuCharger::onclicBoutonNiveau(int choixNiveau)
 {
-	_mJeu->setNiveauSelectionne(choixNiveau);  // affiche 0 pour 1, 1 pour 2, etc... vérifer le modelJeu
+	_mJeu->setNiveauSelectionne(choixNiveau);
+	// affiche 0 pour 1, 1 pour 2, etc... vérifer le modelJeu
 	// A changer pour pouvoir charger les parties
 	emit setVue(VueJeuNouveau::toString());
 }

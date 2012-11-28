@@ -17,10 +17,26 @@ VueJeu::VueJeu(QWidget *parent) :
 	_ui->setupUi(this);
 	_ui->LayoutJeu->addWidget(&_view);
 
-	ObjetJeu *p = new OjPlateforme(0,576,100,10);
+	ObjetJeu *p = new OjPlateforme(150,550,200,15);
+	ObjetJeu *p6 = new OjPlateforme(120,500,200,15);
+	ObjetJeu *p7 = new OjPlateforme(170,420,200,15);
+	ObjetJeu *p8 = new OjPlateforme(120,370,200,15);
 	_scene.addItem(p);
 
-	h = new OjHeros(0,0);
+	ObjetJeu *p2 = new OjPlateforme(0,0,_scene.width(),10);
+	ObjetJeu *p3 = new OjPlateforme(0,_scene.height()-10,_scene.width(),10);
+	ObjetJeu *p4 = new OjPlateforme(0,0,10,_scene.height());
+	ObjetJeu *p5 = new OjPlateforme(_scene.width()-10,0,10,_scene.height());
+
+	_scene.addItem(p2);
+	_scene.addItem(p3);
+	_scene.addItem(p4);
+	_scene.addItem(p5);
+	_scene.addItem(p6);
+	_scene.addItem(p7);
+	_scene.addItem(p8);
+
+	h = new OjHeros(25,25);
 	_scene.addItem(h);
 
 	qDebug() ;
