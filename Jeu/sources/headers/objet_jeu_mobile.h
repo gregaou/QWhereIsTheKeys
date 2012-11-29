@@ -16,7 +16,7 @@ public:
 	inline qreal yVelocity() const                  { return _dy; }
 
 	virtual void process() = 0;
-
+	virtual QString toString() = 0;
 	virtual void herosCollision(OjHeros *h) = 0;
 
 protected:

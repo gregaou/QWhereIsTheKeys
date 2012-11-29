@@ -12,7 +12,6 @@ OjHeros::OjHeros(const qreal x, const qreal y) :
 	ObjetJeuMobile(x,y,loadListPixmap()), counter(0)
 {}
 
-
 QList<QPixmap> OjHeros::loadListPixmap() const
 {
 	QList<QPixmap> animation;

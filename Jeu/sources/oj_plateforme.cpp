@@ -11,6 +11,7 @@ OjPlateforme::OjPlateforme(const qreal x, const qreal y, const qreal w,
 
 }
 
+
 void OjPlateforme::process()
 {
 

@@ -11,7 +11,7 @@ public:
 										 const qreal h);
 
 		void process();
-
+		QString toString(){return QString("OjPlateforme");}
 		void herosCollision(OjHeros *h);
 
 };

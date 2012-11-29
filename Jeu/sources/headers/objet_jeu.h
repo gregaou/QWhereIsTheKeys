@@ -27,7 +27,7 @@ public:
 															_frames.at(frame % _frames.size()).pixmap; }
 
 	virtual void process() = 0;
-
+	virtual QString toString() = 0;
 	virtual void herosCollision(OjHeros *h) = 0;
 
 protected:

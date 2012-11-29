@@ -48,7 +48,8 @@ HEADERS  += sources/headers/qwitk.h \
     sources/headers/oj_plateforme.h \
     sources/headers/vue_jeu_charger.h \
     sources/headers/vue_jeu_menu.h \
-    sources/headers/vue_jeu_nouveau.h
+    sources/headers/vue_jeu_nouveau.h \
+    sources/headers/collision_oj.h
 
 FORMS    += ui/qwitk.ui \
     ui/vue_accueil.ui \
