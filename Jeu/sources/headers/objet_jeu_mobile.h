@@ -16,16 +16,15 @@ public:
 	inline qreal yVelocity() const                  { return _dy; }
 
 	virtual void process() = 0;
-	virtual QString toString() = 0;
-	virtual void herosCollision(OjHeros *h) = 0;
+	virtual QString toString() { return QString("ObjetJeuMobile"); }
 
 protected:
 	void advance(int phase);
 
 	struct Frame {
-			QPixmap pixmap;
-			QPainterPath shape;
-			QRectF boundingRect;
+		QPixmap pixmap;
+		QPainterPath shape;
+		QRectF boundingRect;
 	};
 
 	qreal _dx, _dy;

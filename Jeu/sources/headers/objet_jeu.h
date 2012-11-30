@@ -17,7 +17,7 @@ public:
 	virtual QRectF boundingRect() const;
 	virtual QPainterPath shape() const;
 	virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
-						 QWidget *widget);
+										 QWidget *widget);
 
 	void setFrame(int frame);
 	inline int frame() const                        { return _currentFrame; }
@@ -27,16 +27,18 @@ public:
 															_frames.at(frame % _frames.size()).pixmap; }
 
 	virtual void process() = 0;
-	virtual QString toString() = 0;
-	virtual void herosCollision(OjHeros *h) = 0;
+	virtual QString toString() { return QString("ObjetJeu"); }
+
+signals:
+	void collision(ObjetJeu*,ObjetJeu*);
 
 protected:
-		virtual void advance(int phase) { Q_UNUSED(phase) }
+	virtual void advance(int phase) { Q_UNUSED(phase) }
 
 	struct Frame {
-			QPixmap pixmap;
-			QPainterPath shape;
-			QRectF boundingRect;
+		QPixmap pixmap;
+		QPainterPath shape;
+		QRectF boundingRect;
 	};
 
 	QPixmap * _fond;

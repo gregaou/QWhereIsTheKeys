@@ -48,8 +48,7 @@ void OjHeros::process()
 
 	for(int i=0;i<listCollision.size();++i)
 	{
-		ObjetJeu *oj = dynamic_cast<ObjetJeu*>(listCollision.at(i));
-		oj->herosCollision(this);
+		emit collision(this,listCollision.at(i));
 	}
 }
 

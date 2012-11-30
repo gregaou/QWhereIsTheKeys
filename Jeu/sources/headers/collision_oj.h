@@ -3,28 +3,32 @@
 
 #include <QString>
 #include "sources/headers/objet_jeu.h"
+#include "sources/headers/oj_heros.h"
+#include "sources/headers/oj_plateforme.h"
 
-class CollisionOj
+class CollisionOj :
 {
+	Q_OBJECT
 public:
-	CollisionOj(QString name)
-	{
-			_nomObjet=name;
-			_next = 0;
-	}
+	CollisionOj(QString name) : _nomObjet(name), _next(0) {}
 
 	CollisionOj* setNext(CollisionOj* next)
 	{
-					_next = next;
-					return (_next);
+		_next = next;
+		return (_next);
 	}
 
+	virtual void gererCollision(ObjetJeu* oj1, ObjetJeu* oj2) = 0;
+	static QString toString();
+
+public slots:
 	void collision(ObjetJeu* oj1, ObjetJeu* oj2)
 	{
 		//todo
-		if(oj1->toString() == _name || oj2->toString() == _name)
+		if(oj1->toString() == _nomObjet || oj2->toString() == _nomObjet)
 		{
-			gererCollision((oj1->toString() == _name)?oj2:oj1);
+			gererCollision((oj1->toString() == _nomObjet)?oj2:oj1,
+										 (oj1->toString() == _nomObjet)?oj1:oj2);
 		}
 		else
 		{
@@ -32,11 +36,6 @@ public:
 				_next->collision(oj1, oj2);
 		}
 	}
-
-	virtual void gererCollision(ObjetJeu* oj) = 0;
-
-private:
-
 
 protected:
 	QString _nomObjet;

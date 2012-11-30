@@ -7,7 +7,7 @@ class OjHeros : public ObjetJeuMobile
 {
 public:
 	explicit OjHeros(const qreal x, const qreal y);
-	QString toString(){return QString("OjHeros");}
+	QString toString() { return QString("OjHeros"); }
 	void process();
 
 	void droite(bool t);
@@ -20,8 +20,6 @@ protected:
 	void animation();
 
 	int counter;
-
-	void herosCollision(OjHeros *h) { Q_UNUSED(h) }
 
 	qreal gravite;
 

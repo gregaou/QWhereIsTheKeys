@@ -1,6 +1,9 @@
 #include "sources/headers/vue_jeu.h"
 #include "ui_vue_jeu.h"
 
+#include "sources/headers/collision_oj.h"
+#include "sources/headers/collision_oj_heros.h"
+
 #define FPS_50 20
 
 VueJeu::VueJeu(QWidget *parent) :
@@ -16,6 +19,8 @@ VueJeu::VueJeu(QWidget *parent) :
 
 	_ui->setupUi(this);
 	_ui->LayoutJeu->addWidget(&_view);
+
+	CollisionOj *cOj = new CollisionOjHeros();
 
 	ObjetJeu *p = new OjPlateforme(150,550,200,15);
 	ObjetJeu *p6 = new OjPlateforme(120,500,200,15);
@@ -38,6 +43,16 @@ VueJeu::VueJeu(QWidget *parent) :
 
 	h = new OjHeros(25,25);
 	_scene.addItem(h);
+
+	connect(h,SIGNAL(collision(ObjetJeu*,ObjetJeu*)),cOj,SLOT(collision(ObjetJeu*,ObjetJeu*)));
+	connect(p,SIGNAL(collision(ObjetJeu*,ObjetJeu*)),cOj,SLOT(collision(ObjetJeu*,ObjetJeu*)));
+	connect(p2,SIGNAL(collision(ObjetJeu*,ObjetJeu*)),cOj,SLOT(collision(ObjetJeu*,ObjetJeu*)));
+	connect(p3,SIGNAL(collision(ObjetJeu*,ObjetJeu*)),cOj,SLOT(collision(ObjetJeu*,ObjetJeu*)));
+	connect(p4,SIGNAL(collision(ObjetJeu*,ObjetJeu*)),cOj,SLOT(collision(ObjetJeu*,ObjetJeu*)));
+	connect(p5,SIGNAL(collision(ObjetJeu*,ObjetJeu*)),cOj,SLOT(collision(ObjetJeu*,ObjetJeu*)));
+	connect(p6,SIGNAL(collision(ObjetJeu*,ObjetJeu*)),cOj,SLOT(collision(ObjetJeu*,ObjetJeu*)));
+	connect(p7,SIGNAL(collision(ObjetJeu*,ObjetJeu*)),cOj,SLOT(collision(ObjetJeu*,ObjetJeu*)));
+	connect(p8,SIGNAL(collision(ObjetJeu*,ObjetJeu*)),cOj,SLOT(collision(ObjetJeu*,ObjetJeu*)));
 
 	qDebug() ;
 	connexionAffichage();
