@@ -2,13 +2,13 @@
 #define COLLISION_OJ_H
 
 #include <QString>
+#include <QDebug>
 #include "sources/headers/objet_jeu.h"
 #include "sources/headers/oj_heros.h"
 #include "sources/headers/oj_plateforme.h"
 
-class CollisionOj :
+class CollisionOj
 {
-	Q_OBJECT
 public:
 	CollisionOj(QString name) : _nomObjet(name), _next(0) {}
 
@@ -27,8 +27,8 @@ public slots:
 		//todo
 		if(oj1->toString() == _nomObjet || oj2->toString() == _nomObjet)
 		{
-			gererCollision((oj1->toString() == _nomObjet)?oj2:oj1,
-										 (oj1->toString() == _nomObjet)?oj1:oj2);
+			gererCollision((oj1->toString() == _nomObjet)?oj1:oj2,
+										 (oj1->toString() == _nomObjet)?oj2:oj1);
 		}
 		else
 		{

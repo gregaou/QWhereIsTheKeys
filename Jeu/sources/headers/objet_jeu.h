@@ -6,10 +6,9 @@
 #include <QKeyEvent>
 #include <QBitmap>
 
-class OjHeros;
-
-class ObjetJeu : public QGraphicsItem
+class ObjetJeu :public QObject, public QGraphicsItem
 {
+	Q_OBJECT
 public:
 	explicit ObjetJeu(qreal x, qreal y, const QList<QPixmap> &animation);
 	explicit ObjetJeu(qreal x, qreal y, qreal w, qreal h, const QPixmap & fond);

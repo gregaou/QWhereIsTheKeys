@@ -15,8 +15,12 @@
 
 #include "sources/headers/vue.h"
 #include "sources/headers/model_jeu.h"
+#include "sources/headers/objet_jeu.h"
 #include "sources/headers/oj_plateforme.h"
 #include "sources/headers/oj_heros.h"
+
+#include "sources/headers/collision_oj.h"
+#include "sources/headers/collision_oj_heros.h"
 
 /** \namespace Ui
  *
@@ -58,6 +62,7 @@ public:
 	static QString toString();
 
 private slots:
+	void collision(ObjetJeu *oj1, ObjetJeu *oj2);
 
 private:
 	Ui::VueJeu *_ui; /**< Interface graphique liée à la classe */
@@ -67,6 +72,8 @@ private:
 	QGraphicsView _view; /**< Vue Graphique */
 
 	ObjetJeu *h;
+
+	CollisionOj *cOj;
 
 	void keyPressEvent(QKeyEvent *event);
 
