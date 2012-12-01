@@ -1,3 +1,11 @@
+/**
+ * \file			collision_oj.h
+ * \brief			Chaîne de responsabilité gérant les collisions
+ * \author    Société de Développement de Projets Informatique
+ * \version   1.0
+ * \date      01/12/12
+ */
+
 #ifndef COLLISION_OJ_H
 #define COLLISION_OJ_H
 
@@ -7,21 +15,53 @@
 #include "sources/headers/oj_heros.h"
 #include "sources/headers/oj_plateforme.h"
 
+/**
+ * \class CollisionOj
+ * \brief Structure de la chaîne de responsabilité gérant les collisions
+ */
 class CollisionOj
 {
 public:
+	/**
+		*  \fn    CollisionOj ( QString name )
+		*  \param name Nom de l'objet à reconnaitre
+		*  \brief Constructeur
+		*/
 	CollisionOj(QString name) : _nomObjet(name), _next(0) {}
 
+	/**
+		*  \fn    CollisionOj* setNext ( CollisionOj* next )
+		*  \param next élément suivant
+		*  \brief Set l'élément suivant de la chaîne de responsabilité
+		*/
 	CollisionOj* setNext(CollisionOj* next)
 	{
 		_next = next;
 		return (_next);
 	}
 
+	/**
+		*  \fn    virtual void gererCollision(ObjetJeu* oj1, ObjetJeu* oj2) = 0
+		*  \param oj1 premier ObjetJeu
+		*  \param oj2 deuxieme ObjetJeu
+		*  \brief Gère la collision entre deux ObjetJeu
+		*/
 	virtual void gererCollision(ObjetJeu* oj1, ObjetJeu* oj2) = 0;
-	static QString toString();
+
+	/**
+		*  \fn    static QString toString ()
+		*  \brief Retourne le nom de la classe
+		*/
+	static QString toString() { return QString("CollisionOj"); }
 
 public slots:
+
+	/**
+		*  \fn    void collision(ObjetJeu* oj1, ObjetJeu* oj2)
+		*  \param oj1 premier ObjetJeu
+		*  \param oj2 deuxieme ObjetJeu
+		*  \brief Vérifie le nom des objets et traite la collision si elle doit la traiter, sinon elle la passe à la classe suivante
+		*/
 	void collision(ObjetJeu* oj1, ObjetJeu* oj2)
 	{
 		//todo
@@ -38,8 +78,8 @@ public slots:
 	}
 
 protected:
-	QString _nomObjet;
-	CollisionOj* _next;
+	QString _nomObjet;/**< Défini le nom de l'objet jeu à traiter */
+	CollisionOj* _next;/**< Défini la classe suivante qui traitera l'objet si celle ci ne peut pas la traiter */
 
 
 

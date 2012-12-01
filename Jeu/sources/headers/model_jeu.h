@@ -21,10 +21,8 @@ private:
 	int _idProfil; /**< Identifiant du profil chargé */
 	int _niveauSelectionne; /**< Identifiant du niveau sélectionné */
 	/**
+		*  \fn    ModelJeu()
 		*  \brief Constructeur
-		*	 \fn    ModelJeu()
-		*
-		*  Constructeur de la classe ModelJeu
 		*/
 	ModelJeu();
 public:
