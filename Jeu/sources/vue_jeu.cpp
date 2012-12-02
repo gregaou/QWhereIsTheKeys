@@ -113,9 +113,18 @@ void VueJeu::keyReleaseEvent(QKeyEvent *event)
 
 void VueJeu::timerEvent(QTimerEvent *)
 {
+
+	Niveau *n = new Niveau(&_scene);
+	n = _mNiveau->getNiveaux()[_mJeu->getNiveauSelectionne()];
+	QList<ObjetJeu*> objets = n->getObjets();
+
 	_scene.advance();
 
 	h->process();
+	for(int i = 0; i < objets.size(); i++){
+		if(objets[i])
+		objets[i]->process();
+	}
 }
 
 void VueJeu::setPause()

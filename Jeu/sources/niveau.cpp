@@ -10,6 +10,8 @@ Niveau::Niveau(QGraphicsScene *scene)
 	ObjetJeu *contourB = new OjPlateforme(0,0,10,scene->height());
 	ObjetJeu *contourD = new OjPlateforme(scene->width()-10,0,10,scene->height());
 
+
+
 	_objets.append(contourH);
 	_objets.append(contourG);
 	_objets.append(contourB);
@@ -17,9 +19,11 @@ Niveau::Niveau(QGraphicsScene *scene)
 
 	ObjetJeu *p1 = new OjPlateforme(150,550,200,15);
 	ObjetJeu *p2 = new OjPlateforme(120,500,200,15);
+	ObjetJeu *s1 = new OjSpider(120,300);
 
 	_objets.append(p1);
 	_objets.append(p2);
+	_objets.append(s1);
 }
 
 OjHeros* Niveau::getHeros()

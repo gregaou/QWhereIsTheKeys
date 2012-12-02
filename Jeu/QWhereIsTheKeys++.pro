@@ -31,7 +31,9 @@ SOURCES += sources/main.cpp\
     sources/collision_oj_heros.cpp \
     sources/niveau.cpp \
     sources/model_niveau.cpp \
-    sources/vue_jeu_pause.cpp
+    sources/vue_jeu_pause.cpp \
+    sources/oj_spider.cpp \
+    sources/collision_oj_spider.cpp
 
 HEADERS  += sources/headers/qwitk.h \
     sources/headers/vue.h \
@@ -57,7 +59,9 @@ HEADERS  += sources/headers/qwitk.h \
     sources/headers/collision_oj_heros.h \
     sources/headers/model_niveau.h \
     sources/headers/niveau.h \
-    sources/headers/vue_jeu_pause.h
+    sources/headers/vue_jeu_pause.h \
+    sources/headers/oj_spider.h \
+    sources/headers/collision_oj_spider.h
 
 FORMS    += ui/qwitk.ui \
     ui/vue_accueil.ui \
@@ -72,3 +76,6 @@ FORMS    += ui/qwitk.ui \
 
 RESOURCES += \
     ressources/ressources.qrc
+
+OTHER_FILES += \
+    ressources/spd_lf1.png
