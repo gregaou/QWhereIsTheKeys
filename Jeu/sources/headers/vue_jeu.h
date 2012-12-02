@@ -14,6 +14,7 @@
 #include <QTimer>
 
 #include "sources/headers/vue.h"
+#include "sources/headers/vue_jeu_pause.h"
 #include "sources/headers/model_jeu.h"
 #include "sources/headers/objet_jeu.h"
 #include "sources/headers/oj_plateforme.h"
@@ -59,12 +60,17 @@ public:
 
 	/**
 		*  \brief Renvoi le nom de la vue
-		*	 \fn    static QString toString();
+		*	 \fn    static QString toString()
 		*/
 	static QString toString();
 
 private slots:
 	void collision(ObjetJeu *oj1, ObjetJeu *oj2);
+	/**
+		*  \brief Stoppe la pause
+		*	 \fn    void resumePause()
+		*/
+	void resumePause();
 
 private:
 	Ui::VueJeu *_ui; /**< Interface graphique liée à la classe */
@@ -72,7 +78,8 @@ private:
 	ModelNiveau *_mNiveau; /**< Modèle de données des niveaux */
 	QGraphicsScene _scene; /**< Scene Graphique */
 	QGraphicsView _view; /**< Vue Graphique */
-
+	VueJeuPause _viewPause; /**< Vue Graphique de la pause */
+	int _timer; /**< Timer */
 	ObjetJeu *h;
 
 	CollisionOj *cOj;
@@ -89,6 +96,21 @@ private:
 		*  \fn void connexionAffichage()
 		*/
 	void connexionAffichage();
+	/**
+		*  \brief Effectue une pause
+		*  \fn void setPause()
+		*/
+	void setPause();
+	/**
+		*  \brief Démarre le timer
+		*  \fn void demarrerTimer()
+		*/
+	void demarrerTimer();
+	/**
+		*  \brief Stoppe le timer
+		*  \fn void stopperTimer()
+		*/
+	void stopperTimer();
 };
 
 #endif // VUE_JEU_H

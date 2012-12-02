@@ -30,7 +30,8 @@ SOURCES += sources/main.cpp\
     sources/vue_jeu_nouveau.cpp \
     sources/collision_oj_heros.cpp \
     sources/niveau.cpp \
-    sources/model_niveau.cpp
+    sources/model_niveau.cpp \
+    sources/vue_jeu_pause.cpp
 
 HEADERS  += sources/headers/qwitk.h \
     sources/headers/vue.h \
@@ -55,7 +56,8 @@ HEADERS  += sources/headers/qwitk.h \
     sources/headers/collision_oj.h \
     sources/headers/collision_oj_heros.h \
     sources/headers/model_niveau.h \
-    sources/headers/niveau.h
+    sources/headers/niveau.h \
+    sources/headers/vue_jeu_pause.h
 
 FORMS    += ui/qwitk.ui \
     ui/vue_accueil.ui \
@@ -65,7 +67,8 @@ FORMS    += ui/qwitk.ui \
     ui/vue_jeu.ui \
     ui/vue_jeu_charger.ui \
     ui/vue_jeu_menu.ui \
-    ui/vue_jeu_nouveau.ui
+    ui/vue_jeu_nouveau.ui \
+    ui/vue_jeu_pause.ui
 
 RESOURCES += \
     ressources/ressources.qrc
