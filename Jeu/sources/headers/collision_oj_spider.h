@@ -29,7 +29,7 @@ public:
 private:
 	/**
 		*  \fn    void collisionEntre(OjSpider *h, OjPlateforme *p);
-		*  \param h Pointeur vers OjSpider
+		*  \param s Pointeur vers OjSpider
 		*  \param p Pointeur vers OjPlateforme
 		*  \brief Définit le comportement d'une collision entre un OjSpider et un OjPlateforme
 		*/
