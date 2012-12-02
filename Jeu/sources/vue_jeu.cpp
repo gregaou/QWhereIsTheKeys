@@ -7,6 +7,7 @@ VueJeu::VueJeu(QWidget *parent) :
 	Vue(parent),
 	_ui(new Ui::VueJeu),
 	_mJeu(ModelJeu::getInstance()),
+	_mNiveau(ModelNiveau::getInstance()),
 	_scene(0,0,798,598,this),
 	_view(&_scene,this)
 
@@ -17,32 +18,20 @@ VueJeu::VueJeu(QWidget *parent) :
 	_ui->setupUi(this);
 	_ui->LayoutJeu->addWidget(&_view);
 
+	//_scene.setItemIndexMethod(QGraphicsScene::NoIndex);
+
 	cOj = new CollisionOjHeros();
-
-	ObjetJeu *p = new OjPlateforme(150,550,200,15);
-	ObjetJeu *p6 = new OjPlateforme(120,500,200,15);
-	ObjetJeu *p7 = new OjPlateforme(170,420,200,15);
-	ObjetJeu *p8 = new OjPlateforme(120,370,200,15);
-	_scene.addItem(p);
-
-	ObjetJeu *p2 = new OjPlateforme(0,0,_scene.width(),10);
-	ObjetJeu *p3 = new OjPlateforme(0,_scene.height()-10,_scene.width(),10);
-	ObjetJeu *p4 = new OjPlateforme(0,0,10,_scene.height());
-	ObjetJeu *p5 = new OjPlateforme(_scene.width()-10,0,10,_scene.height());
-
-	_scene.addItem(p2);
-	_scene.addItem(p3);
-	_scene.addItem(p4);
-	_scene.addItem(p5);
-	_scene.addItem(p6);
-	_scene.addItem(p7);
-	_scene.addItem(p8);
-
-	h = new OjHeros(25,25);
-	_scene.addItem(h);
-
-	connect(h,SIGNAL(collision(ObjetJeu*,ObjetJeu*)),this,SLOT(collision(ObjetJeu*,ObjetJeu*)));
-
+	Niveau *n = new Niveau(&_scene);
+	_mNiveau->ajouterUnNiveau(n);
+	n = _mNiveau->getNiveaux()[_mJeu->getNiveauSelectionne()];
+	QList<ObjetJeu*> objets = n->getObjets();
+	h = n->getHeros();
+	for(int i = 0; i < objets.size(); i++)
+	{
+		_scene.addItem(objets[i]);
+		//if(dynamic_cast<ObjetJeuMobile*> (objets[i]))
+			connect(objets[i],SIGNAL(collision(ObjetJeu*,ObjetJeu*)),this,SLOT(collision(ObjetJeu*,ObjetJeu*)));
+	}
 	connexionAffichage();
 
 	//_view.setBackgroundBrush(QImage(":/fond/fond.png"));

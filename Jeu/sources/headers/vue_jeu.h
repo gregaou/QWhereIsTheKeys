@@ -18,6 +18,8 @@
 #include "sources/headers/objet_jeu.h"
 #include "sources/headers/oj_plateforme.h"
 #include "sources/headers/oj_heros.h"
+#include "sources/headers/model_niveau.h"
+#include "sources/headers/niveau.h"
 
 #include "sources/headers/collision_oj.h"
 #include "sources/headers/collision_oj_heros.h"
@@ -67,7 +69,7 @@ private slots:
 private:
 	Ui::VueJeu *_ui; /**< Interface graphique liée à la classe */
 	ModelJeu *_mJeu; /**< Modèle de données du jeu */
-
+	ModelNiveau *_mNiveau; /**< Modèle de données des niveaux */
 	QGraphicsScene _scene; /**< Scene Graphique */
 	QGraphicsView _view; /**< Vue Graphique */
 

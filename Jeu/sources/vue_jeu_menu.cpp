@@ -21,6 +21,7 @@ VueJeuMenu::~VueJeuMenu()
 
 void VueJeuMenu::onClicBoutonNouvellePartie()
 {
+	_mJeu->setNiveauSelectionne(0);
 	emit setVue(VueJeu::toString());
 }
 

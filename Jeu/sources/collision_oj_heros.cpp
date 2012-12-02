@@ -2,7 +2,6 @@
 
 void CollisionOjHeros::gererCollision(ObjetJeu *oj1, ObjetJeu *oj2)
 {
-	qDebug() << _nomObjet << oj1->toString() << oj2->toString();
 	OjHeros* h = dynamic_cast<OjHeros*>(oj1);
 	if(oj2->toString() == "OjPlateforme")
 	{
