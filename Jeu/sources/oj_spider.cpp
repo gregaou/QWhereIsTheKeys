@@ -15,16 +15,10 @@ OjSpider::OjSpider(const qreal x, const qreal y) :
 QList<QPixmap> OjSpider::loadListPixmap() const
 {
 	QList<QPixmap> animation;
-//	animation.append(QPixmap(":/spider/spd_lf1.png"));
-//	animation.append(QPixmap(":/spider/spd_lf2.png"));
-//	animation.append(QPixmap(":/spider/spd_rt1.png"));
-//	animation.append(QPixmap(":/spider/spd_rt2.png"));
-	animation.append(QPixmap(":/heros/h_d1.png"));
-	animation.append(QPixmap(":/heros/h_d2.png"));
-	animation.append(QPixmap(":/heros/h_l1.png"));
-	animation.append(QPixmap(":/heros/h_l2.png"));
-	animation.append(QPixmap(":/heros/h_r1.png"));
-	animation.append(QPixmap(":/heros/h_r2.png"));
+	animation.append(QPixmap(":/spider/s_l1.png"));
+	animation.append(QPixmap(":/spider/s_l2.png"));
+	animation.append(QPixmap(":/spider/s_r1.png"));
+	animation.append(QPixmap(":/spider/s_r2.png"));
 	return animation;
 }
 
@@ -47,7 +41,7 @@ void OjSpider::process()
 
 	for(int i=0;i<listCollision.size();++i)
 	{
-			qDebug()<<"avant";emit collision(this,dynamic_cast<ObjetJeu*>(listCollision.at(i)));qDebug()<<"apres";
+			emit collision(this,dynamic_cast<ObjetJeu*>(listCollision.at(i)));
 	}
 }
 

@@ -14,9 +14,9 @@
         <file alias="h_r2.png">images/heros/hero_right2.png</file>
     </qresource>
     <qresource prefix="/spider">
-        <file>images/spider/spd_lf1.png</file>
-        <file>images/spider/spd_lf2.png</file>
-        <file>images/spider/spd_rt1.png</file>
-        <file>images/spider/spd_rt2.png</file>
+        <file alias="s_l1.png">images/spider/spd_lf1.png</file>
+        <file alias="s_l2.png">images/spider/spd_lf2.png</file>
+        <file alias="s_r1.png">images/spider/spd_rt1.png</file>
+        <file alias="s_r2.png">images/spider/spd_rt2.png</file>
     </qresource>
 </RCC>

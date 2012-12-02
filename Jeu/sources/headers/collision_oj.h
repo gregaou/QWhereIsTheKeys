@@ -65,20 +65,14 @@ public slots:
 		*/
 	void collision(ObjetJeu* oj1, ObjetJeu* oj2)
 	{
-		//todo
-		qDebug()<<"COLLISION1";
-		qDebug()<<_nomObjet;
 		if(oj1->toString() == _nomObjet || oj2->toString() == _nomObjet)
 		{
-			qDebug()<<"COLLISION2";
-
 			gererCollision((oj1->toString() == _nomObjet)?oj1:oj2,
 										 (oj1->toString() == _nomObjet)?oj2:oj1);
-			qDebug()<<"COLLISION3";
 		}
 		else
 		{
-			if(!_next)
+			if(_next)
 				_next->collision(oj1, oj2);
 		}
 	}

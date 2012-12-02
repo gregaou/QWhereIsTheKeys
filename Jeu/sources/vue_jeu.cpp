@@ -23,6 +23,8 @@ VueJeu::VueJeu(QWidget *parent) :
 	_scene.setItemIndexMethod(QGraphicsScene::NoIndex);
 
 	cOj = new CollisionOjHeros();
+	cOj->setNext(new CollisionOjSpider());
+
 	Niveau *n = new Niveau(&_scene);
 	_mNiveau->ajouterUnNiveau(n);
 	n = _mNiveau->getNiveaux()[_mJeu->getNiveauSelectionne()];
@@ -31,12 +33,9 @@ VueJeu::VueJeu(QWidget *parent) :
 	for(int i = 0; i < objets.size(); i++)
 	{
 		_scene.addItem(objets[i]);
-		//if(dynamic_cast<ObjetJeuMobile*> (objets[i]))
-			connect(objets[i],SIGNAL(collision(ObjetJeu*,ObjetJeu*)),this,SLOT(collision(ObjetJeu*,ObjetJeu*)));
+				connect(objets[i],SIGNAL(collision(ObjetJeu*,ObjetJeu*)),this,SLOT(collision(ObjetJeu*,ObjetJeu*)));
 	}
-	connexionAffichage();
-
-	//_view.setBackgroundBrush(QImage(":/fond/fond.png"));
+		connexionAffichage();
 
 	demarrerTimer();
 }
@@ -75,8 +74,6 @@ void VueJeu::keyPressEvent(QKeyEvent *event)
 
 	OjHeros *monH = dynamic_cast<OjHeros*>(h);
 
-	qDebug() << event->key();
-
 	switch(event->key())
 	{
 		case Qt::Key_Right: case Qt::Key_D :
@@ -114,13 +111,11 @@ void VueJeu::keyReleaseEvent(QKeyEvent *event)
 void VueJeu::timerEvent(QTimerEvent *)
 {
 
-	Niveau *n = new Niveau(&_scene);
-	n = _mNiveau->getNiveaux()[_mJeu->getNiveauSelectionne()];
+		Niveau *n = _mNiveau->getNiveaux()[_mJeu->getNiveauSelectionne()];
 	QList<ObjetJeu*> objets = n->getObjets();
 
 	_scene.advance();
 
-	h->process();
 	for(int i = 0; i < objets.size(); i++){
 		if(objets[i])
 		objets[i]->process();

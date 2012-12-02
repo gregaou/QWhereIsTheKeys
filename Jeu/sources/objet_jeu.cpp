@@ -18,8 +18,6 @@ ObjetJeu::ObjetJeu(qreal x, qreal y, const QList<QPixmap> &animation) :
 		frame.boundingRect = pixmap.rect();
 		_frames << frame;
 	}
-
-	qDebug() << animation.size();
 }
 
 ObjetJeu::ObjetJeu(qreal x, qreal y, qreal w, qreal h, const QPixmap &fond) :
