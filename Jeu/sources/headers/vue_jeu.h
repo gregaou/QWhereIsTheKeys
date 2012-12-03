@@ -20,13 +20,16 @@
 #include "sources/headers/oj_plateforme.h"
 #include "sources/headers/oj_heros.h"
 #include "sources/headers/oj_spider.h"
+#include "sources/headers/oj_clef.h"
 #include "sources/headers/model_niveau.h"
 #include "sources/headers/niveau.h"
+
 
 #include "sources/headers/collision_oj.h"
 #include "sources/headers/collision_oj_heros.h"
 #include "sources/headers/collision_oj_spider.h"
 #include "sources/headers/collision_oj_garde.h"
+
 
 /** \namespace Ui
  *

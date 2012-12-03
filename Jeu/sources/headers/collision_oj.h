@@ -16,7 +16,7 @@
 #include "sources/headers/oj_plateforme.h"
 #include "sources/headers/oj_spider.h"
 #include "sources/headers/oj_garde.h"
-
+#include "sources/headers/oj_clef.h"
 /**
  * \class CollisionOj
  * \brief Structure de la chaîne de responsabilité gérant les collisions
@@ -38,8 +38,10 @@ public:
 		*/
 	CollisionOj* setNext(CollisionOj* next)
 	{
-		_next = next;
-		return (_next);
+		if(_next)
+			_next->setNext(next);
+		else
+			_next = next;
 	}
 
 	/**

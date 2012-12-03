@@ -14,6 +14,11 @@ void CollisionOjHeros::gererCollision(ObjetJeu *oj1, ObjetJeu *oj2)
 		qDebug()<< "Retour au debut, mort du heros";
 
 	}
+	if(oj2->toString() == "OjClef")
+	{
+		h->setPos(30,30);
+		qDebug()<< "Partie gagnée";
+	}
 }
 
 void CollisionOjHeros::collisionEntre(OjHeros *h, OjPlateforme *p)

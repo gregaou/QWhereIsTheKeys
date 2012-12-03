@@ -12,7 +12,7 @@ OjSpider::OjSpider(const qreal x, const qreal y, const bool deplacement) :
 	ObjetJeuMobile(x,y,loadListPixmap()), counter(0),deplacement(deplacement)
 {
 	if(deplacement)
-			droite();
+		droite();
 	else
 		gauche();
 }

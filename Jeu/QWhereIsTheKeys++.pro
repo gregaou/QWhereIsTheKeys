@@ -35,7 +35,8 @@ SOURCES += sources/main.cpp\
     sources/collision_oj_spider.cpp \
     sources/oj_spider.cpp \
     sources/collision_oj_garde.cpp \
-    sources/oj_garde.cpp
+    sources/oj_garde.cpp \
+    sources/oj_clef.cpp
 
 HEADERS  += sources/headers/qwitk.h \
     sources/headers/vue.h \
@@ -65,7 +66,8 @@ HEADERS  += sources/headers/qwitk.h \
     sources/headers/collision_oj_spider.h \
     sources/headers/oj_spider.h \
     sources/headers/oj_garde.h \
-    sources/headers/collision_oj_garde.h
+    sources/headers/collision_oj_garde.h \
+    sources/headers/oj_clef.h
 
 FORMS    += ui/qwitk.ui \
     ui/vue_accueil.ui \
