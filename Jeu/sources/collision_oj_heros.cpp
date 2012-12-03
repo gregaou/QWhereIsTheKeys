@@ -11,7 +11,7 @@ void CollisionOjHeros::gererCollision(ObjetJeu *oj1, ObjetJeu *oj2)
 	if(oj2->toString() == "OjSpider" || oj2->toString() == "OjGarde")
 	{
 		h->setPos(30,30);
-		qDebug()<< "Aaaaaaaaaaaaaah je me meurt!";
+		qDebug()<< "Retour au debut, mort du heros";
 
 	}
 }

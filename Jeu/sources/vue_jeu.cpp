@@ -23,9 +23,9 @@ VueJeu::VueJeu(QWidget *parent) :
 	_scene.setItemIndexMethod(QGraphicsScene::NoIndex);
 
 	cOj = new CollisionOjHeros();
-
-	cOj->setNext(new CollisionOjGarde());
-	cOj->setNext(new CollisionOjSpider());
+	cOj->setNext(new CollisionOjSpider())->setNext(new CollisionOjGarde());
+	//cOj->setNext(new CollisionOjGarde());
+	// Et les mecs il faut faire une methode "getLast();" !!!JB
 
 	Niveau *n = new Niveau(&_scene);
 	_mNiveau->ajouterUnNiveau(n);
@@ -35,7 +35,7 @@ VueJeu::VueJeu(QWidget *parent) :
 	for(int i = 0; i < objets.size(); i++)
 	{
 		_scene.addItem(objets[i]);
-				connect(objets[i],SIGNAL(collision(ObjetJeu*,ObjetJeu*)),this,SLOT(collision(ObjetJeu*,ObjetJeu*)));
+		connect(objets[i],SIGNAL(collision(ObjetJeu*,ObjetJeu*)),this,SLOT(collision(ObjetJeu*,ObjetJeu*)));
 	}
 		connexionAffichage();
 
