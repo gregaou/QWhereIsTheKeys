@@ -1,8 +1,8 @@
-#include "sources/headers/collision_oj_spider.h"
+#include "sources/headers/collision_oj_garde.h"
 
-void CollisionOjSpider::gererCollision(ObjetJeu *oj1, ObjetJeu *oj2)
+void CollisionOjGarde::gererCollision(ObjetJeu *oj1, ObjetJeu *oj2)
 {
-	OjSpider *s = dynamic_cast<OjSpider*>(oj1);
+	OjGarde *s = dynamic_cast<OjGarde*>(oj1);
 
 	if(oj2->toString() == "OjHeros")
 	{
@@ -18,20 +18,20 @@ void CollisionOjSpider::gererCollision(ObjetJeu *oj1, ObjetJeu *oj2)
 
 }
 
-void CollisionOjSpider::collisionEntre(OjSpider *h, OjPlateforme *p)
+void CollisionOjGarde::collisionEntre(OjGarde *h, OjPlateforme *p)
 {
 	qreal hx1,hy1,hx2,hy2,px1,py1,px2,py2;
 	qreal hw,hh,pw,ph;
 
-	hw = h->boundingRect().width(); //largeur spider
-	hh = h->boundingRect().height(); // hauteur spider
+	hw = h->boundingRect().width(); //largeur garde
+	hh = h->boundingRect().height(); // hauteur garde
 	pw = p->boundingRect().width();
 	ph = p->boundingRect().height();
 
-	hx1 = h->x(); //position x du spider (gauche)
-	hy1 = h->y(); //position y du spider(haut)
-	hx2 = hx1 + hw; //point le plus à droite du spider
-	hy2 = hy1 + hh; //point le plus en bas du spider
+	hx1 = h->x(); //position x du garde (gauche)
+	hy1 = h->y(); //position y du garde(haut)
+	hx2 = hx1 + hw; //point le plus à droite du garde
+	hy2 = hy1 + hh; //point le plus en bas du garde
 
 	px1 = p->x();
 	py1 = p->y();
@@ -68,8 +68,9 @@ void CollisionOjSpider::collisionEntre(OjSpider *h, OjPlateforme *p)
 
 }
 
-void CollisionOjSpider::collisionHeros(OjSpider *s, OjHeros *h)
+void CollisionOjGarde::collisionHeros(OjGarde *s, OjHeros *h)
 {
 	qDebug()<<"Le heros meurt !";
 }
+
 

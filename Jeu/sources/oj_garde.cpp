@@ -1,4 +1,4 @@
-#include "sources/headers/oj_spider.h"
+#include "sources/headers/oj_garde.h"
 
 #include <QDebug>
 #include <QGraphicsScene>
@@ -8,7 +8,7 @@
 
 #define NB_FPS_ANIMATION(X)  ((1000/20)/X)
 
-OjSpider::OjSpider(const qreal x, const qreal y, const bool deplacement) :
+OjGarde::OjGarde(const qreal x, const qreal y, const bool deplacement) :
 	ObjetJeuMobile(x,y,loadListPixmap()), counter(0),deplacement(deplacement)
 {
 	if(deplacement)
@@ -17,17 +17,18 @@ OjSpider::OjSpider(const qreal x, const qreal y, const bool deplacement) :
 		gauche();
 }
 
-QList<QPixmap> OjSpider::loadListPixmap() const
+QList<QPixmap> OjGarde::loadListPixmap() const
 {
 	QList<QPixmap> animation;
-	animation.append(QPixmap(":/spider/s_l1.png"));
-	animation.append(QPixmap(":/spider/s_l2.png"));
-	animation.append(QPixmap(":/spider/s_r1.png"));
-	animation.append(QPixmap(":/spider/s_r2.png"));
+	animation.append(QPixmap(":/garde/g_l1.png"));
+	animation.append(QPixmap(":/garde/g_l2.png"));
+	animation.append(QPixmap(":/garde/g_r1.png"));
+	animation.append(QPixmap(":/garde/g_r2.png"));
+
 	return animation;
 }
 
-void OjSpider::process()
+void OjGarde::process()
 {
 
 	_dy = (_dy < GRAVITE)? _dy+PGRAVITE : GRAVITE;
@@ -42,18 +43,18 @@ void OjSpider::process()
 }
 
 
-void OjSpider::droite()
+void OjGarde::droite()
 {
 		_dx = 2;
 }
 
-void OjSpider::gauche()
+void OjGarde::gauche()
 {
 		_dx = -2;
 }
 
 
-void OjSpider::animation()
+void OjGarde::animation()
 {
 	counter++;
 	if(_dx > 0 && counter % NB_FPS_ANIMATION(5) < NB_FPS_ANIMATION(5)/2 && frame() != 2)
@@ -65,3 +66,4 @@ void OjSpider::animation()
 	else if(_dx < 0 && counter % NB_FPS_ANIMATION(5) >= NB_FPS_ANIMATION(5)/2 && frame() != 1)
 		setFrame(1);
 }
+

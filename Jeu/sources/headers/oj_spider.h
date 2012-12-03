@@ -6,13 +6,12 @@
 class OjSpider : public ObjetJeuMobile
 {
 public:
-	explicit OjSpider(const qreal x, const qreal y);
+	explicit OjSpider(const qreal x, const qreal y, const bool deplacement);
 	QString toString() { return QString("OjSpider"); }
-	void setDeplacementDroite(bool t);
 	void process();
 
-	void droite(bool t);
-	void gauche(bool t);
+	void droite();
+	void gauche();
 
 protected:
 	QList<QPixmap> loadListPixmap() const;
@@ -21,10 +20,9 @@ protected:
 
 	int counter;
 
-	bool deplacementDroite;
+	bool deplacement;
 
 	qreal gravite;
-
 
 };
 

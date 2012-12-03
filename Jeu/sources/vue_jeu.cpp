@@ -23,6 +23,8 @@ VueJeu::VueJeu(QWidget *parent) :
 	_scene.setItemIndexMethod(QGraphicsScene::NoIndex);
 
 	cOj = new CollisionOjHeros();
+
+	cOj->setNext(new CollisionOjGarde());
 	cOj->setNext(new CollisionOjSpider());
 
 	Niveau *n = new Niveau(&_scene);
@@ -82,6 +84,7 @@ void VueJeu::keyPressEvent(QKeyEvent *event)
 		case Qt::Key_Left: case Qt::Key_Q :
 			monH->gauche(true);
 			break;
+		case Qt::Key_Up:
 		case Qt::Key_Space:
 			monH->saut();
 			break;
@@ -111,13 +114,13 @@ void VueJeu::keyReleaseEvent(QKeyEvent *event)
 void VueJeu::timerEvent(QTimerEvent *)
 {
 
-		Niveau *n = _mNiveau->getNiveaux()[_mJeu->getNiveauSelectionne()];
+	Niveau *n = _mNiveau->getNiveaux()[_mJeu->getNiveauSelectionne()];
 	QList<ObjetJeu*> objets = n->getObjets();
 
 	_scene.advance();
 
 	for(int i = 0; i < objets.size(); i++){
-		if(objets[i])
+
 		objets[i]->process();
 	}
 }

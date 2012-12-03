@@ -19,11 +19,16 @@ Niveau::Niveau(QGraphicsScene *scene)
 
 	ObjetJeu *p1 = new OjPlateforme(150,550,200,15);
 	ObjetJeu *p2 = new OjPlateforme(120,500,200,15);
-	ObjetJeu *s1 = new OjSpider(120,300);
+	ObjetJeu *p3 = new OjPlateforme(10,50,60,15);
+	ObjetJeu *s1 = new OjSpider(120,400,true);
+	ObjetJeu *s2 = new OjGarde(320,400,false);
+
 
 	_objets.append(p1);
 	_objets.append(p2);
+	_objets.append(p3);
 	_objets.append(s1);
+	_objets.append(s2);
 }
 
 OjHeros* Niveau::getHeros()

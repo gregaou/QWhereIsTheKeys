@@ -19,4 +19,10 @@
         <file alias="s_r1.png">images/spider/spd_rt1.png</file>
         <file alias="s_r2.png">images/spider/spd_rt2.png</file>
     </qresource>
+    <qresource prefix="/garde">
+        <file alias="g_r1.png">images/garde/garded1.png</file>
+        <file alias="g_r2.png">images/garde/garded2.png</file>
+        <file alias="g_l1.png">images/garde/gardeg1.png</file>
+        <file alias="g_l2.png">images/garde/gardeg2.png</file>
+    </qresource>
 </RCC>

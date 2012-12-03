@@ -8,6 +8,12 @@ void CollisionOjHeros::gererCollision(ObjetJeu *oj1, ObjetJeu *oj2)
 		OjPlateforme *p = dynamic_cast<OjPlateforme*>(oj2);
 		collisionEntre(h,p);
 	}
+	if(oj2->toString() == "OjSpider" || oj2->toString() == "OjGarde")
+	{
+		h->setPos(30,30);
+		qDebug()<< "Aaaaaaaaaaaaaah je me meurt!";
+
+	}
 }
 
 void CollisionOjHeros::collisionEntre(OjHeros *h, OjPlateforme *p)
