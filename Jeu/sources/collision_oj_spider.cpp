@@ -4,12 +4,6 @@ void CollisionOjSpider::gererCollision(ObjetJeu *oj1, ObjetJeu *oj2)
 {
 	OjSpider *s = dynamic_cast<OjSpider*>(oj1);
 
-	if(oj2->toString() == "OjHeros")
-	{
-		qDebug()<<"le heros meurt";
-		OjHeros *h = dynamic_cast<OjHeros*>(oj2);
-		collisionHeros(s,h);
-	}
 	if(oj2->toString() == "OjPlateforme")
 	{
 		OjPlateforme *p = dynamic_cast<OjPlateforme*>(oj2);
@@ -66,10 +60,5 @@ void CollisionOjSpider::collisionEntre(OjSpider *h, OjPlateforme *p)
 	else if(recI.x()+recI.width() == hx2)
 			h->gauche();
 
-}
-
-void CollisionOjSpider::collisionHeros(OjSpider *s, OjHeros *h)
-{
-	qDebug()<<"Le heros meurt !";
 }
 
