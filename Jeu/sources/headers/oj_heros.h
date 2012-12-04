@@ -19,9 +19,12 @@ protected:
 
 	void animation();
 
-	int counter;
+	int _counter;
 
-	qreal gravite;
+	qreal _gravite;
+
+	bool _doubleSautGauche;
+	bool _doubleSautDroite;
 
 
 };

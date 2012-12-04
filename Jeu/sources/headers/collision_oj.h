@@ -26,7 +26,7 @@ class CollisionOj
 public:
 	/**
 		*  \fn    CollisionOj ( QString name )
-		*  \param name Nom de l'objet à reconnaitre
+		*  \param name Nom de l'objet �  reconnaitre
 		*  \brief Constructeur
 		*/
 	CollisionOj(QString name) : _nomObjet(name), _next(0) {}
@@ -42,6 +42,7 @@ public:
 			_next->setNext(next);
 		else
 			_next = next;
+		return next;
 	}
 
 	/**
@@ -64,7 +65,7 @@ public slots:
 		*  \fn    void collision(ObjetJeu* oj1, ObjetJeu* oj2)
 		*  \param oj1 premier ObjetJeu
 		*  \param oj2 deuxieme ObjetJeu
-		*  \brief Vérifie le nom des objets et traite la collision si elle doit la traiter, sinon elle la passe à la classe suivante
+		*  \brief Vérifie le nom des objets et traite la collision si elle doit la traiter, sinon elle la passe �  la classe suivante
 		*/
 	void collision(ObjetJeu* oj1, ObjetJeu* oj2)
 	{
@@ -81,7 +82,7 @@ public slots:
 	}
 
 protected:
-	QString _nomObjet;/**< Défini le nom de l'objet jeu à traiter */
+	QString _nomObjet;/**< Défini le nom de l'objet jeu �  traiter */
 	CollisionOj* _next;/**< Défini la classe suivante qui traitera l'objet si celle ci ne peut pas la traiter */
 
 
