@@ -8,7 +8,7 @@ void CollisionOjHeros::gererCollision(ObjetJeu *oj1, ObjetJeu *oj2)
 		OjPlateforme *p = dynamic_cast<OjPlateforme*>(oj2);
 		collisionEntre(h,p);
 	}
-	if(oj2->toString() == "OjSpider" || oj2->toString() == "OjGarde")
+	if(oj2->toString() == "OjMechantSimple")
 	{
 		h->setPos(30,30);
 		qDebug()<< "Retour au debut, mort du heros";
@@ -23,7 +23,7 @@ void CollisionOjHeros::gererCollision(ObjetJeu *oj1, ObjetJeu *oj2)
 
 void CollisionOjHeros::collisionEntre(OjHeros *h, OjPlateforme *p)
 {
-	qreal hx1,hy1,hx2,hy2,px1,py1,px2,py2;
+	qreal hx1,hy1,/*hx2,*/hy2,px1,py1,px2,py2;
 	qreal hw,hh,pw,ph;
 
 	hw = h->boundingRect().width();
@@ -33,7 +33,7 @@ void CollisionOjHeros::collisionEntre(OjHeros *h, OjPlateforme *p)
 
 	hx1 = h->x();
 	hy1 = h->y();
-	hx2 = hx1 + hw;
+//	hx2 = hx1 + hw;
 	hy2 = hy1 + hh;
 
 	px1 = p->x();

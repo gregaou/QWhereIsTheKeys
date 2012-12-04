@@ -1,16 +1,20 @@
-#ifndef COLLISION_OJ_GARDE_H
-#define COLLISION_OJ_GARDE_H
+#ifndef COLLISION_OJ_MECHANT_SIMPLE_H
+#define COLLISION_OJ_MECHANT_SIMPLE_H
 
 #include "sources/headers/collision_oj.h"
 
-class CollisionOjGarde : public CollisionOj
+
+// VERIFIER LES COMMENTAIRES !!
+
+
+class CollisionOjMechantSimple : public CollisionOj
 {
 public:
 	/**
 		*  \fn    CollisionOjGarde ()
 		*  \brief Constructeur
 		*/
-	CollisionOjGarde() : CollisionOj("OjGarde") {}
+	CollisionOjMechantSimple() : CollisionOj("OjMechantSimple") {}
 
 	/**
 		*  \fn    virtual void gererCollision(ObjetJeu* oj1, ObjetJeu* oj2) = 0
@@ -24,7 +28,7 @@ public:
 		*  \fn    static QString toString ()
 		*  \brief Retourne le nom de la classe
 		*/
-	static QString toString() { return QString("CollisionOjGarde"); }
+	static QString toString() { return QString("CollisionOjMechantSimple"); }
 
 private:
 	/**
@@ -33,16 +37,16 @@ private:
 		*  \param p Pointeur vers OjPlateforme
 		*  \brief Définit le comportement d'une collision entre un OjGarde et un OjPlateforme
 		*/
-	void collisionEntre(OjGarde *s, OjPlateforme *p);
+	void collisionEntre(OjMechantSimple *s, OjPlateforme *p);
 	/**
 		*  \fn    void collisionHeros(OjGarde *s, OjHeros *h);
 		*  \param s Pointeur vers OjGarde
 		*  \param h Pointeur vers OjHeros
 		*  \brief Définit le comportement d'une collision entre un OjGarde et un OjHeros
 		*/
-	void collisionHeros(OjGarde *s, OjHeros *h);
+	void collisionHeros(OjMechantSimple *s, OjHeros *h);
 
 };
 
 
-#endif // COLLISION_OJ_GARDE_H
+#endif // COLLISION_OJ_MECHANT_SIMPLE_H

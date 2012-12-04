@@ -23,10 +23,7 @@ VueJeu::VueJeu(QWidget *parent) :
 	_scene.setItemIndexMethod(QGraphicsScene::NoIndex);
 
 	cOj = new CollisionOjHeros();
-	cOj->setNext(new CollisionOjSpider());
-	cOj->setNext(new CollisionOjGarde());
-	//cOj->setNext(new CollisionOjGarde());
-	// Et les mecs il faut faire une methode "getLast();" !!!JB
+	cOj->setNext(new CollisionOjMechantSimple);
 
 	_mNiveau->setScene(&_scene);
 	_mNiveau->chargerNiveaux();

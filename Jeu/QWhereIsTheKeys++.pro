@@ -32,11 +32,9 @@ SOURCES += sources/main.cpp\
     sources/niveau.cpp \
     sources/model_niveau.cpp \
     sources/vue_jeu_pause.cpp \
-    sources/collision_oj_spider.cpp \
-    sources/oj_spider.cpp \
-    sources/collision_oj_garde.cpp \
-    sources/oj_garde.cpp \
-    sources/oj_clef.cpp
+    sources/oj_clef.cpp \
+    sources/oj_mechant_simple.cpp \
+    sources/collision_oj_mechant_simple.cpp
 
 HEADERS  += sources/headers/qwitk.h \
     sources/headers/vue.h \
@@ -63,11 +61,9 @@ HEADERS  += sources/headers/qwitk.h \
     sources/headers/model_niveau.h \
     sources/headers/niveau.h \
     sources/headers/vue_jeu_pause.h \
-    sources/headers/collision_oj_spider.h \
-    sources/headers/oj_spider.h \
-    sources/headers/oj_garde.h \
-    sources/headers/collision_oj_garde.h \
-    sources/headers/oj_clef.h
+    sources/headers/oj_clef.h \
+    sources/headers/oj_mechant_simple.h \
+    sources/headers/collision_oj_mechant_simple.h
 
 FORMS    += ui/qwitk.ui \
     ui/vue_accueil.ui \
