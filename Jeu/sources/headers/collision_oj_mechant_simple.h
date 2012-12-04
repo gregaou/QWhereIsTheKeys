@@ -1,17 +1,20 @@
+/**
+ * \file			collision_oj_mechant_simple.h
+ * \brief			gestion des collisions d'un objet jeu méchant simple
+ * \author    Société de Développement de Projets Informatique
+ * \version   1.0
+ * \date      22/04/12
+ */
 #ifndef COLLISION_OJ_MECHANT_SIMPLE_H
 #define COLLISION_OJ_MECHANT_SIMPLE_H
 
 #include "sources/headers/collision_oj.h"
 
-
-// VERIFIER LES COMMENTAIRES !!
-
-
 class CollisionOjMechantSimple : public CollisionOj
 {
 public:
 	/**
-		*  \fn    CollisionOjGarde ()
+		*  \fn    CollisionOjMechantSimple ()
 		*  \brief Constructeur
 		*/
 	CollisionOjMechantSimple() : CollisionOj("OjMechantSimple") {}
@@ -33,18 +36,11 @@ public:
 private:
 	/**
 		*  \fn    void collisionEntre(OjGarde *h, OjPlateforme *p);
-		*  \param s Pointeur vers OjGarde
+		*  \param s Pointeur vers OjMechantSimple
 		*  \param p Pointeur vers OjPlateforme
 		*  \brief Définit le comportement d'une collision entre un OjGarde et un OjPlateforme
 		*/
 	void collisionEntre(OjMechantSimple *s, OjPlateforme *p);
-	/**
-		*  \fn    void collisionHeros(OjGarde *s, OjHeros *h);
-		*  \param s Pointeur vers OjGarde
-		*  \param h Pointeur vers OjHeros
-		*  \brief Définit le comportement d'une collision entre un OjGarde et un OjHeros
-		*/
-	void collisionHeros(OjMechantSimple *s, OjHeros *h);
 
 };
 
