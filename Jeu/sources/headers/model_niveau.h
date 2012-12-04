@@ -19,11 +19,12 @@ class ModelNiveau : public Singleton<ModelNiveau>
 	friend class Singleton<ModelNiveau>;
 private:
 	QList<Niveau*> _niveaux; /**< Liste des niveaux */
+	QGraphicsScene* _scene; /**< Scene des niveaux */
 	/**
 		*  \fn    ModelNiveau()
 		*  \brief Constructeur
 		*/
-	ModelNiveau() {}
+	ModelNiveau(){}
 public:
 	/**
 		*  \fn    void ajouterUnNiveau(Niveau *n)
@@ -37,6 +38,23 @@ public:
 		*  \return La liste des niveaux
 		*/
 	QList<Niveau*> getNiveaux();
+	/**
+		*  \fn    setScene(QGraphicsScene *scene)
+		*  \brief Mutateur de la donnée membre _scene
+		*  \param scene la scene des niveaux
+		*/
+	void setScene(QGraphicsScene *scene);
+	/**
+		*  \fn    QGraphicsScene* getScene()
+		*  \brief Accesseur de la donnée membre _scene
+		*  \return La scene des niveaux
+		*/
+	QGraphicsScene* getScene();
+	/**
+		*  \fn    void chargerNiveaux()
+		*  \brief Charge les niveaux dans la liste des niveaux
+		*/
+	void chargerNiveaux();
 };
 
 

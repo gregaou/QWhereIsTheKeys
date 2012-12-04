@@ -28,8 +28,9 @@ VueJeu::VueJeu(QWidget *parent) :
 	//cOj->setNext(new CollisionOjGarde());
 	// Et les mecs il faut faire une methode "getLast();" !!!JB
 
-	Niveau *n = new Niveau(&_scene);
-	_mNiveau->ajouterUnNiveau(n);
+	_mNiveau->setScene(&_scene);
+	_mNiveau->chargerNiveaux();
+	Niveau *n;
 	n = _mNiveau->getNiveaux()[_mJeu->getNiveauSelectionne()];
 	QList<ObjetJeu*> objets = n->getObjets();
 	h = n->getHeros();

@@ -42,6 +42,12 @@ public:
 		*	 \return Une liste contenant les objets du niveau
 		*/
 	QList<ObjetJeu*> getObjets();
+	/**
+		*  \brief Ajoute un objet au niveau
+		*	 \fn    void addObject(ObjetJeu* obj)
+		*  \param obj l'objet que l'on veut ajouter au niveau
+		*/
+	void addObject(ObjetJeu* obj);
 };
 
 #endif // NIVEAU_H
