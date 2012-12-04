@@ -72,8 +72,8 @@ QString VueJeu::toString()
 
 void VueJeu::keyPressEvent(QKeyEvent *event)
 {
-	if(event->isAutoRepeat())
-		event->ignore();
+//	if(event->isAutoRepeat())
+//		event->ignore();
 
 	OjHeros *monH = dynamic_cast<OjHeros*>(h);
 
@@ -97,8 +97,8 @@ void VueJeu::keyPressEvent(QKeyEvent *event)
 
 void VueJeu::keyReleaseEvent(QKeyEvent *event)
 {
-	if(event->isAutoRepeat())
-		event->ignore();
+//	if(event->isAutoRepeat())
+//		event->ignore();
 
 	OjHeros *monH = dynamic_cast<OjHeros*>(h);
 	switch(event->key())
