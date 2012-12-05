@@ -3,7 +3,7 @@
  * \brief			Structure de donnée d'un objet jeu méchant simple
  * \author    Société de Développement de Projets Informatique
  * \version   1.0
- * \date      22/04/12
+ * \date      04/12/12
  */
 #ifndef OJ_MECHANT_SIMPLE_H
 #define OJ_MECHANT_SIMPLE_H
@@ -60,18 +60,17 @@ protected:
 		*  \param l4 sprite 4
 		*/
 	QList<QPixmap> loadListPixmap(QString l1, QString l2, QString r1, QString r2) const;
-
 	/**
 		*  \brief Gère l'animation de l'objet jeu
 		*	 \fn    void animation()
 		*/
 	void animation();
 
-	int counter;/**< Permet de définir le vitesse de défilement des frames de objet jeu */
+	int counter;/**< Permet de définir la vitesse de défilement des frames de l'objet jeu */
 
-	bool deplacement;/**< Permet de définir le déplacement de objet jeu */
+	bool deplacement;/**< Permet de définir le déplacement de l'objet jeu */
 
-	qreal gravite;/**< Permet de définir la gravité de objet jeu */
+	qreal gravite;/**< Permet de définir la gravité de l'objet jeu */
 
 };
 
