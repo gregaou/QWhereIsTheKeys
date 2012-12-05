@@ -34,7 +34,8 @@ SOURCES += sources/main.cpp\
     sources/vue_jeu_pause.cpp \
     sources/oj_clef.cpp \
     sources/oj_mechant_simple.cpp \
-    sources/collision_oj_mechant_simple.cpp
+    sources/collision_oj_mechant_simple.cpp \
+    sources/oj_flamme.cpp
 
 HEADERS  += sources/headers/qwitk.h \
     sources/headers/vue.h \
@@ -63,7 +64,8 @@ HEADERS  += sources/headers/qwitk.h \
     sources/headers/vue_jeu_pause.h \
     sources/headers/oj_clef.h \
     sources/headers/oj_mechant_simple.h \
-    sources/headers/collision_oj_mechant_simple.h
+    sources/headers/collision_oj_mechant_simple.h \
+    sources/headers/oj_flamme.h
 
 FORMS    += ui/qwitk.ui \
     ui/vue_accueil.ui \

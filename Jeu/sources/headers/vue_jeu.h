@@ -21,6 +21,7 @@
 #include "sources/headers/oj_heros.h"
 #include "sources/headers/oj_mechant_simple.h"
 #include "sources/headers/oj_clef.h"
+#include "sources/headers/oj_flamme.h"
 #include "sources/headers/model_niveau.h"
 #include "sources/headers/niveau.h"
 

@@ -25,4 +25,10 @@
         <file alias="g_l1.png">images/garde/gardeg1.png</file>
         <file alias="g_l2.png">images/garde/gardeg2.png</file>
     </qresource>
+    <qresource prefix="/flamme">
+        <file alias="flame1.png">images/flamme/flammes1.png</file>
+        <file alias="flame2.png">images/flamme/flammes2.png</file>
+        <file alias="flame3.png">images/flamme/flammes3.png</file>
+        <file alias="flame4.png">images/flamme/flammes4.png</file>
+    </qresource>
 </RCC>

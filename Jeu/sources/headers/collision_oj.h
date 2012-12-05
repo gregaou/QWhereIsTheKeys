@@ -16,6 +16,7 @@
 #include "sources/headers/oj_plateforme.h"
 #include "sources/headers/oj_mechant_simple.h"
 #include "sources/headers/oj_clef.h"
+#include "sources/headers/oj_flamme.h"
 /**
  * \class CollisionOj
  * \brief Structure de la chaîne de responsabilité gérant les collisions

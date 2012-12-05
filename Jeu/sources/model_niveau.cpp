@@ -26,7 +26,7 @@ void ModelNiveau::chargerNiveaux()
 	ObjetJeu *depart	= new OjPlateforme(10,50,60,15);
 	ObjetJeu *mur			= new OjPlateforme(200,0,15,395);
 	ObjetJeu *mur2		= new OjPlateforme(275,0,15,45);
-	ObjetJeu *mur3		= new OjPlateforme(275,65,15,335);
+	ObjetJeu *mur3		= new OjPlateforme(275,65,15,340);
 	ObjetJeu *p1			= new OjPlateforme(80,160,120,15);
 	ObjetJeu *g1			= new OjMechantSimple(90,120,QString(":/garde/g_l1.png"),QString(":/garde/g_l2.png"),QString(":/garde/g_r1.png"),QString(":/garde/g_r2.png"),true);
 
@@ -36,7 +36,7 @@ void ModelNiveau::chargerNiveaux()
 	ObjetJeu *p3			= new OjPlateforme(40,380,160,15);
 	ObjetJeu *g3			= new OjMechantSimple(40,340,QString(":/garde/g_l1.png"),QString(":/garde/g_l2.png"),QString(":/garde/g_r1.png"),QString(":/garde/g_r2.png"),true);
 
-	ObjetJeu *p4			= new OjPlateforme(200,550,80,15);
+	ObjetJeu *p4			= new OjPlateforme(250,530,20,15);
 	ObjetJeu *p5			= new OjPlateforme(300,500,80,15);
 	ObjetJeu *p6			= new OjPlateforme(230,450,50,15);
 
@@ -49,6 +49,29 @@ void ModelNiveau::chargerNiveaux()
 	ObjetJeu *p10			= new OjPlateforme(500,250,225,15);
 
 	ObjetJeu *clef    = new OjClef(700,140);
+
+	ObjetJeu *p11			 = new OjPlateforme(9,575,20,15);
+	ObjetJeu *flamme1  = new OjFlamme(30,575);
+	ObjetJeu *flamme2  = new OjFlamme(55,575);
+	ObjetJeu *flamme3  = new OjFlamme(80,575);
+	ObjetJeu *flamme4  = new OjFlamme(105,575);
+	ObjetJeu *flamme5  = new OjFlamme(130,575);
+	ObjetJeu *flamme6  = new OjFlamme(155,575);
+	ObjetJeu *flamme7  = new OjFlamme(180,575);
+	ObjetJeu *flamme8  = new OjFlamme(205,575);
+	ObjetJeu *p12			 = new OjPlateforme(230,575,24,15);
+	ObjetJeu *flamme11  = new OjFlamme(255,575);
+	ObjetJeu *flamme21  = new OjFlamme(280,575);
+	ObjetJeu *flamme31  = new OjFlamme(305,575);
+	ObjetJeu *flamme41  = new OjFlamme(330,575);
+	ObjetJeu *flamme51 = new OjFlamme(355,575);
+	ObjetJeu *flamme61  = new OjFlamme(380,575);
+	ObjetJeu *flamme71  = new OjFlamme(405,575);
+	ObjetJeu *flamme81  = new OjFlamme(430,575);
+	ObjetJeu *p13			 = new OjPlateforme(455,575,20,15);
+
+	ObjetJeu *p14			 = new OjPlateforme(100,530,20,15);
+
 
 
 	n->addObject(depart);
@@ -65,8 +88,30 @@ void ModelNiveau::chargerNiveaux()
 	n->addObject(p8);
 	n->addObject(p9);
 	n->addObject(p10);
+	n->addObject(p11);
+	n->addObject(p12);
+	n->addObject(p13);
+	n->addObject(p14);
+
 
 	n->addObject(clef);
+
+	n->addObject(flamme1);
+	n->addObject(flamme2);
+	n->addObject(flamme3);
+	n->addObject(flamme4);
+	n->addObject(flamme5);
+	n->addObject(flamme6);
+	n->addObject(flamme7);
+	n->addObject(flamme8);
+	n->addObject(flamme11);
+	n->addObject(flamme21);
+	n->addObject(flamme31);
+	n->addObject(flamme41);
+	n->addObject(flamme51);
+	n->addObject(flamme61);
+	n->addObject(flamme71);
+	n->addObject(flamme81);
 
 	n->addObject(s1);
 	n->addObject(s2);
