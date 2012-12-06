@@ -13,6 +13,7 @@
  */
 #include <QList>
 #include <QGraphicsScene>
+#include "macro_sprite.h"
 #include "sources/headers/collision_oj.h"
 /**
  * \class Niveau

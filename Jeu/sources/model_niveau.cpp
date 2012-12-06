@@ -28,21 +28,21 @@ void ModelNiveau::chargerNiveaux()
 	ObjetJeu *mur2		= new OjPlateforme(275,0,15,45);
 	ObjetJeu *mur3		= new OjPlateforme(275,65,15,340);
 	ObjetJeu *p1			= new OjPlateforme(80,160,120,15);
-	ObjetJeu *g1			= new OjMechantSimple(90,120,QString(":/garde/g_l1.png"),QString(":/garde/g_l2.png"),QString(":/garde/g_r1.png"),QString(":/garde/g_r2.png"),true);
+	ObjetJeu *g1			= GARDE(90,120,true);
 
 	ObjetJeu *p2			= new OjPlateforme(10,270,120,15);
-	ObjetJeu *g2			= new OjMechantSimple(10,230,QString(":/garde/g_l1.png"),QString(":/garde/g_l2.png"),QString(":/garde/g_r1.png"),QString(":/garde/g_r2.png"),false);
+	ObjetJeu *g2			= GARDE(10,230,false);
 
 	ObjetJeu *p3			= new OjPlateforme(40,380,160,15);
-	ObjetJeu *g3			= new OjMechantSimple(40,340,QString(":/garde/g_l1.png"),QString(":/garde/g_l2.png"),QString(":/garde/g_r1.png"),QString(":/garde/g_r2.png"),true);
+	ObjetJeu *g3			= GARDE(40,340,true);
 
 	ObjetJeu *p4			= new OjPlateforme(250,530,20,15);
 	ObjetJeu *p5			= new OjPlateforme(300,500,80,15);
 	ObjetJeu *p6			= new OjPlateforme(230,450,50,15);
 
 	ObjetJeu *p7			= new OjPlateforme(450,400,400,15);
-	ObjetJeu *s1			= new OjMechantSimple(440,370,QString(":/spider/s_l1.png"),QString(":/spider/s_l2.png"),QString(":/spider/s_r1.png"),QString(":/spider/s_r2.png"),true);
-	ObjetJeu *s2			= new OjMechantSimple(780,370,QString(":/spider/s_l1.png"),QString(":/spider/s_l2.png"),QString(":/spider/s_r1.png"),QString(":/spider/s_r2.png"),false);
+	ObjetJeu *s1			= SPIDER(440,370,true);
+	ObjetJeu *s2			= SPIDER(780,370,false);
 
 	ObjetJeu *p8			= new OjPlateforme(275,400,100,15);
 	ObjetJeu *p9			= new OjPlateforme(700,350,50,15);
@@ -51,23 +51,23 @@ void ModelNiveau::chargerNiveaux()
 	ObjetJeu *clef    = new OjClef(700,140);
 
 	ObjetJeu *p11			 = new OjPlateforme(9,575,20,15);
-	ObjetJeu *flamme1  = new OjFlamme(30,575);
-	ObjetJeu *flamme2  = new OjFlamme(55,575);
-	ObjetJeu *flamme3  = new OjFlamme(80,575);
-	ObjetJeu *flamme4  = new OjFlamme(105,575);
-	ObjetJeu *flamme5  = new OjFlamme(130,575);
-	ObjetJeu *flamme6  = new OjFlamme(155,575);
-	ObjetJeu *flamme7  = new OjFlamme(180,575);
-	ObjetJeu *flamme8  = new OjFlamme(205,575);
+	ObjetJeu *lave1  = LAVE(30,575);
+	ObjetJeu *lave2  = LAVE(55,575);
+	ObjetJeu *lave3  = LAVE(80,575);
+	ObjetJeu *lave4  = LAVE(105,575);
+	ObjetJeu *lave5  = LAVE(130,575);
+	ObjetJeu *lave6  = LAVE(155,575);
+	ObjetJeu *lave7  = LAVE(180,575);
+	ObjetJeu *lave8  = LAVE(205,575);
 	ObjetJeu *p12			 = new OjPlateforme(230,575,24,15);
-	ObjetJeu *flamme11  = new OjFlamme(255,575);
-	ObjetJeu *flamme21  = new OjFlamme(280,575);
-	ObjetJeu *flamme31  = new OjFlamme(305,575);
-	ObjetJeu *flamme41  = new OjFlamme(330,575);
-	ObjetJeu *flamme51 = new OjFlamme(355,575);
-	ObjetJeu *flamme61  = new OjFlamme(380,575);
-	ObjetJeu *flamme71  = new OjFlamme(405,575);
-	ObjetJeu *flamme81  = new OjFlamme(430,575);
+	ObjetJeu *lave11  = LAVE(255,575);
+	ObjetJeu *lave21  = LAVE(280,575);
+	ObjetJeu *lave31  = LAVE(305,575);
+	ObjetJeu *lave41  = LAVE(330,575);
+	ObjetJeu *lave51	= LAVE(355,575);
+	ObjetJeu *lave61  = LAVE(380,575);
+	ObjetJeu *lave71  = LAVE(405,575);
+	ObjetJeu *lave81  = LAVE(430,575);
 	ObjetJeu *p13			 = new OjPlateforme(455,575,20,15);
 
 	ObjetJeu *p14			 = new OjPlateforme(100,530,20,15);
@@ -96,22 +96,22 @@ void ModelNiveau::chargerNiveaux()
 
 	n->addObject(clef);
 
-	n->addObject(flamme1);
-	n->addObject(flamme2);
-	n->addObject(flamme3);
-	n->addObject(flamme4);
-	n->addObject(flamme5);
-	n->addObject(flamme6);
-	n->addObject(flamme7);
-	n->addObject(flamme8);
-	n->addObject(flamme11);
-	n->addObject(flamme21);
-	n->addObject(flamme31);
-	n->addObject(flamme41);
-	n->addObject(flamme51);
-	n->addObject(flamme61);
-	n->addObject(flamme71);
-	n->addObject(flamme81);
+	n->addObject(lave1);
+	n->addObject(lave2);
+	n->addObject(lave3);
+	n->addObject(lave4);
+	n->addObject(lave5);
+	n->addObject(lave6);
+	n->addObject(lave7);
+	n->addObject(lave8);
+	n->addObject(lave11);
+	n->addObject(lave21);
+	n->addObject(lave31);
+	n->addObject(lave41);
+	n->addObject(lave51);
+	n->addObject(lave61);
+	n->addObject(lave71);
+	n->addObject(lave81);
 
 	n->addObject(s1);
 	n->addObject(s2);

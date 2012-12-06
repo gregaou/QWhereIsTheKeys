@@ -1,16 +1,26 @@
-#include "sources/headers/oj_flamme.h"
-
+#include "sources/headers/oj_fix_anime.h"
 #include <QDebug>
 #include <QGraphicsScene>
 
 #define NB_FPS_ANIMATION(X)  ((1000/1)/X)
 
-OjFlamme::OjFlamme(const qreal x, const qreal y) :
-	ObjetJeuMobile(x,y,loadListPixmap()),counter(0)
+OjFixAnime::OjFixAnime(const qreal x, const qreal y, QString sprite1,QString sprite2,QString sprite3,QString sprite4) :
+	ObjetJeuMobile(x,y,loadListPixmap(sprite1,sprite2,sprite3,sprite4)),counter(0)
 {
 	tmp = 0;
 }
 
+QList<QPixmap> OjFixAnime::loadListPixmap(QString l1,QString l2,QString l3,QString l4) const
+{
+	QList<QPixmap> animation;
+	animation.append(QPixmap(l1));
+	animation.append(QPixmap(l2));
+	animation.append(QPixmap(l3));
+	animation.append(QPixmap(l4));
+
+	return animation;
+}
+/*
 QList<QPixmap> OjFlamme::loadListPixmap() const
 {
 	QList<QPixmap> animation;
@@ -18,16 +28,17 @@ QList<QPixmap> OjFlamme::loadListPixmap() const
 	animation.append(QPixmap(":/flamme/flame2.png"));
 	animation.append(QPixmap(":/flamme/flame3.png"));
 	animation.append(QPixmap(":/flamme/flame4.png"));
+	QString(:/flamme/flame1.png),QString(":/flamme/flame2.png"),QString(":/flamme/flame3.png"),QString(":/flamme/flame4.png")
 	return animation;
 }
-
-void OjFlamme::process()
+*/
+void OjFixAnime::process()
 {
 	animation();
 }
 
 
-void OjFlamme::animation()
+void OjFixAnime::animation()
 {
 	counter++;
 	if(tmp == 40)
