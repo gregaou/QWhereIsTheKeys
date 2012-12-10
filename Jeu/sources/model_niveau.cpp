@@ -23,34 +23,34 @@ QGraphicsScene *ModelNiveau::getScene()
 void ModelNiveau::chargerNiveaux()
 {
 	Niveau* n = new Niveau(_scene);
-	ObjetJeu *depart	= new OjPlateforme(10,50,60,15);
-	ObjetJeu *mur			= new OjPlateforme(200,0,15,395);
-	ObjetJeu *mur2		= new OjPlateforme(275,0,15,45);
-	ObjetJeu *mur3		= new OjPlateforme(275,65,15,340);
-	ObjetJeu *p1			= new OjPlateforme(80,160,120,15);
-	ObjetJeu *g1			= GARDE(90,120,true);
+	ObjetJeu *depart = new OjPlateforme(10,50,60,15);
+	ObjetJeu *mur		 = new OjPlateforme(200,0,15,395);
+	ObjetJeu *mur2	 = new OjPlateforme(275,0,15,45);
+	ObjetJeu *mur3	 = new OjPlateforme(275,65,15,340);
+	ObjetJeu *p1		 = new OjPlateforme(80,160,120,15);
+	ObjetJeu *g1		 = GARDE(90,120,true);
 
-	ObjetJeu *p2			= new OjPlateforme(10,270,120,15);
-	ObjetJeu *g2			= GARDE(10,230,false);
+	ObjetJeu *p2		 = new OjPlateforme(10,270,120,15);
+	ObjetJeu *g2		 = GARDE(10,230,false);
 
-	ObjetJeu *p3			= new OjPlateforme(40,380,160,15);
-	ObjetJeu *g3			= GARDE(40,340,true);
+	ObjetJeu *p3		 = new OjPlateforme(40,380,160,15);
+	ObjetJeu *g3		 = GARDE(40,340,true);
 
-	ObjetJeu *p4			= new OjPlateforme(250,530,20,15);
-	ObjetJeu *p5			= new OjPlateforme(300,500,80,15);
-	ObjetJeu *p6			= new OjPlateforme(230,450,50,15);
+	ObjetJeu *p4		 = new OjPlateforme(250,530,20,15);
+	ObjetJeu *p5		 = new OjPlateforme(300,500,80,15);
+	ObjetJeu *p6		 = new OjPlateforme(230,450,50,15);
 
-	ObjetJeu *p7			= new OjPlateforme(450,400,400,15);
-	ObjetJeu *s1			= SPIDER(440,370,true);
-	ObjetJeu *s2			= SPIDER(780,370,false);
+	ObjetJeu *p7		 = new OjPlateforme(450,400,400,15);
+	ObjetJeu *s1		 = SPIDER(440,370,true);
+	ObjetJeu *s2		 = SPIDER(780,370,false);
 
-	ObjetJeu *p8			= new OjPlateforme(275,400,100,15);
-	ObjetJeu *p9			= new OjPlateforme(700,350,50,15);
-	ObjetJeu *p10			= new OjPlateforme(500,250,225,15);
+	ObjetJeu *p8		 = new OjPlateforme(275,400,100,15);
+	ObjetJeu *p9		 = new OjPlateforme(700,350,50,15);
+	ObjetJeu *p10		 = new OjPlateforme(500,250,225,15);
 
-	ObjetJeu *clef    = new OjClef(700,140);
+	ObjetJeu *clef   = new OjClef(700,140);
 
-	ObjetJeu *p11			 = new OjPlateforme(9,575,20,15);
+	ObjetJeu *p11		 = new OjPlateforme(9,570,20,20);
 	ObjetJeu *lave1  = LAVE(30,575);
 	ObjetJeu *lave2  = LAVE(55,575);
 	ObjetJeu *lave3  = LAVE(80,575);
@@ -59,18 +59,18 @@ void ModelNiveau::chargerNiveaux()
 	ObjetJeu *lave6  = LAVE(155,575);
 	ObjetJeu *lave7  = LAVE(180,575);
 	ObjetJeu *lave8  = LAVE(205,575);
-	ObjetJeu *p12			 = new OjPlateforme(230,575,24,15);
-	ObjetJeu *lave11  = LAVE(255,575);
-	ObjetJeu *lave21  = LAVE(280,575);
-	ObjetJeu *lave31  = LAVE(305,575);
-	ObjetJeu *lave41  = LAVE(330,575);
-	ObjetJeu *lave51	= LAVE(355,575);
-	ObjetJeu *lave61  = LAVE(380,575);
-	ObjetJeu *lave71  = LAVE(405,575);
-	ObjetJeu *lave81  = LAVE(430,575);
-	ObjetJeu *p13			 = new OjPlateforme(455,575,20,15);
+	ObjetJeu *p12		 = new OjPlateforme(230,570,24,20);
+	ObjetJeu *lave11 = LAVE(255,575);
+	ObjetJeu *lave21 = LAVE(280,575);
+	ObjetJeu *lave31 = LAVE(305,575);
+	ObjetJeu *lave41 = LAVE(330,575);
+	ObjetJeu *lave51 = LAVE(355,575);
+	ObjetJeu *lave61 = LAVE(380,575);
+	ObjetJeu *lave71 = LAVE(405,575);
+	ObjetJeu *lave81 = LAVE(430,575);
+	ObjetJeu *p13		 = new OjPlateforme(455,570,20,20);
 
-	ObjetJeu *p14			 = new OjPlateforme(100,530,20,15);
+	ObjetJeu *p14		 = new OjPlateforme(100,530,20,15);
 
 
 
