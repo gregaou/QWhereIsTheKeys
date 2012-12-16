@@ -1,7 +1,7 @@
 /**
  * \file			oj_mechant_simple.h
  * \brief			Structure de donnée d'un objet jeu méchant simple
- * \author    Société de Développement de Projets Informatique
+ * \author    Jean-Bernard Gallo
  * \version   1.0
  * \date      04/12/12
  */

@@ -1,7 +1,7 @@
 /**
  * \file	    vue_nouveau_jeu.h
  * \brief	    Classe vue nouveau jeu
- * \author    Société de Développement de Projets Informatique
+ * \author    Jean-Bernard Gallo
  * \version   1.0
  * \date      15/11/12
  */

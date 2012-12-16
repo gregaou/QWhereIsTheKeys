@@ -1,7 +1,7 @@
 /**
  * \file			oj_flamme.h
- * \brief			Structure de donnée d'un objet jeu flamme
- * \author    Société de Développement de Projets Informatique
+ * \brief			Structure de donnée d'un objet jeu fix et animé
+ * \author    Jean-Bernard Gallo
  * \version   1.0
  * \date      05/12/12
  */

@@ -1,3 +1,11 @@
+/**
+ * \file			vue_jeu_charger.h
+ * \brief			Classe vue jeu charger
+ * \author    Jean-Bernard Gallo
+ * \version   1.0
+ * \date      24/11/12
+ */
+
 #ifndef VUE_JEU_CHARGER_H
 #define VUE_JEU_CHARGER_H
 

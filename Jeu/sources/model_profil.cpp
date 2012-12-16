@@ -1,4 +1,4 @@
-#include "sources/headers/model_profil.h"
+ #include "sources/headers/model_profil.h"
 
 const QString ModelProfil::UrlFichierSauvegarde = "sauvegarde/sauv.txt";
 

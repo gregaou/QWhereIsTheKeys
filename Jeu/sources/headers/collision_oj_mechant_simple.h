@@ -1,9 +1,9 @@
 /**
  * \file			collision_oj_mechant_simple.h
  * \brief			gestion des collisions d'un objet jeu méchant simple
- * \author    Société de Développement de Projets Informatique
+ * \author    Jean-Bernard Gallo
  * \version   1.0
- * \date      22/04/12
+ * \date      17/12/2012
  */
 #ifndef COLLISION_OJ_MECHANT_SIMPLE_H
 #define COLLISION_OJ_MECHANT_SIMPLE_H
