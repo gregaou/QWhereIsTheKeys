@@ -15,6 +15,7 @@
 #include "sources/headers/oj_heros.h"
 #include "sources/headers/oj_plateforme.h"
 #include "sources/headers/oj_mechant_simple.h"
+#include "sources/headers/oj_mechant_tourne.h"
 #include "sources/headers/oj_clef.h"
 #include "sources/headers/oj_fix_anime.h"
 /**

@@ -35,7 +35,9 @@ SOURCES += sources/main.cpp\
     sources/oj_clef.cpp \
     sources/oj_mechant_simple.cpp \
     sources/collision_oj_mechant_simple.cpp \
-    sources/oj_fix_anime.cpp
+    sources/oj_fix_anime.cpp \
+    sources/collision_oj_mechant_tourne.cpp \
+    sources/oj_mechant_tourne.cpp
 
 HEADERS  += sources/headers/qwitk.h \
     sources/headers/vue.h \
@@ -66,7 +68,9 @@ HEADERS  += sources/headers/qwitk.h \
     sources/headers/oj_mechant_simple.h \
     sources/headers/collision_oj_mechant_simple.h \
     sources/headers/oj_fix_anime.h \
-    sources/headers/macro_sprite.h
+    sources/headers/macro_sprite.h \
+    sources/headers/collision_oj_mechant_tourne.h \
+    sources/headers/oj_mechant_tourne.h
 
 FORMS    += ui/qwitk.ui \
     ui/vue_accueil.ui \
