@@ -16,6 +16,16 @@ int ModelJeu::getNiveauSelectionne()
 	return _niveauSelectionne;
 }
 
+void ModelJeu::setTempsNiveau(QTime temps)
+{
+	_tempsNiveau = temps;
+}
+
+QTime ModelJeu::getTempsNiveau()
+{
+	return _tempsNiveau;
+}
+
 QString ModelJeu::getNomProfil()
 {
 	return _profils->getProfil(_idProfil).getNom();

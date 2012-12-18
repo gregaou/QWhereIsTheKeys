@@ -33,6 +33,7 @@ void VueJeuNiveauTermine::connexionAffichage()
 					SLOT(onClicBoutonRetourMenu()));
 	connect(_ui->boutonNiveauSuivant,SIGNAL(clicked()),this,
 					SLOT(onclicBoutonNiveauSuivant()));
+	_ui->lTemps->setText(_ui->lTemps->text().append(_mJeu->getTempsNiveau().toString("hh:mm:ss:zzz")));
 }
 
 QString VueJeuNiveauTermine::toString()

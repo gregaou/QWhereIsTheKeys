@@ -9,6 +9,7 @@
 #define MODEL_JEU_H
 
 #include "sources/headers/model_profil.h"
+#include <QTime>
 /**
  * \class ModelJeu
  * \brief Structure de donnée représentant un jeu.
@@ -20,6 +21,7 @@ private:
 	ModelProfil * _profils; /**< Modèle de profils de joueurs */
 	int _idProfil; /**< Identifiant du profil chargé */
 	int _niveauSelectionne; /**< Identifiant du niveau sélectionné */
+	QTime _tempsNiveau; /**< Temps réalisé du niveau sélectionné */
 	/**
 		*  \fn    ModelJeu()
 		*  \brief Constructeur
@@ -50,7 +52,18 @@ public:
 		*  \return QString le nom du profil
 		*/
 	QString getNomProfil();
-
+	/**
+		*  \brief Mutateur de la donnée membre _tempsNiveau
+		*	 \fn    void setTempsNiveau(QTime temps)
+		*  \param temps Temps réalisé sur le niveau sélectionné
+		*/
+	void setTempsNiveau(QTime temps);
+	/**
+		*  \brief Récupère le temps du niveau
+		*	 \fn    QTime getTempsNiveau()
+		*  \return QTime le temps du niveau
+		*/
+	QTime getTempsNiveau();
 
 	/**
 		*  \brief Retourne le dernier niveau terminé et sauvegardé
