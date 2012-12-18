@@ -1,6 +1,5 @@
 #include "sources/headers/oj_clef.h"
 
-#include <QDebug>
 #include <QGraphicsScene>
 
 

@@ -19,11 +19,9 @@ void CollisionOjMechantTourne::collisionEntre(OjMechantTourne *h, OjPlateforme *
 				return;
 
 		h->setPlateforme(p);
-		qDebug()<<h->getDeplacement() << "collision";
 
 		if(!(h->getDeplacement()))
 		{
-				qDebug()<< "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaah";
 			h->gauche();
 		}
 		else

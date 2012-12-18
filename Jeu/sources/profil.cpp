@@ -1,5 +1,4 @@
 ﻿#include "sources/headers/profil.h"
-#include <QDebug>
 
 const QString Profil::_sep = "*|*";
 
@@ -81,7 +80,6 @@ QString Profil::toString()
 {
 	QString strProfil(_nom);
 	QMapIterator<int, QTime> i(_resultatsNiveaux);
-	qDebug() << _resultatsNiveaux.size();
 	while(i.hasNext())
 	{
 		i.next();

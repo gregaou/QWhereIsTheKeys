@@ -16,7 +16,6 @@ void CollisionOjHeros::gererCollision(ObjetJeu *oj1, ObjetJeu *oj2)
 	if(oj2->toString() == "OjMechantSimple" || oj2->toString() == "OjMechantTourne" || oj2->toString() == "OjFixAnime" )
 	{
 		h->setPos(30,30);
-		qDebug()<< "Retour au debut, mort du heros";
 
 	}
 	if(oj2->toString() == "OjClef")

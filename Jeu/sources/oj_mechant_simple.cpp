@@ -1,6 +1,5 @@
 #include "sources/headers/oj_mechant_simple.h"
 
-#include <QDebug>
 #include <QGraphicsScene>
 
 #define GRAVITE 5

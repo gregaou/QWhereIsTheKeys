@@ -1,5 +1,4 @@
 #include "sources/headers/model_jeu.h"
-#include <QDebug>
 
 ModelJeu::ModelJeu() : _profils(ModelProfil::getInstance()){}
 

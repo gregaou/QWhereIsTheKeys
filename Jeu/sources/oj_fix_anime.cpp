@@ -1,5 +1,4 @@
 #include "sources/headers/oj_fix_anime.h"
-#include <QDebug>
 #include <QGraphicsScene>
 
 #define NB_FPS_ANIMATION(X)  ((1000/1)/X)

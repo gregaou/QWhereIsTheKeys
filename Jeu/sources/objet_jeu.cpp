@@ -1,5 +1,4 @@
 #include "sources/headers/objet_jeu.h"
-#include <QDebug>
 
 ObjetJeu::ObjetJeu(qreal x, qreal y, const QList<QPixmap> &animation) :
 	QGraphicsItem(0),

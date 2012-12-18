@@ -22,18 +22,28 @@ QGraphicsScene *ModelNiveau::getScene()
 
 void ModelNiveau::chargerNiveaux()
 {
-	Niveau* n = new Niveau(_scene);
+	QString lvl("niveau/%1.txt");
 
-	QFile f("niveau/1.txt");
-	f.open(QIODevice::ReadOnly);
+	int i=1;
+	QFile f(lvl.arg(i));
 
-	while(!f.atEnd())
+	if(!f.exists())
+		ajouterUnNiveau(new Niveau(_scene));
+	while(f.exists())
 	{
-		QString line = f.readLine();
-		n->addObject(ObjetJeuFactory::getObjetJeu(line));
+
+		f.open(QIODevice::ReadOnly);
+		Niveau* n = new Niveau(_scene);
+		while(!f.atEnd())
+		{
+			QString line = f.readLine();
+			n->addObject(ObjetJeuFactory::getObjetJeu(line));
+		}
+		ajouterUnNiveau(n);
+		f.close();
+
+		f.setFileName(lvl.arg(++i));
 	}
-	ajouterUnNiveau(n);
-	f.close();
 }
 
 int ModelNiveau::getNbNiveau()

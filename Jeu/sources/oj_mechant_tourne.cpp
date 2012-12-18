@@ -1,6 +1,5 @@
 #include "sources/headers/oj_mechant_tourne.h"
 
-#include <QDebug>
 #include <QGraphicsScene>
 
 //#define GRAVITE 5
@@ -65,27 +64,23 @@ void OjMechantTourne::direction()
 
 		if (deplacement)
 		{
-				qDebug() << "deplacement horraire";
-				if (_dx >0) //la creature allait Ã  droite
+				if (_dx >0) //la creature allait Ã  droite
 				{
-						qDebug()<< "droite";
-						if (hx1 >= px2)//si la creature depasse le point le plus Ã  droite de la plateforme elle descend
+						if (hx1 >= px2)//si la creature depasse le point le plus Ã  droite de la plateforme elle descend
 							 bas();
 						else
 								droite(); //sinon elle continue son chemin vers la droite
 				}
-				else if(_dx <0) //la creature allait Ã  gauche
+				else if(_dx <0) //la creature allait Ã  gauche
 				{
-						qDebug()<< "gauche";
-						if (hx2<= px1) //si la creature depasse le point le plus Ã  gauche de la plateforme elle monte
+						if (hx2<= px1) //si la creature depasse le point le plus Ã  gauche de la plateforme elle monte
 								haut();
 						else
 								gauche(); //sinon elle continue son chemin vers la gauche
 				}
 				else if(_dy >0)  //la creature descend
 				{
-						qDebug()<< "descend";
-						if(hy1>=py2) //si la creture depasse le point le plus en bas de la plateforme elle part Ã  gauche
+						if(hy1>=py2) //si la creture depasse le point le plus en bas de la plateforme elle part Ã  gauche
 								gauche();
 						else
 								bas(); //sinon elle continue de descendre
@@ -93,37 +88,32 @@ void OjMechantTourne::direction()
 				}
 				else if (_dy < 0) //la creature monte
 				{
-						qDebug()<< "monte hy2 = " << hy2 << "; py1 = "<<py1;
-						if(hy2 <= py1) //si la creature depasse le point le plus haut, elle vas Ã  droite
+						if(hy2 <= py1) //si la creature depasse le point le plus haut, elle vas Ã  droite
 								droite();
 						else
-								haut(); //sinonelle contine Ã  monter
+								haut(); //sinonelle contine Ã  monter
 
 				}
 		}
 		else
 		{
-				qDebug() << "deplacement trigo";
-				if (_dx < 0) //la creature allait Ã  gauche
+				if (_dx < 0) //la creature allait Ã  gauche
 				{
-						qDebug()<< "gauche";
-						if (hx2 <= px1)//si la creature depasse le point le plus Ã  gauche de la plateforme elle descend
+						if (hx2 <= px1)//si la creature depasse le point le plus Ã  gauche de la plateforme elle descend
 							 bas();
 						else
 							 gauche(); //sinon elle continue son chemin vers la droite
 				}
-				else if(_dx >0) //la creature allait Ã  droite
+				else if(_dx >0) //la creature allait Ã  droite
 				{
-						qDebug()<< "droite";
-						if (hx1>= px2) //si la creature depasse le point le plus Ã  gauche de la plateforme elle monte
+						if (hx1>= px2) //si la creature depasse le point le plus Ã  gauche de la plateforme elle monte
 								haut();
 						else
 								droite(); //sinon elle continue son chemin vers la gauche
 				}
 				else if(_dy <0)  //la creature monte
 				{
-						qDebug()<< "monte";
-						if(hy2<=py1) //si la creture depasse le point le plus en bas de la plateforme elle part Ã  droite
+						if(hy2<=py1) //si la creture depasse le point le plus en bas de la plateforme elle part Ã  droite
 								gauche();
 						else
 								haut(); //sinon elle continue de descendre
@@ -131,11 +121,10 @@ void OjMechantTourne::direction()
 				}
 				else if (_dy>  0) //la creature descend
 				{
-						qDebug()<< "descend hy2 = " << hy2 << "; py1 = "<<py1;
-						if(hy1 >= py2) //si la creature depasse le point le plus haut, elle vas Ã  gauche
+						if(hy1 >= py2) //si la creature depasse le point le plus haut, elle vas Ã  gauche
 								droite();
 						else
-								bas(); //sinonelle contine Ã  monter
+								bas(); //sinonelle contine Ã  monter
 
 				}
 		}

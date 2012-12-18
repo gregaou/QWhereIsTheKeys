@@ -1,6 +1,5 @@
 #include "sources/headers/oj_heros.h"
 
-#include <QDebug>
 #include <QGraphicsScene>
 
 #define GRAVITE 5

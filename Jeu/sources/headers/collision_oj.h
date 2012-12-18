@@ -10,7 +10,6 @@
 #define COLLISION_OJ_H
 
 #include <QString>
-#include <QDebug>
 #include "sources/headers/objet_jeu.h"
 #include "sources/headers/oj_heros.h"
 #include "sources/headers/oj_plateforme.h"

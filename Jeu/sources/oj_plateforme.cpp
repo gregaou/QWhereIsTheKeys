@@ -1,6 +1,5 @@
 #include "sources/headers/oj_plateforme.h"
 
-#include <QDebug>
 #include <QWidget>
 
 OjPlateforme::OjPlateforme(const qreal x, const qreal y, const qreal w,

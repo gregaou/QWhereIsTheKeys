@@ -11,7 +11,6 @@
 
 #include <QWidget>
 #include <QMessageBox>
-#include <QDebug>
 
 /**
  * \class Vue
