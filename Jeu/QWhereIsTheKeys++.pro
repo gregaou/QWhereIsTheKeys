@@ -72,7 +72,8 @@ HEADERS  += sources/headers/qwitk.h \
     sources/headers/macro_sprite.h \
     sources/headers/collision_oj_mechant_tourne.h \
     sources/headers/oj_mechant_tourne.h \
-    sources/headers/objet_jeu_factory.h
+    sources/headers/objet_jeu_factory.h \
+    sources/headers/vue_jeu_niveau_termine.h
 
 FORMS    += ui/qwitk.ui \
     ui/vue_accueil.ui \
