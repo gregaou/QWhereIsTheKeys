@@ -10,6 +10,8 @@
 
 #include "sources/headers/niveau.h"
 #include "sources/headers/singleton.h"
+#include "sources/headers/objet_jeu_factory.h"
+
 /**
  * \class ModelNiveau
  * \brief Structure de donnée représentant les niveaux.

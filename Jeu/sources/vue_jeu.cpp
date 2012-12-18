@@ -1,7 +1,7 @@
 #include "sources/headers/vue_jeu.h"
 #include "ui_vue_jeu.h"
 
-#define FPS_50 20
+#define FPS_50 19
 
 VueJeu::VueJeu(QWidget *parent) :
 	Vue(parent),
@@ -10,7 +10,8 @@ VueJeu::VueJeu(QWidget *parent) :
 	_mNiveau(ModelNiveau::getInstance()),
 	_scene(0,0,798,598,this),
 	_view(&_scene,this),
-	_viewPause()
+	_viewPause(),
+	_temps(0,0,0,0)
 {
 	_view.setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Expanding);
 
@@ -22,15 +23,15 @@ VueJeu::VueJeu(QWidget *parent) :
 
 	_scene.setItemIndexMethod(QGraphicsScene::NoIndex);
 
-	cOj = new CollisionOjHeros();
-	cOj->setNext(new CollisionOjMechantSimple);
+	_cOj = new CollisionOjHeros();
+	_cOj->setNext(new CollisionOjMechantSimple);
 
 	_mNiveau->setScene(&_scene);
 	_mNiveau->chargerNiveaux();
 	Niveau *n;
 	n = _mNiveau->getNiveaux()[_mJeu->getNiveauSelectionne()];
 	QList<ObjetJeu*> objets = n->getObjets();
-	h = n->getHeros();
+	_h = n->getHeros();
 	for(int i = 0; i < objets.size(); i++)
 	{
 		_scene.addItem(objets[i]);
@@ -38,12 +39,14 @@ VueJeu::VueJeu(QWidget *parent) :
 	}
 		connexionAffichage();
 
+	_tempsItem.setPos(700,20);
+	_scene.addItem(&_tempsItem);
 	demarrerTimer();
 }
 
 void VueJeu::collision(ObjetJeu *oj1, ObjetJeu *oj2)
 {
-	cOj->collision(oj1,oj2);
+	_cOj->collision(oj1,oj2);
 }
 
 void VueJeu::resumePause()
@@ -70,10 +73,7 @@ QString VueJeu::toString()
 
 void VueJeu::keyPressEvent(QKeyEvent *event)
 {
-//	if(event->isAutoRepeat())
-//		event->ignore();
-
-	OjHeros *monH = dynamic_cast<OjHeros*>(h);
+	OjHeros *monH = dynamic_cast<OjHeros*>(_h);
 
 	switch(event->key())
 	{
@@ -95,10 +95,7 @@ void VueJeu::keyPressEvent(QKeyEvent *event)
 
 void VueJeu::keyReleaseEvent(QKeyEvent *event)
 {
-//	if(event->isAutoRepeat())
-//		event->ignore();
-
-	OjHeros *monH = dynamic_cast<OjHeros*>(h);
+	OjHeros *monH = dynamic_cast<OjHeros*>(_h);
 	switch(event->key())
 	{
 		case Qt::Key_Right: case Qt::Key_D :
@@ -112,11 +109,12 @@ void VueJeu::keyReleaseEvent(QKeyEvent *event)
 
 void VueJeu::timerEvent(QTimerEvent *)
 {
-
+	_temps = _temps.addMSecs(FPS_50);
 	Niveau *n = _mNiveau->getNiveaux()[_mJeu->getNiveauSelectionne()];
 	QList<ObjetJeu*> objets = n->getObjets();
 
 	_scene.advance();
+	_tempsItem.setPlainText(_temps.toString("hh:mm:ss:zzz"));
 
 	for(int i = 0; i < objets.size(); i++){
 

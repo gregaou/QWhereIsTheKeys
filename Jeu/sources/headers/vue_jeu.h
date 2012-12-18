@@ -12,6 +12,7 @@
 #include <QGraphicsView>
 #include <QGraphicsScene>
 #include <QTimer>
+#include <QTime>
 
 #include "sources/headers/vue.h"
 #include "sources/headers/vue_jeu_pause.h"
@@ -81,16 +82,19 @@ private slots:
 	void resumePause();
 
 private:
-	Ui::VueJeu *_ui; /**< Interface graphique liée à la classe */
+	Ui::VueJeu *_ui; /**< Interface graphique liée �  la classe */
 	ModelJeu *_mJeu; /**< Modèle de données du jeu */
 	ModelNiveau *_mNiveau; /**< Modèle de données des niveaux */
 	QGraphicsScene _scene; /**< Scene Graphique */
 	QGraphicsView _view; /**< Vue Graphique */
 	VueJeuPause _viewPause; /**< Vue Graphique de la pause */
 	int _timer; /**< Timer */
-	ObjetJeu *h;
+	QTime _temps; /**< Temps */
+	QGraphicsTextItem _tempsItem;
 
-	CollisionOj *cOj;
+	ObjetJeu *_h;
+
+	CollisionOj *_cOj;
 
 	void keyPressEvent(QKeyEvent *event);
 
@@ -99,7 +103,7 @@ private:
 	void timerEvent(QTimerEvent *);
 
 	/**
-		*  \brief Connecte les signaux des éléments de l'interface à
+		*  \brief Connecte les signaux des éléments de l'interface �
 		*  leur fonction associé
 		*  \fn void connexionAffichage()
 		*/

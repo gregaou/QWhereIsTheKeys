@@ -48,7 +48,8 @@ void OjHeros::process()
 
 	for(int i=0;i<listCollision.size();++i)
 	{
-		emit collision(this,dynamic_cast<ObjetJeu*>(listCollision.at(i)));
+		if (dynamic_cast<ObjetJeu*>(listCollision.at(i)) != 0)
+			emit collision(this,dynamic_cast<ObjetJeu*>(listCollision.at(i)));
 	}
 }
 
