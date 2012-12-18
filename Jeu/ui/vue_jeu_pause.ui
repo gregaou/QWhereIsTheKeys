@@ -58,6 +58,13 @@
         </widget>
        </item>
        <item>
+        <widget class="QPushButton" name="boutonRetourMenu">
+         <property name="text">
+          <string>Retour au menu</string>
+         </property>
+        </widget>
+       </item>
+       <item>
         <spacer name="spacerBas">
          <property name="orientation">
           <enum>Qt::Vertical</enum>

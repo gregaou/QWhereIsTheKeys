@@ -26,6 +26,7 @@
 #include "sources/headers/oj_fix_anime.h"
 #include "sources/headers/model_niveau.h"
 #include "sources/headers/niveau.h"
+#include "sources/headers/vue_jeu_menu.h"
 
 
 #include "sources/headers/collision_oj.h"
@@ -80,6 +81,12 @@ private slots:
 		*	 \fn    void resumePause()
 		*/
 	void resumePause();
+
+	/**
+		*  \brief Retour au menu
+		*	 \fn    void retourMenu()
+		*/
+	void retourMenu();
 
 private:
 	Ui::VueJeu *_ui; /**< Interface graphique liÃ©e Ã  la classe */

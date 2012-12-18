@@ -59,11 +59,20 @@ void VueJeu::resumePause()
 VueJeu::~VueJeu()
 {
 	delete _ui;
+	delete _h;
+	delete _cOj;
+	_mNiveau->kill();
 }
 
 void VueJeu::connexionAffichage()
 {
 	connect(&_viewPause,SIGNAL(reprendrePartie()),this,SLOT(resumePause()));
+	connect(&_viewPause,SIGNAL(retourMenu()),this,SLOT(retourMenu()));
+}
+
+void VueJeu::retourMenu()
+{
+	emit setVue(VueJeuMenu::toString());
 }
 
 QString VueJeu::toString()

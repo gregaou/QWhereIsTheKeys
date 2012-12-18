@@ -26,7 +26,7 @@ class VueJeuPause : public QWidget
 {
 	Q_OBJECT
 private:
-	Ui::VueJeuPause* _ui; /**< Interface graphique liée à la classe */
+	Ui::VueJeuPause* _ui; /**< Interface graphique liée �  la classe */
 public:
 	/**
 		*  \brief Constructeur
@@ -39,7 +39,7 @@ public:
 		*/
 	~VueJeuPause();
 	/**
-		*  \brief Connecte les signaux des éléments de l'interface à
+		*  \brief Connecte les signaux des éléments de l'interface �
 		*  leur fonction associé
 		*  \fn void connexionAffichage()
 		*/
@@ -52,7 +52,15 @@ signals:
 		*/
 	void reprendrePartie();
 
+	/**
+		*  \brief Signal émit lorsque le bouton retour au niveau est cliqué
+		*  \fn void retourMenu()
+		*/
+	void retourMenu();
+
+
 private slots:
 	void onClicBoutonReprendrePartie();
+	void onClicBoutonRetourMenu();
 };
 #endif // VUE_JEU_PAUSE_H

@@ -16,9 +16,15 @@ VueJeuPause::~VueJeuPause()
 void VueJeuPause::connexionAffichage()
 {
 	connect(_ui->boutonReprendrePartie, SIGNAL(clicked()), this, SLOT(onClicBoutonReprendrePartie()));
+	connect(_ui->boutonRetourMenu,SIGNAL(clicked()),this,SLOT(onClicBoutonRetourMenu()));
 }
 
 void VueJeuPause::onClicBoutonReprendrePartie()
 {
 	emit reprendrePartie();
+}
+
+void VueJeuPause::onClicBoutonRetourMenu()
+{
+	emit retourMenu();
 }

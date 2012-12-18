@@ -27,6 +27,12 @@ private:
 		*  \brief Constructeur
 		*/
 	ModelNiveau(){}
+
+	/**
+		*  \fn    ~ModelNiveau()
+		*  \brief Destructeur
+		*/
+	~ModelNiveau(){}
 public:
 	/**
 		*  \fn    void ajouterUnNiveau(Niveau *n)
