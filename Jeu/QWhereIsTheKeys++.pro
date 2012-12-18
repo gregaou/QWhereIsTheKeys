@@ -84,7 +84,8 @@ FORMS    += ui/qwitk.ui \
     ui/vue_jeu_charger.ui \
     ui/vue_jeu_menu.ui \
     ui/vue_jeu_nouveau.ui \
-    ui/vue_jeu_pause.ui
+    ui/vue_jeu_pause.ui \
+    ui/vue_jeu_niveau_termine.ui
 
 RESOURCES += \
     ressources/ressources.qrc
