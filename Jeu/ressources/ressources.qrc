@@ -31,4 +31,14 @@
         <file alias="lave3.png">images/flamme/flammes3.png</file>
         <file alias="lave4.png">images/flamme/flammes4.png</file>
     </qresource>
+    <qresource prefix="/spiderred">
+        <file alias="sr_u1.png">images/spiderred/spd1_bk1.png</file>
+        <file alias="sr_u2.png">images/spiderred/spd1_bk2.png</file>
+        <file alias="sr_d1.png">images/spiderred/spd1_fr1.png</file>
+        <file alias="sr_d2.png">images/spiderred/spd1_fr2.png</file>
+        <file alias="sr_l1.png">images/spiderred/spd_lf1.png</file>
+        <file alias="sr_l2.png">images/spiderred/spd_lf2.png</file>
+        <file alias="sr_r1.png">images/spiderred/spd_rt1.png</file>
+        <file alias="sr_r2.png">images/spiderred/spd_rt2.png</file>
+    </qresource>
 </RCC>
