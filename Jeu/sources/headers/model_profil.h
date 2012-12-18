@@ -99,6 +99,13 @@ public:
 		*  \return Profil à la position i
 		*/
 	Profil getProfil(int i) const;
+	/**
+		*  \brief Supprime le profil à l'indice i si il existe
+		*	 \fn    void supprimerProfil(int i)
+		*  \param i Identifiant du profil a supprimer
+		*  \param p Profil a insérer
+		*/
+	void supprimerEtRemplacerProfil(int i, Profil p);
 	Profil getProfilByName(QString nom) const;
 	int getIdProfilByName(QString nom) const;
 };

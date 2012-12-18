@@ -1,4 +1,5 @@
 ﻿#include "sources/headers/profil.h"
+#include <QDebug>
 
 const QString Profil::_sep = "*|*";
 
@@ -51,7 +52,7 @@ void Profil::setResultatsNiveaux(QMap<int,QTime> resultatsNiveaux)
 
 void Profil::ajouterResultatNiveau(int idNiveau, QTime temps)
 {
-	_resultatsNiveaux.insert(idNiveau, temps);
+	_resultatsNiveaux[idNiveau] = temps;
 }
 
 bool Profil::operator ==(const Profil & p)
@@ -70,7 +71,7 @@ Profil* Profil::fromString(QString str)
 		while(!list.isEmpty())
 		{
 			i = list.takeFirst().toInt();
-			p->_resultatsNiveaux[i] = QTime::fromString(list.takeFirst());
+			p->_resultatsNiveaux[i] = QTime::fromString(list.takeFirst(), "hh:mm:ss:zzz");
 		}
 	}
 	return p;
@@ -80,11 +81,12 @@ QString Profil::toString()
 {
 	QString strProfil(_nom);
 	QMapIterator<int, QTime> i(_resultatsNiveaux);
+	qDebug() << _resultatsNiveaux.size();
 	while(i.hasNext())
 	{
 		i.next();
 		strProfil += (_sep + QString::number(i.key()) + _sep +
-									i.value().toString());
+									i.value().toString("hh:mm:ss:zzz"));
 	}
 	return strProfil;
 }

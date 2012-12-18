@@ -79,6 +79,7 @@ void VueJeu::retourMenu()
 void VueJeu::collisionClef()
 {
 	_mJeu->setTempsNiveau(_temps);
+	_mJeu->ajouterScore(_mJeu->getNiveauSelectionne(), _temps);
 	emit setVue(VueJeuNiveauTermine::toString());
 }
 

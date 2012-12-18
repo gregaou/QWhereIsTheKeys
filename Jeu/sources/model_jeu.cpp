@@ -1,4 +1,5 @@
 #include "sources/headers/model_jeu.h"
+#include <QDebug>
 
 ModelJeu::ModelJeu() : _profils(ModelProfil::getInstance()){}
 
@@ -42,6 +43,9 @@ int ModelJeu::getDernierNiveauTermine()
 
 bool ModelJeu::ajouterScore(int idNiveau, QTime temps)
 {
-	_profils->getProfil(_idProfil).ajouterResultatNiveau(idNiveau, temps);
+	Profil p = _profils->getProfil(_idProfil);
+	p.ajouterResultatNiveau(idNiveau, temps);
+	_profils->supprimerEtRemplacerProfil(_idProfil, p);
+	_profils->sauverProfils();
 	return true;
 }

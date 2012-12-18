@@ -144,8 +144,14 @@ QList<Profil> ModelProfil::getList() const
 Profil ModelProfil::getProfil(int i) const
 {
 	if(i >= 0 && i < _profils.size())
-		return _profils.at(i);
+		return _profils[i];
 	return Profil();
+}
+
+void ModelProfil::supprimerEtRemplacerProfil(int i, Profil p)
+{
+	if(i >= 0 && i < _profils.size())
+		_profils[i] = p;
 }
 
 Profil ModelProfil::getProfilByName(QString nom) const
