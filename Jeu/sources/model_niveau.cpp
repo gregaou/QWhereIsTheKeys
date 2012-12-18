@@ -35,3 +35,8 @@ void ModelNiveau::chargerNiveaux()
 	ajouterUnNiveau(n);
 	f.close();
 }
+
+int ModelNiveau::getNbNiveau()
+{
+	return _niveaux.size();
+}

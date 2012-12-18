@@ -63,6 +63,12 @@ public:
 		*  \brief Charge les niveaux dans la liste des niveaux
 		*/
 	void chargerNiveaux();
+	/**
+		*  \fn    int getNbNiveau()
+		*  \brief Retourne le nombre de niveaux
+		*  \return Le nombre de niveaux
+		*/
+	int getNbNiveau();
 };
 
 

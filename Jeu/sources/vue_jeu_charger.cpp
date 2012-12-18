@@ -5,7 +5,8 @@
 VueJeuCharger::VueJeuCharger(QWidget *parent) :
 	Vue(parent),
 	_ui(new Ui::VueJeuCharger),
-	_mJeu(ModelJeu::getInstance())
+	_mJeu(ModelJeu::getInstance()),
+	_mNiveaux(ModelNiveau::getInstance())
 {
 
 	_ui->setupUi(this);
@@ -58,7 +59,7 @@ void VueJeuCharger::actualiseListeNiveaux()
 					SLOT(onclicBoutonNiveau(int)));
 
 
-	int dernierNiveauTermine = _mJeu->getDernierNiveauTermine();
+	int dernierNiveauTermine = _mNiveaux->getNbNiveau();
 
 	while(indexActuel <= dernierNiveauTermine){
 		if(column%6 == 0)
