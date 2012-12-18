@@ -13,6 +13,7 @@
 #include "sources/headers/vue_profil_nouveau.h"
 #include "sources/headers/vue_profil_charger.h"
 #include "sources/headers/vue_profil_supprimer.h"
+#include "sources/headers/vue_credit.h"
 
 /** \namespace Ui
  *
@@ -69,6 +70,12 @@ private slots:
 		*	 \fn    void onClicBoutonSupprimerProfil();
 		*/
 	void onClicBoutonSupprimerProfil();
+
+	/**
+		*  \brief Action lorsque l'on clic sur le bouton crédits
+		*	 \fn    void onClicBoutonCredit();
+		*/
+	void onClicBoutonCredit();
 
 private:
 	Ui::VueAccueil *_ui; /**< Interface graphique liée à la classe */

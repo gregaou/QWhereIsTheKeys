@@ -58,6 +58,7 @@ public:
 		*  \return La scene des niveaux
 		*/
 	QGraphicsScene* getScene();
+
 	/**
 		*  \fn    void chargerNiveaux()
 		*  \brief Charge les niveaux dans la liste des niveaux

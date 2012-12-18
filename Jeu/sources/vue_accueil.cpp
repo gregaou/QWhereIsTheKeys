@@ -30,6 +30,11 @@ void VueAccueil::onClicBoutonSupprimerProfil()
 	emit setVue(VueProfilSupprimer::toString());
 }
 
+void VueAccueil::onClicBoutonCredit()
+{
+	emit setVue(VueCredit::toString());
+}
+
 void VueAccueil::connexionAffichage()
 {
 	connect(_ui->boutonQuitter,SIGNAL(clicked()),_qwitk,SLOT(close()));
@@ -39,6 +44,8 @@ void VueAccueil::connexionAffichage()
 					SLOT(onClicBoutonChargerProfil()));
 	connect(_ui->boutonSupprimerProfil,SIGNAL(clicked()),this,
 					SLOT(onClicBoutonSupprimerProfil()));
+	connect(_ui->boutonCredits,SIGNAL(clicked()),this,
+					SLOT(onClicBoutonCredit()));
 }
 
 QString VueAccueil::toString()

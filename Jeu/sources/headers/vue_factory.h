@@ -19,6 +19,7 @@
 #include "sources/headers/vue_jeu.h"
 #include "sources/headers/vue_jeu_nouveau.h"
 #include "sources/headers/vue_jeu_charger.h"
+#include "sources/headers/vue_credit.h"
 
 /**
  * \class VueFactory
