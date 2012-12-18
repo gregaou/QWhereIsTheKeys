@@ -116,7 +116,7 @@ bool ModelProfil::removeRow(int row, const QModelIndex &parent)
 	{
 		_profils.removeAt(row);
 	}
-	return false;
+	return sauverProfils();
 }
 
 bool ModelProfil::setData(const QModelIndex &index, const QVariant &value,
