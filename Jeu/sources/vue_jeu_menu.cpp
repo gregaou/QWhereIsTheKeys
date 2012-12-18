@@ -30,16 +30,6 @@ void VueJeuMenu::onClicBoutonChargerPartie()
 	emit setVue(VueJeuCharger::toString());
 }
 
-void VueJeuMenu::onClicBoutonCreerPartieMultijoueur()
-{
-	emit setVue(VueJeuNouveau::toString());
-}
-
-void VueJeuMenu::onClicBoutonRejoindrePartieMultijoueur()
-{
-	emit setVue(VueJeuNouveau::toString());
-}
-
 void VueJeuMenu::onClicBoutonQuitterMenuJeu()
 {
 	_mJeu->kill();
@@ -53,10 +43,6 @@ void VueJeuMenu::connexionAffichage()
 					SLOT(onClicBoutonNouvellePartie()));
 	connect(_ui->boutonChargerPartie,SIGNAL(clicked()),this,
 					SLOT(onClicBoutonChargerPartie()));
-	connect(_ui->boutonCreerPartieMultijoueur,SIGNAL(clicked()),this,
-					SLOT(onClicBoutonCreerPartieMultijoueur()));
-	connect(_ui->boutonRejoindrePartieMultijoueur,SIGNAL(clicked()),this,
-					SLOT(onClicBoutonRejoindrePartieMultijoueur()));
 	connect(_ui->boutonQuitterMenuJeu,SIGNAL(clicked()),this,
 					SLOT(onClicBoutonQuitterMenuJeu()));
 }
