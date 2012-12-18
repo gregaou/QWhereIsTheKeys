@@ -1,5 +1,4 @@
 #include "sources/headers/objet_jeu_factory.h"
-#include <QDebug>
 
 ObjetJeu* ObjetJeuFactory::getObjetJeu(QString line)
 {
