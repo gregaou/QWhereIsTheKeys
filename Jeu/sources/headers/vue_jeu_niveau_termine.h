@@ -8,7 +8,10 @@
 #ifndef VUE_JEU_NIVEAU_TERMINE_H
 #define VUE_JEU_NIVEAU_TERMINE_H
 
-#include "vue.h"
+#include "sources/headers/vue.h"
+#include "sources/headers/vue_jeu_menu.h"
+#include "sources/headers/model_jeu.h"
+#include "sources/headers/model_niveau.h"
 
 /** \namespace Ui
  *
@@ -36,7 +39,17 @@ private:
 		*/
 	void connexionAffichage();
 private slots:
-
+	/**
+		*  \brief Permet de faire un retour au menu du jeu
+		*	 \fn    void onClicBoutonRetourMenu()
+		*/
+	void onClicBoutonRetourMenu();
+	/**
+		*  \brief Charge le niveau selectionné
+		*	 \fn    void onclicBoutonNiveauSuivant()
+		*	 \param choixNiveau définit le niveau choisi
+		*/
+	void onclicBoutonNiveauSuivant();
 public:
 	/**
 		*  \brief Constructeur

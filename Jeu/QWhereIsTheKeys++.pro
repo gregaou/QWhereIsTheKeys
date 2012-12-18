@@ -38,7 +38,8 @@ SOURCES += sources/main.cpp\
     sources/oj_fix_anime.cpp \
     sources/collision_oj_mechant_tourne.cpp \
     sources/oj_mechant_tourne.cpp \
-    sources/objet_jeu_factory.cpp
+    sources/objet_jeu_factory.cpp \
+    sources/vue_jeu_niveau_termine.cpp
 
 HEADERS  += sources/headers/qwitk.h \
     sources/headers/vue.h \

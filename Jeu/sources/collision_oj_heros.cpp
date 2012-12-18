@@ -1,5 +1,10 @@
 #include "sources/headers/collision_oj_heros.h"
 
+CollisionOjHeros::CollisionOjHeros(VueJeu* vueJeu) : CollisionOj("OjHeros")
+{
+	_view = vueJeu;
+}
+
 void CollisionOjHeros::gererCollision(ObjetJeu *oj1, ObjetJeu *oj2)
 {
 	OjHeros* h = dynamic_cast<OjHeros*>(oj1);
@@ -15,10 +20,7 @@ void CollisionOjHeros::gererCollision(ObjetJeu *oj1, ObjetJeu *oj2)
 
 	}
 	if(oj2->toString() == "OjClef")
-	{
-		h->setPos(30,30);
-		qDebug()<< "Partie gagnée";
-	}
+		_view->collisionClef();
 }
 
 void CollisionOjHeros::collisionEntre(OjHeros *h, OjPlateforme *p)

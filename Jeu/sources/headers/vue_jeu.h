@@ -16,6 +16,7 @@
 
 #include "sources/headers/vue.h"
 #include "sources/headers/vue_jeu_pause.h"
+#include "sources/headers/vue_jeu_niveau_termine.h"
 #include "sources/headers/model_jeu.h"
 #include "sources/headers/objet_jeu.h"
 #include "sources/headers/oj_plateforme.h"
@@ -74,6 +75,11 @@ public:
 		*/
 	static QString toString();
 
+	/**
+		*  \brief Collision du héros avec la clef
+		*	 \fn    void collisionClef()
+		*/
+	void collisionClef();
 private slots:
 	void collision(ObjetJeu *oj1, ObjetJeu *oj2);
 	/**
@@ -87,7 +93,6 @@ private slots:
 		*	 \fn    void retourMenu()
 		*/
 	void retourMenu();
-
 private:
 	Ui::VueJeu *_ui; /**< Interface graphique liÃ©e Ã  la classe */
 	ModelJeu *_mJeu; /**< ModÃ¨le de donnÃ©es du jeu */

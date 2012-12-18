@@ -1,7 +1,10 @@
 #ifndef COLLISION_OJ_HEROS_H
 #define COLLISION_OJ_HEROS_H
 
+#include "sources/headers/vue_jeu.h"
 #include "sources/headers/collision_oj.h"
+
+class VueJeu;
 
 class CollisionOjHeros : public CollisionOj
 {
@@ -10,7 +13,7 @@ public:
 		*  \fn    CollisionOjHeros ()
 		*  \brief Constructeur
 		*/
-	CollisionOjHeros() : CollisionOj("OjHeros") {}
+	CollisionOjHeros(VueJeu* vueJeu);
 
 	/**
 		*  \fn    virtual void gererCollision(ObjetJeu* oj1, ObjetJeu* oj2) = 0
@@ -25,8 +28,8 @@ public:
 		*  \brief Retourne le nom de la classe
 		*/
 	static QString toString() { return QString("CollisionOjHeros"); }
-
 private:
+	VueJeu* _view; /**< Vue Graphique du jeu */
 	/**
 		*  \fn    void collisionEntre(OjHeros *h, OjPlateforme *p);
 		*  \param h Pointeur vers OjHeros
@@ -34,7 +37,6 @@ private:
 		*  \brief Définit le comportement d'une collision entre un OjHeros et un OjPlateforme
 		*/
 	void collisionEntre(OjHeros *h, OjPlateforme *p);
-
 };
 
 #endif // COLLISION_OJ_HEROS_H

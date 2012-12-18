@@ -65,14 +65,14 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="bNext">
+        <widget class="QPushButton" name="boutonNiveauSuivant">
          <property name="text">
           <string>Niveau suivant</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="boutonRetourMenu">
          <property name="text">
           <string>Retour au menu</string>
          </property>

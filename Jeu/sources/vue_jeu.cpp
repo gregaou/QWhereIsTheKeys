@@ -23,7 +23,7 @@ VueJeu::VueJeu(QWidget *parent) :
 
 	_scene.setItemIndexMethod(QGraphicsScene::NoIndex);
 
-	_cOj = new CollisionOjHeros();
+	_cOj = new CollisionOjHeros(this);
 	_cOj->setNext(new CollisionOjMechantSimple);
 
 	_mNiveau->setScene(&_scene);
@@ -73,6 +73,11 @@ void VueJeu::connexionAffichage()
 void VueJeu::retourMenu()
 {
 	emit setVue(VueJeuMenu::toString());
+}
+
+void VueJeu::collisionClef()
+{
+	emit setVue(VueJeuNiveauTermine::toString());
 }
 
 QString VueJeu::toString()
