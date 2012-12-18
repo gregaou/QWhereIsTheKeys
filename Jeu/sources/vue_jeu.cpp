@@ -25,6 +25,7 @@ VueJeu::VueJeu(QWidget *parent) :
 
 	_cOj = new CollisionOjHeros();
 	_cOj->setNext(new CollisionOjMechantSimple);
+	_cOj->setNext(new CollisionOjMechantTourne);
 
 	_mNiveau->setScene(&_scene);
 	_mNiveau->chargerNiveaux();
