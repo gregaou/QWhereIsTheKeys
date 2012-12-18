@@ -8,8 +8,19 @@ VueJeuNiveauTermine::VueJeuNiveauTermine(QWidget *parent) :
 	_mNiveau(ModelNiveau::getInstance())
 {
 	_ui->setupUi(this);
-	_mJeu->setNiveauSelectionne(_mJeu->getNiveauSelectionne()+1);
-	connexionAffichage();
+	if(_mJeu->getNiveauSelectionne() == _mNiveau->getNbNiveau()-1)
+	{
+		_ui->boutonNiveauSuivant->hide();
+		_ui->lTemps->hide();
+		connect(_ui->boutonRetourMenu,SIGNAL(clicked()),this,
+						SLOT(onClicBoutonRetourMenu()));
+		_ui->lTitre->setText("Jeu terminé !");
+	}
+	else
+	{
+		_mJeu->setNiveauSelectionne(_mJeu->getNiveauSelectionne()+1);
+		connexionAffichage();
+	}
 }
 
 VueJeuNiveauTermine::~VueJeuNiveauTermine()
