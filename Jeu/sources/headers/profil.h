@@ -11,6 +11,8 @@
 #include <QMap>
 #include <QString>
 #include <QStringList>
+#include <QTime>
+
 /**
  * \class Profil
  * \brief Structure de donnée représentant un profil de joueur.
@@ -19,7 +21,7 @@ class Profil
 {
 private:
 	QString _nom; /**< Nom du profil du joueur */
-	QMap<int, int> _resultatsNiveaux; /**< Liste des temps réalisés sur les niveaux déjà complétés */
+	QMap<int, QTime> _resultatsNiveaux; /**< Liste des temps réalisés sur les niveaux déjà complétés */
 	static const QString _sep; /**< Séparateur */
 public:
 	/**
@@ -48,20 +50,20 @@ public:
 		*	 \fn    QMap getResultatsNiveaux() const
 		*  \return Liste des temps réalisés sur les niveaux déjà complétés
 		*/
-	QMap<int,int> getResultatsNiveaux() const;
+	QMap<int,QTime> getResultatsNiveaux() const;
 	/**
 		*  \brief Accesseur de la donnée temps de _resultatsNiveau en fonction du niveau
 		*	 \fn    int getResultat(int idNiveau)
 		*	 \param idNiveau Identifiant du niveau
 		*  \return Temps du niveau identifié par idNiveau | 0 si le niveau n'existe pas
 		*/
-	int getResultat(int idNiveau);
+	QTime getResultat(int idNiveau);
 	/**
 		*  \brief Calcule le temps total de tout les niveaux
 		*	 \fn    int getTempsTotal()
 		*  \return Temps total de tout les niveaux
 		*/
-	int getTempsTotal();
+	QTime getTempsTotal();
 	/**
 		*  \brief Mutateur de la donnée membre _nom
 		*	 \fn    void setNom(QString nom)
@@ -73,14 +75,14 @@ public:
 		*	 \fn    void setResultatsNiveaux(QMap<int,int> resultatsNiveaux)
 		*  \param resultatsNiveaux Nouveaux scores
 		*/
-	void setResultatsNiveaux(QMap<int,int> resultatsNiveaux);
+	void setResultatsNiveaux(QMap<int, QTime> resultatsNiveaux);
 	/**
 		*  \brief Ajoute un couple (identifiant de niveau)/(temps pour terminer le niveau) dans la liste des résultats
-		*	 \fn    bool ajouterResultatNiveau(int idNiveau, int temps)
+		*	 \fn    bool ajouterResultatNiveau(int idNiveau, QTime temps)
 		*  \param idNiveau Identifiant du niveau
 		*  \param temps Temps réalisé sur le niveau
 		*/
-	void ajouterResultatNiveau(int idNiveau, int temps);
+	void ajouterResultatNiveau(int idNiveau, QTime temps);
 	/**
 		*  \brief Opérateur d'égalité
 		*	 \fn    bool operator== (const Profil & p)

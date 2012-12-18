@@ -34,13 +34,13 @@ QString ModelJeu::getNomProfil()
 int ModelJeu::getDernierNiveauTermine()
 {
 	Profil p;
-	QMap<int, int> resultatsNiveaux;
+	QMap<int, QTime> resultatsNiveaux;
 	p = _profils->getProfil(_idProfil);
 	resultatsNiveaux = p.getResultatsNiveaux();
 	return resultatsNiveaux.count();
 }
 
-bool ModelJeu::ajouterScore(int idNiveau, int temps)
+bool ModelJeu::ajouterScore(int idNiveau, QTime temps)
 {
 	_profils->getProfil(_idProfil).ajouterResultatNiveau(idNiveau, temps);
 	return true;

@@ -78,7 +78,7 @@ public:
 		*  \param temps Temps à ajouté
 		*	 \return Vrai le score est sauvegardé sinon Faux
 		*/
-	bool ajouterScore(int idNiveau, int temps);
+	bool ajouterScore(int idNiveau, QTime temps);
 };
 
 #endif // MODEL_JEU_H

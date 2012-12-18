@@ -19,23 +19,23 @@ QString Profil::getNom() const
 	return _nom;
 }
 
-QMap<int, int> Profil::getResultatsNiveaux() const
+QMap<int, QTime> Profil::getResultatsNiveaux() const
 {
 	return _resultatsNiveaux;
 }
 
-int Profil::getResultat(int idNiveau)
+QTime Profil::getResultat(int idNiveau)
 {
 	if(!_resultatsNiveaux.contains(idNiveau))
-		return 0;
+		return QTime();
 	return _resultatsNiveaux[idNiveau];
 }
 
-int Profil::getTempsTotal()
+QTime Profil::getTempsTotal()
 {
-	int total = 0;
-	foreach(int v, _resultatsNiveaux)
-		total += v;
+	QTime total;
+	foreach(QTime v, _resultatsNiveaux)
+		total.addSecs(v.hour() * 3600 + v.minute() * 60 + v.second());
 	return total;
 }
 
@@ -44,12 +44,12 @@ void Profil::setNom(QString nom)
 	_nom = nom;
 }
 
-void Profil::setResultatsNiveaux(QMap<int,int> resultatsNiveaux)
+void Profil::setResultatsNiveaux(QMap<int,QTime> resultatsNiveaux)
 {
 	_resultatsNiveaux = resultatsNiveaux;
 }
 
-void Profil::ajouterResultatNiveau(int idNiveau, int temps)
+void Profil::ajouterResultatNiveau(int idNiveau, QTime temps)
 {
 	_resultatsNiveaux.insert(idNiveau, temps);
 }
@@ -70,7 +70,7 @@ Profil* Profil::fromString(QString str)
 		while(!list.isEmpty())
 		{
 			i = list.takeFirst().toInt();
-			p->_resultatsNiveaux[i] = list.takeFirst().toInt();
+			p->_resultatsNiveaux[i] = QTime::fromString(list.takeFirst());
 		}
 	}
 	return p;
@@ -79,12 +79,12 @@ Profil* Profil::fromString(QString str)
 QString Profil::toString()
 {
 	QString strProfil(_nom);
-	QMapIterator<int, int> i(_resultatsNiveaux);
+	QMapIterator<int, QTime> i(_resultatsNiveaux);
 	while(i.hasNext())
 	{
 		i.next();
 		strProfil += (_sep + QString::number(i.key()) + _sep +
-									QString::number(i.value()));
+									i.value().toString());
 	}
 	return strProfil;
 }
