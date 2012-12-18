@@ -39,7 +39,8 @@ SOURCES += sources/main.cpp\
     sources/collision_oj_mechant_tourne.cpp \
     sources/oj_mechant_tourne.cpp \
     sources/objet_jeu_factory.cpp \
-    sources/vue_jeu_niveau_termine.cpp
+    sources/vue_jeu_niveau_termine.cpp \
+    sources/vue_credit.cpp
 
 HEADERS  += sources/headers/qwitk.h \
     sources/headers/vue.h \
@@ -74,7 +75,8 @@ HEADERS  += sources/headers/qwitk.h \
     sources/headers/collision_oj_mechant_tourne.h \
     sources/headers/oj_mechant_tourne.h \
     sources/headers/objet_jeu_factory.h \
-    sources/headers/vue_jeu_niveau_termine.h
+    sources/headers/vue_jeu_niveau_termine.h \
+    sources/headers/vue_credit.h
 
 FORMS    += ui/qwitk.ui \
     ui/vue_accueil.ui \
@@ -86,7 +88,8 @@ FORMS    += ui/qwitk.ui \
     ui/vue_jeu_menu.ui \
     ui/vue_jeu_nouveau.ui \
     ui/vue_jeu_pause.ui \
-    ui/vue_jeu_niveau_termine.ui
+    ui/vue_jeu_niveau_termine.ui \
+    ui/vue_credit.ui
 
 RESOURCES += \
     ressources/ressources.qrc

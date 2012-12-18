@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>VueAccueil</class>
- <widget class="QWidget" name="VueAccueil">
-  <property name="enabled">
-   <bool>true</bool>
-  </property>
+ <class>VueCredit</class>
+ <widget class="QWidget" name="VueCredit">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -24,7 +21,7 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <layout class="QHBoxLayout" name="Layout">
+    <layout class="QHBoxLayout" name="LayoutCredits">
      <item>
       <spacer name="spacerGauche">
        <property name="orientation">
@@ -54,40 +51,84 @@
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="boutonNouveauProfil">
+        <widget class="QLabel" name="label">
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
          <property name="text">
-          <string>Nouveau Profil</string>
+          <string>QWhereIsTheKey's++</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="boutonChargerProfil">
+        <widget class="QLabel" name="label_2">
          <property name="text">
-          <string>Charger Profil</string>
+          <string>édité par la SDPI</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="boutonSupprimerProfil">
+        <widget class="QLabel" name="label_3">
          <property name="text">
-          <string>Supprimer Profil</string>
+          <string>distribué par WHERE'R'U</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="boutonCredits">
-         <property name="enabled">
-          <bool>true</bool>
-         </property>
+        <widget class="QLabel" name="label_4">
          <property name="text">
-          <string>Crédits</string>
+          <string>Développeurs :</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="boutonQuitter">
+        <widget class="QLabel" name="label_7">
          <property name="text">
-          <string>Quitter</string>
+          <string> - BOSSOLA Grégory</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string> - BUISSON Fabien</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string> - GALLO Jean-Bernard</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string> - MAHE Yannick</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_9">
+         <property name="text">
+          <string> - PACHY Ravi</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_10">
+         <property name="text">
+          <string> - RIT Grégoire</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="bouton">
+         <property name="text">
+          <string>Retour au menu</string>
          </property>
         </widget>
        </item>
@@ -123,13 +164,6 @@
    </item>
   </layout>
  </widget>
- <tabstops>
-  <tabstop>boutonNouveauProfil</tabstop>
-  <tabstop>boutonChargerProfil</tabstop>
-  <tabstop>boutonSupprimerProfil</tabstop>
-  <tabstop>boutonCredits</tabstop>
-  <tabstop>boutonQuitter</tabstop>
- </tabstops>
  <resources/>
  <connections/>
 </ui>
