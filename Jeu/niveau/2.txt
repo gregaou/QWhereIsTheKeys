@@ -29,7 +29,7 @@ OjFixAnime##350##100##:/flamme/lave1.png##:/flamme/lave2.png##:/flamme/lave3.png
 OjPlateforme##250##100##25##30
 OjPlateforme##375##100##25##30
 OjPlateforme##130##100##25##30
-OjPlateforme##680##100##25##120
+OjPlateforme##682##100##25##120
 
 OjMechantSimple##400##85##:/garde/g_l1.png##:/garde/g_l2.png##:/garde/g_r1.png##:/garde/g_r2.png##1
 
@@ -92,18 +92,27 @@ OjPlateforme##90##530##29##10
 OjPlateforme##180##480##30##10
 OjPlateforme##280##430##30##10
 OjPlateforme##180##380##30##10
-//pilier intersalle
-OjPlateforme##110##540##10##50
-
-//OjPlateforme##300##360##10##230
-
-
-//2eme salle
 
 OjPlateforme##280##360##20##10
+OjPlateforme##400##558##20##40
+OjMechantTourne##400##320##:/spiderred/sr_u1.png##:/spiderred/sr_u2.png##:/spiderred/sr_d1.png##:/spiderred/sr_d2.png##:/spiderred/sr_l1.png##:/spiderred/sr_l2.png##:/spiderred/sr_r1.png##:/spiderred/sr_r2.png##1
+OjPlateforme##400##360##220##150
+OjMechantTourne##400##320##:/spiderred/sr_u1.png##:/spiderred/sr_u2.png##:/spiderred/sr_d1.png##:/spiderred/sr_d2.png##:/spiderred/sr_l1.png##:/spiderred/sr_l2.png##:/spiderred/sr_r1.png##:/spiderred/sr_r2.png##0
 
-OjPlateforme##300##360##428##227
+
 OjClef##740##550
+
+OjFixAnime##421##563##:/flamme/lave1.png##:/flamme/lave2.png##:/flamme/lave3.png##:/flamme/lave4.png
+OjFixAnime##446##563##:/flamme/lave1.png##:/flamme/lave2.png##:/flamme/lave3.png##:/flamme/lave4.png
+OjFixAnime##471##563##:/flamme/lave1.png##:/flamme/lave2.png##:/flamme/lave3.png##:/flamme/lave4.png
+OjFixAnime##496##563##:/flamme/lave1.png##:/flamme/lave2.png##:/flamme/lave3.png##:/flamme/lave4.png
+OjFixAnime##521##563##:/flamme/lave1.png##:/flamme/lave2.png##:/flamme/lave3.png##:/flamme/lave4.png
+
+OjPlateforme##545##570##150##20
+
+OjPlateforme##652##400##150##10
+OjPlateforme##652##400##10##120
+OjMechantSimple##652##355##:/garde/g_l1.png##:/garde/g_l2.png##:/garde/g_r1.png##:/garde/g_r2.png##1
 
 
 
