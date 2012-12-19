@@ -21,6 +21,8 @@ VueJeu::VueJeu(QWidget *parent) :
 	_viewPause.hide();
 	grabKeyboard();
 
+	_scene.setBackgroundBrush(QBrush(QPixmap(":/fond/bg.png")));
+
 	_scene.setItemIndexMethod(QGraphicsScene::NoIndex);
 
 	_cOj = new CollisionOjHeros(this);

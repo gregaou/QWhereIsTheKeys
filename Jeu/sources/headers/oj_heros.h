@@ -1,3 +1,11 @@
+/**
+ * \file			oj_heros.h
+ * \brief			Définit le héros
+ * \author    RIT Grégoire
+ * \version   1.0
+ * \date      05/12/12
+ */
+
 #ifndef OJ_HEROS_H
 #define OJ_HEROS_H
 

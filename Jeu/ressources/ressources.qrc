@@ -4,6 +4,7 @@
     </qresource>
     <qresource prefix="/fond">
         <file alias="fond.png">images/fond.png</file>
+        <file alias="bg.png">images/background.png</file>
     </qresource>
     <qresource prefix="/heros">
         <file alias="h_d1.png">images/heros/hero_down1.png</file>
