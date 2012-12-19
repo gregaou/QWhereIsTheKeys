@@ -1,7 +1,7 @@
 /**
- * \file	  vue_menu_jeu.h
- * \brief	  Classe vue menu jeu
- * \author    Jean-Bernard Gallo
+ * \file	    vue_menu_jeu.h
+ * \brief	    Classe vue menu jeu
+ * \author    GALLO Jean-Bernard
  * \version   1.0
  * \date      15/11/12
  */

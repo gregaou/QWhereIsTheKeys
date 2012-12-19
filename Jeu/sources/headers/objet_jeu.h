@@ -1,3 +1,11 @@
+/**
+ * \file			objet_jeu.h
+ * \brief			Classe décrivant un comportement par defaut des objets jeu
+ * \author    RIT Grégoire
+ * \version   1.0
+ * \date      01/12/12
+ */
+
 #ifndef OBJETJEU_H
 #define OBJETJEU_H
 

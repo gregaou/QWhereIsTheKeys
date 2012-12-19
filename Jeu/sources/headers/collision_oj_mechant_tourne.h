@@ -1,7 +1,7 @@
 /**
  * \file			collision_oj_mechant_tourne.h
  * \brief			gestion des collisions d'un objet jeu méchant tourne
- * \author    Yannick Mahe
+ * \author    MAHE Yannick
  * \version   1.0
  * \date      10/12/2012
  */

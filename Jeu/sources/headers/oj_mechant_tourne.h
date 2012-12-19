@@ -1,8 +1,8 @@
 
 /**
  * \file			oj_mechant_tourne.h
- * \brief			Structure de donnÃ©e d'un objet jeu mÃ©chant tourne
- * \author    Yannick Mahe
+ * \brief			Structure de donnée d'un objet jeu méchant tourne
+ * \author    MAHE Yannick
  * \version   1.0
  * \date      04/12/12
  */
@@ -13,7 +13,7 @@
 #include "objet_jeu_mobile.h"
 /**
  * \class OjMechantTourne
- * \brief Structure de donnÃ©e reprÃ©sentant mÃ©chant tourne (dÃ©placement droite/gauche ou gauche/droite ).
+ * \brief Structure de donnée représentant méchant tourne (déplacement droite/gauche ou gauche/droite ).
  */
 class OjMechantTourne : public ObjetJeuMobile
 {
@@ -21,17 +21,17 @@ public:
 		/**
 				*  \brief Constructeur
 				*	 \fn    explicit OjMechantTourne(qreal x, qreal y,QString left1,QString left2,QString right1,QString right2, const bool deplacement)
-				*  \param x DÃ©finit l'abscisse de l'objet jeu
-				*  \param y DÃ©finit l'ordonnÃ©e de l'objet jeu
-				*  \param up1 Frame dÃ©placement haut 1
-				*  \param up2 Frame dÃ©placement haut 2
-				*  \param down1 Frame dÃ©placement bas 1
-				*  \param down2 Frame dÃ©placement bas 2
-				*  \param left1 Frame dÃ©placement gauche 1
-				*  \param left2 Frame dÃ©placement gauche 2
-				*  \param right Frame dÃ©placement droite 1
-				*  \param right Frame dÃ©placement droite 2
-				*  \param deplacement DÃ©finit le dÃ©placement initial de l'objet jeu (true = droite / false = gauche )
+				*  \param x Définit l'abscisse de l'objet jeu
+				*  \param y Définit l'ordonnée de l'objet jeu
+				*  \param up1 Frame déplacement haut 1
+				*  \param up2 Frame déplacement haut 2
+				*  \param down1 Frame déplacement bas 1
+				*  \param down2 Frame déplacement bas 2
+				*  \param left1 Frame déplacement gauche 1
+				*  \param left2 Frame déplacement gauche 2
+				*  \param right Frame déplacement droite 1
+				*  \param right Frame déplacement droite 2
+				*  \param deplacement Définit le déplacement initial de l'objet jeu (true = droite / false = gauche )
 				*/
 		explicit OjMechantTourne(qreal x, qreal y,QString up1, QString up2, QString down1, QString down2,QString left1,QString left2,QString right1,QString right2, const bool deplacement);
 		/**
@@ -114,18 +114,18 @@ protected:
 				*/
 		QList<QPixmap> loadListPixmap(QString u1, QString u2, QString d1, QString d2,QString l1, QString l2, QString r1, QString r2) const;
 		/**
-				*  \brief GÃšre l'animation de l'objet jeu
+				*  \brief Gère l'animation de l'objet jeu
 				*	 \fn    void animation()
 				*/
 		void animation();
 
-		int counter;/**< Permet de dÃ©finir la vitesse de dÃ©filement des frames de l'objet jeu */
+		int counter;/**< Permet de définir la vitesse de défilement des frames de l'objet jeu */
 
-		bool deplacement;/**< Permet de dÃ©finir le dÃ©placement de l'objet jeu */
+		bool deplacement;/**< Permet de définir le déplacement de l'objet jeu */
 
-		qreal gravite;/**< Permet de dÃ©finir la gravitÃ© de l'objet jeu */
+		qreal gravite;/**< Permet de définir la gravité de l'objet jeu */
 
-		OjPlateforme *pf; /**< Permet de dÃ©finir la plateforme rataché à l'objet jeu */
+		OjPlateforme *pf; /**< Permet de définir la plateforme rataché à l'objet jeu */
 };
 
 

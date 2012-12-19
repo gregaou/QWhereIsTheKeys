@@ -1,7 +1,7 @@
 /**
  * \file			collision_oj_mechant_simple.h
- * \brief			Macro facilitant la création d'objet jeu lors de l'édition d'un niveau
- * \author    Jean-Bernard Gallo
+ * \brief			Macro facilitant la cr�ation d'objet jeu lors de l'ajout d'un niveau
+ * \author    GALLO Jean-Bernard
  * \version   1.0
  * \date      17/12/2012
  */

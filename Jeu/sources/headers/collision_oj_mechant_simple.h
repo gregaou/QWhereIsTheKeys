@@ -1,7 +1,7 @@
 /**
  * \file			collision_oj_mechant_simple.h
  * \brief			gestion des collisions d'un objet jeu méchant simple
- * \author    Jean-Bernard Gallo
+ * \author    GALLO Jean-Bernard
  * \version   1.0
  * \date      17/12/2012
  */

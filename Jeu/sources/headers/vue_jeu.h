@@ -1,7 +1,7 @@
 /**
  * \file			vue_jeu.h
  * \brief			Classe vue jeu
- * \author    Société de Développement de Projets Informatique
+ * \author    RIT Gr�goire
  * \version   1.0
  * \date      24/11/12
  */

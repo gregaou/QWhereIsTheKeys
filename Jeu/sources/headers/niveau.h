@@ -1,10 +1,11 @@
 /**
  * \file	  niveau.h
  * \brief	  Structure de donnée représentant un niveau.
- * \author    Société de Développement de Projets Informatique
+ * \author    BUISSON Fabien
  * \version   1.0
  * \date      01/12/12
  */
+
 #ifndef NIVEAU_H
 #define NIVEAU_H
 /**

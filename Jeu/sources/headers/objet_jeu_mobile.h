@@ -1,3 +1,11 @@
+/**
+ * \file			collision_oj.h
+ * \brief			Chaîne de
+ * \author    RIT Grégoire
+ * \version   1.0
+ * \date      01/12/12
+ */
+
 #ifndef OBJET_JEU_MOBILE_H
 #define OBJET_JEU_MOBILE_H
 

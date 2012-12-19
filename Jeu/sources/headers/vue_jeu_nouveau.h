@@ -1,7 +1,7 @@
 /**
  * \file	    vue_nouveau_jeu.h
  * \brief	    Classe vue nouveau jeu
- * \author    Jean-Bernard Gallo
+ * \author    GALLO Jean-Bernard
  * \version   1.0
  * \date      15/11/12
  */

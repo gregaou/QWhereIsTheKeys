@@ -1,7 +1,7 @@
 ﻿/**
- * \file	  vue.h
- * \brief	  Classe abstraite pour les vues
- * \author    Société de Développement de Projets Informatique
+ * \file	    vue.h
+ * \brief	    Classe abstraite pour les vues
+ * \author    RIT Grégoire
  * \version   1.0
  * \date      11/11/12
  */

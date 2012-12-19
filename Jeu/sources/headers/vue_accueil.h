@@ -1,7 +1,7 @@
 ﻿/**
- * \file	  vue_accueil.h
- * \brief	  Classe vue accueil
- * \author    Société de Développement de Projets Informatique
+ * \file	    vue_accueil.h
+ * \brief	    Classe vue accueil
+ * \author    RIT Grégoire
  * \version   1.0
  * \date      11/11/12
  */

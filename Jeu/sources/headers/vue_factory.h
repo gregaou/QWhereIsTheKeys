@@ -1,7 +1,7 @@
 ﻿/**
- * \file	  vue_factory.h
- * \brief	  Classe fabrique pour les vues
- * \author    Sociétéde Développement de Projets Informatique
+ * \file	    vue_factory.h
+ * \brief	    Classe fabrique pour les vues
+ * \author    RIT Grégoire
  * \version   1.0
  * \date      11/11/12
  */

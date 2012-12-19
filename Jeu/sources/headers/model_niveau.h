@@ -1,7 +1,7 @@
 /**
  * \file	  model_niveau.h
  * \brief	  Structure de donnée représentant les niveaux.
- * \author    Société de Développement de Projets Informatique
+ * \author    BUISSON Fabien
  * \version   1.0
  * \date      01/12/12
  */

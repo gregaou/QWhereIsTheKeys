@@ -1,7 +1,7 @@
 /**
- * \file	  model_jeu.h
- * \brief	  Structure de donnée représentant le jeu.
- * \author    Société de Développement de Projets Informatique
+ * \file	    model_jeu.h
+ * \brief	    Structure de donnée représentant le jeu.
+ * \author    BOSSOLA Gr�gory
  * \version   1.0
  * \date      16/11/12
  */
@@ -72,10 +72,10 @@ public:
 		*/
 	int getDernierNiveauTermine();
 	/**
-		*  \brief Ajoute un score associé à un niveau dans le profil joueur
+		*  \brief Ajoute un score associé �  un niveau dans le profil joueur
 		*	 \fn    virtual bool ajouterScore(int idNiveau, int temps)
 		*  \param idNiveau Identifiant du niveau
-		*  \param temps Temps à ajouté
+		*  \param temps Temps �  ajouté
 		*	 \return Vrai le score est sauvegardé sinon Faux
 		*/
 	bool ajouterScore(int idNiveau, QTime temps);

@@ -1,7 +1,7 @@
 ﻿/**
- * \file	  qwitk.h
- * \brief	  Fenêtre principale
- * \author    Société de Développement de Projets Informatique
+ * \file	    qwitk.h
+ * \brief	    Fenêtre principale
+ * \author    RIT Grégoire
  * \version   1.0
  * \date      11/11/12
  */

@@ -1,7 +1,7 @@
 /**
  * \file	    vue_profil_charger.h
  * \brief	    Classe vue charger nouveau profil
- * \author    Société de Développement de Projets Informatique
+ * \author    RIT Grégoire
  * \version   1.0
  * \date      12/11/12
  */

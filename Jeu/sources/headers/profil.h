@@ -1,7 +1,7 @@
 ﻿/**
- * \file	  profil.h
- * \brief	  Structure de donnée représentant un profil de joueur.
- * \author    Société de Développement de Projets Informatique
+ * \file			profil.h
+ * \brief			Structure de donnée représentant un profil de joueur.
+ * \author    BOSSOLA Grégory
  * \version   1.0
  * \date      11/11/12
  */

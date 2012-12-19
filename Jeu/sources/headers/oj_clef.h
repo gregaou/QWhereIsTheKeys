@@ -1,7 +1,7 @@
 /**
  * \file			oj_clef.h
  * \brief			Structure de donnée d'un objet clef
- * \author    Société de Développement de Projets Informatique
+ * \author    PACHY Ravi, BUISSON Fabien
  * \version   1.0
  * \date      05/12/12
  */

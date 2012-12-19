@@ -1,10 +1,11 @@
 /**
  * \file	    vue_jeu_pause.h
  * \brief	    Classe vue jeu pause
- * \author    Société de Développement de Projets Informatique
+ * \author    BUISSON Fabien, BOSSOLA Gr�gory
  * \version   1.0
  * \date      01/12/12
  */
+
 #ifndef VUE_JEU_PAUSE_H
 #define VUE_JEU_PAUSE_H
 

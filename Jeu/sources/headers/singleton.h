@@ -1,7 +1,7 @@
 ﻿/**
- * \file	  singleton.h
- * \brief	  Classe modèle pour la création de singletons
- * \author    Société de Développement de Projets Informatique
+ * \file	    singleton.h
+ * \brief	    Classe modèle pour la création de singletons
+ * \author    RIT Grégoire
  * \version   1.0
  * \date      11/11/12
  */

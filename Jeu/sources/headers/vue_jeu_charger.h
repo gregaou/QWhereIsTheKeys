@@ -1,7 +1,7 @@
 /**
  * \file			vue_jeu_charger.h
  * \brief			Classe vue jeu charger
- * \author    Jean-Bernard Gallo
+ * \author    GALLO Jean-Bernard
  * \version   1.0
  * \date      24/11/12
  */

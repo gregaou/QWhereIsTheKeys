@@ -1,3 +1,11 @@
+/**
+ * \file			collision_oj.h
+ * \brief			Chaîne de responsabilité gérant les collisions
+ * \author    PACHY Ravi
+ * \version   1.0
+ * \date      01/12/12
+ */
+
 #ifndef COLLISION_OJ_HEROS_H
 #define COLLISION_OJ_HEROS_H
 

@@ -1,7 +1,7 @@
 /**
  * \file			oj_flamme.h
  * \brief			Structure de donnée d'un objet jeu fix et animé
- * \author    Jean-Bernard Gallo
+ * \author    GALLO Jean-Bernard
  * \version   1.0
  * \date      05/12/12
  */
