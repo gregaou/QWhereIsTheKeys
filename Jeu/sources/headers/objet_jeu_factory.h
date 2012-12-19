@@ -1,7 +1,7 @@
 /**
  * \file	    objet_jeu_factory.h
  * \brief			Classe fabrique pour les objets jeu
- * \author    BUISSON Fabien, RIT Grégoire
+ * \author    BUISSON Fabien, RIT GrÃ©goire
  * \version   6.0
  * \date      17/12/12
  */
@@ -41,7 +41,7 @@ public:
 	/**
 		*  \brief Renvoi l'instance d'un objet jeu en fonction d'un QString
 		*	 \fn    static ObjetJeu* getObjetJeu(QString nom);
-		*	 \param nom Décris le nom du type de l'objet jeu à renvoyer
+		*	 \param nom DÃ©cris le nom du type de l'objet jeu Ã  renvoyer
 		*/
 	static ObjetJeu* getObjetJeu(QString line);
 
