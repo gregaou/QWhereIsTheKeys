@@ -1,6 +1,6 @@
 /**
  * \file			collision_oj.h
- * \brief			Cha�ne de responsabilit� g�rant les collisions
+ * \brief			Chaîne de responsabilité gérant les collisions
  * \author    PACHY Ravi
  * \version   1.0
  * \date      01/12/12
@@ -27,7 +27,7 @@ public:
 		*  \fn    virtual void gererCollision(ObjetJeu* oj1, ObjetJeu* oj2) = 0
 		*  \param oj1 premier ObjetJeu
 		*  \param oj2 deuxieme ObjetJeu
-		*  \brief Gère la collision entre deux ObjetJeu
+		*  \brief GÃšre la collision entre deux ObjetJeu
 		*/
 	void gererCollision(ObjetJeu* oj1, ObjetJeu* oj2);
 
@@ -42,7 +42,7 @@ private:
 		*  \fn    void collisionEntre(OjHeros *h, OjPlateforme *p);
 		*  \param h Pointeur vers OjHeros
 		*  \param p Pointeur vers OjPlateforme
-		*  \brief Définit le comportement d'une collision entre un OjHeros et un OjPlateforme
+		*  \brief DÃ©finit le comportement d'une collision entre un OjHeros et un OjPlateforme
 		*/
 	void collisionEntre(OjHeros *h, OjPlateforme *p);
 };

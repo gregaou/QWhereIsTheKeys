@@ -1,7 +1,7 @@
 /**
  * \file	    vue_credit.h
  * \brief	    Classe vue credit
- * \author    RIT Grégoire
+ * \author    RIT GrÃ©goire
  * \version   1.0
  * \date      18/12/12
  */
@@ -34,7 +34,7 @@ public:
 	/**
 		*  \brief Constructeur
 		*	 \fn    explicit VueCredit (QWidget *parent = 0)
-		*  \param parent Définit le parent de la fenêtre
+		*  \param parent DÃ©finit le parent de la fenÃªtre
 		*/
 	explicit VueCredit(QWidget *parent = 0);
 
@@ -61,12 +61,12 @@ private slots:
 	void onClicBoutonRetourMenu();
 
 private:
-	Ui::VueCredit *_ui; /**< Interface graphique liée à la classe */
-	ModelJeu *_mJeu; /**< Modêle de données du jeu */
+	Ui::VueCredit *_ui; /**< Interface graphique liÃ©e Ã  la classe */
+	ModelJeu *_mJeu; /**< ModÃªle de donnÃ©es du jeu */
 
 	/**
-		*  \brief Connecte les signaux des éléments de l'interface à
-		*  leur fonction associée
+		*  \brief Connecte les signaux des Ã©lÃ©ments de l'interface Ã 
+		*  leur fonction associÃ©e
 		*  \fn void connexionAffichage()
 		*/
 	void connexionAffichage();

@@ -1,7 +1,7 @@
 /**
  * \file			vue_jeu.h
  * \brief			Classe vue jeu
- * \author    RIT Gr�goire
+ * \author    RIT Grégoire
  * \version   1.0
  * \date      24/11/12
  */
@@ -57,7 +57,7 @@ public:
 	/**
 		*  \brief Constructeur
 		*	 \fn    explicit VueJeu (QWidget *parent = 0)
-		*  \param parent Définit le parent de la fenêtre
+		*  \param parent DÃ©finit le parent de la fenÃªtre
 		*/
 	explicit VueJeu(QWidget *parent = 0);
 
@@ -76,7 +76,7 @@ public:
 	static QString toString();
 
 	/**
-		*  \brief Collision du h�ros avec la clef
+		*  \brief Collision du héros avec la clef
 		*	 \fn    void collisionClef()
 		*/
 	void collisionClef();
@@ -94,9 +94,9 @@ private slots:
 		*/
 	void retourMenu();
 private:
-	Ui::VueJeu *_ui; /**< Interface graphique liée �  la classe */
-	ModelJeu *_mJeu; /**< Modèle de données du jeu */
-	ModelNiveau *_mNiveau; /**< Modèle de données des niveaux */
+	Ui::VueJeu *_ui; /**< Interface graphique liÃ©e Ã  la classe */
+	ModelJeu *_mJeu; /**< ModÃšle de donnÃ©es du jeu */
+	ModelNiveau *_mNiveau; /**< ModÃšle de donnÃ©es des niveaux */
 	QGraphicsScene _scene; /**< Scene Graphique */
 	QGraphicsView _view; /**< Vue Graphique */
 	VueJeuPause _viewPause; /**< Vue Graphique de la pause */
@@ -115,8 +115,8 @@ private:
 	void timerEvent(QTimerEvent *);
 
 	/**
-		*  \brief Connecte les signaux des éléments de l'interface �
-		*  leur fonction associé
+		*  \brief Connecte les signaux des Ã©lÃ©ments de l'interface Ã
+		*  leur fonction associÃ©
 		*  \fn void connexionAffichage()
 		*/
 	void connexionAffichage();
@@ -126,7 +126,7 @@ private:
 		*/
 	void setPause();
 	/**
-		*  \brief Démarre le timer
+		*  \brief DÃ©marre le timer
 		*  \fn void demarrerTimer()
 		*/
 	void demarrerTimer();

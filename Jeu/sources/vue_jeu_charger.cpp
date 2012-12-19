@@ -1,12 +1,12 @@
 #include "sources/headers/vue_jeu_charger.h"
 #include "ui_vue_jeu_charger.h"
 #include <qsignalmapper.h>
+#include <QDebug>
 
 VueJeuCharger::VueJeuCharger(QWidget *parent) :
 	Vue(parent),
 	_ui(new Ui::VueJeuCharger),
-	_mJeu(ModelJeu::getInstance()),
-	_mNiveaux(ModelNiveau::getInstance())
+	_mJeu(ModelJeu::getInstance())
 {
 
 	_ui->setupUi(this);
@@ -59,7 +59,7 @@ void VueJeuCharger::actualiseListeNiveaux()
 					SLOT(onclicBoutonNiveau(int)));
 
 
-	int dernierNiveauTermine = _mNiveaux->getNbNiveau();
+	int dernierNiveauTermine = _mJeu->getDernierNiveauTermine();
 
 	while(indexActuel <= dernierNiveauTermine){
 		if(column%6 == 0)

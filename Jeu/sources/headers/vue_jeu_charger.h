@@ -12,7 +12,6 @@
 #include "sources/headers/vue.h"
 #include "sources/headers/vue_profil.h"
 #include "sources/headers/vue_jeu_menu.h"
-#include "sources/headers/model_niveau.h"
 
 /** \namespace Ui
  *
@@ -69,7 +68,6 @@ private slots:
 private:
 	Ui::VueJeuCharger *_ui; /**< Interface graphique liée à la classe */
 	ModelJeu *_mJeu;					/**< Modèle de données du jeu */
-	ModelNiveau *_mNiveaux; /**< Modèle de données des niveaux */
 	/**
 		*  \brief Connecte les signaux des éléments de l'interface à
 		*  leur fonction associé
