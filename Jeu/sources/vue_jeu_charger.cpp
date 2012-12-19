@@ -1,6 +1,7 @@
 #include "sources/headers/vue_jeu_charger.h"
 #include "ui_vue_jeu_charger.h"
 #include <qsignalmapper.h>
+#include <QDebug>
 
 VueJeuCharger::VueJeuCharger(QWidget *parent) :
 	Vue(parent),
@@ -60,6 +61,8 @@ void VueJeuCharger::actualiseListeNiveaux()
 
 
 	int dernierNiveauTermine = _mJeu->getDernierNiveauTermine()-1;
+	if(dernierNiveauTermine == -1)
+		dernierNiveauTermine = 0;
 
 	while(indexActuel <= dernierNiveauTermine){
 		if(column%6 == 0)
