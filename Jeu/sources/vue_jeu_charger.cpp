@@ -60,9 +60,7 @@ void VueJeuCharger::actualiseListeNiveaux()
 					SLOT(onclicBoutonNiveau(int)));
 
 
-	int dernierNiveauTermine = _mJeu->getDernierNiveauTermine()-1;
-	if(dernierNiveauTermine == -1)
-		dernierNiveauTermine = 0;
+	int dernierNiveauTermine = _mJeu->getDernierNiveauTermine();
 
 	while(indexActuel <= dernierNiveauTermine){
 		if(column%6 == 0)
