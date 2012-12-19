@@ -77,6 +77,8 @@ void OjHeros::saut()
 	{
 		for(int i = 0 ; i < list.size() ; i++)
 		{
+			if(dynamic_cast<ObjetJeu*>(list.at(i)) == 0)
+				 continue;
 			if(dynamic_cast<ObjetJeu*>(list.at(i))->toString() == "OjPlateforme")
 			{
 				_dy = -GRAVITE;
@@ -92,6 +94,8 @@ void OjHeros::saut()
 		{
 			for(int i = 0 ; i < list.size() ; i++)
 			{
+				if(dynamic_cast<ObjetJeu*>(list.at(i)) == 0)
+					 continue;
 				if(dynamic_cast<ObjetJeu*>(list.at(i))->toString() == "OjPlateforme")
 				{
 					_dy = -GRAVITE;
@@ -106,6 +110,8 @@ void OjHeros::saut()
 		{
 			for(int i = 0 ; i < list.size() ; i++)
 			{
+				if(dynamic_cast<ObjetJeu*>(list.at(i)) == 0)
+					 continue;
 				if(dynamic_cast<ObjetJeu*>(list.at(i))->toString() == "OjPlateforme")
 				{
 					_dy = -GRAVITE;
