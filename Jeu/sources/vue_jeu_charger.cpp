@@ -6,8 +6,7 @@
 VueJeuCharger::VueJeuCharger(QWidget *parent) :
 	Vue(parent),
 	_ui(new Ui::VueJeuCharger),
-	_mJeu(ModelJeu::getInstance()),
-	_mNiveaux(ModelNiveau::getInstance())
+	_mJeu(ModelJeu::getInstance())
 {
 
 	_ui->setupUi(this);
